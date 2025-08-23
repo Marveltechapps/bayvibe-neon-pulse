@@ -14,6 +14,12 @@ import PowerRedundancy from "./pages/PowerRedundancy";
 import CoolingClimateControl from "./pages/CoolingClimateControl";
 import SustainabilityEnergyEfficiency from "./pages/SustainabilityEnergyEfficiency";
 import ComplianceCertification from "./pages/ComplianceCertification";
+import NetworkArchitectureConnectivity from "./pages/NetworkArchitectureConnectivity";
+import ServerStorageSolutions from "./pages/ServerStorageSolutions";
+import CloudIntegrationHybridSystems from "./pages/CloudIntegrationHybridSystems";
+import CybersecurityMeasures from "./pages/CybersecurityMeasures";
+import MultiAvailabilityDisasterRecovery from "./pages/MultiAvailabilityDisasterRecovery";
+import EquipmentMaintenanceProtocols from "./pages/EquipmentMaintenanceProtocols";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +40,12 @@ const App = () => (
           <Route path="/sustainability-energy-efficiency" element={<SustainabilityEnergyEfficiency />} />
           <Route path="/compliance-certification" element={<ComplianceCertification />} />
           <Route path="/it-hardware-infrastructure" element={<ITHardwareInfrastructure />} />
+          <Route path="/network-architecture-connectivity" element={<NetworkArchitectureConnectivity />} />
+          <Route path="/server-storage-solutions" element={<ServerStorageSolutions />} />
+          <Route path="/cloud-integration-hybrid-systems" element={<CloudIntegrationHybridSystems />} />
+          <Route path="/cybersecurity-measures" element={<CybersecurityMeasures />} />
+          <Route path="/multi-availability-disaster-recovery" element={<MultiAvailabilityDisasterRecovery />} />
+          <Route path="/equipment-maintenance-protocols" element={<EquipmentMaintenanceProtocols />} />
           <Route path="/digital-data-infrastructure" element={<DigitalDataInfrastructure />} />
           <Route path="/sustainability" element={<Sustainability />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

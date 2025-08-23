@@ -1,46 +1,66 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 import { 
   Network, 
   Server, 
   Shield, 
-  Zap, 
-  Database, 
-  Cpu,
-  HardDrive,
-  Wifi,
-  Router,
-  Monitor
+  Cloud, 
+  RefreshCw, 
+  Wrench
 } from 'lucide-react';
 
 const ITHardwareInfrastructure = () => {
-  const tabs = [
-    { id: 'network', label: 'Network Architecture & Connectivity' },
-    { id: 'server', label: 'Server & Storage Solutions' },
-    { id: 'cloud', label: 'Cloud Integration & Hybrid Systems' },
-    { id: 'cybersecurity', label: 'Cybersecurity Measures' },
-    { id: 'disaster', label: 'Multi-Availability & Disaster Recovery' },
-    { id: 'equipment', label: 'Equipment & Maintenance Protocols' }
-  ];
+  const navigate = useNavigate();
 
-  const features = [
+  const sections = [
     {
-      icon: Server,
-      title: 'Server Rack',
-      description: 'Powers all core data processing and secure storage operations.',
+      id: 'network',
+      title: 'Network Architecture & Connectivity',
+      description: 'Network architecture and connectivity are vital for seamless data center operations. Redundant fiber-optic connections ensure high-speed, low-latency data transmission.',
+      icon: Network,
+      route: '/network-architecture-connectivity',
       color: 'bg-blue-500'
     },
     {
-      icon: Router,
-      title: 'Network Router / Switch',
-      description: 'Manages seamless connectivity and fast data transmission.',
+      id: 'server',
+      title: 'Server & Storage Solutions',
+      description: 'Server and storage solutions in a data center ensure high-performance computing. High-quality servers support virtualization and their workloads.',
+      icon: Server,
+      route: '/server-storage-solutions',
+      color: 'bg-green-500'
+    },
+    {
+      id: 'cloud',
+      title: 'Cloud Integration & Hybrid Systems',
+      description: 'Cloud integration and hybrid systems deliver data center flexibility and scalability. Seamless integration of private and public cloud environments.',
+      icon: Cloud,
+      route: '/cloud-integration-hybrid-systems',
       color: 'bg-purple-500'
     },
     {
-      icon: Monitor,
-      title: 'High-end Computers',
-      description: 'Drives system performance with essential computing components.',
-      color: 'bg-yellow-500'
+      id: 'cybersecurity',
+      title: 'Cybersecurity Measures',
+      description: 'Cybersecurity measures in a data center ensure protection against threats and data breaches. Multi-layered security architecture and firewall protection.',
+      icon: Shield,
+      route: '/cybersecurity-measures',
+      color: 'bg-red-500'
+    },
+    {
+      id: 'disaster',
+      title: 'Multi-Availability & Disaster Recovery',
+      description: 'High-availability and disaster recovery ensure continuous data center operations and minimal downtime. Scalable backup systems and failover mechanisms.',
+      icon: RefreshCw,
+      route: '/multi-availability-disaster-recovery',
+      color: 'bg-cyan-500'
+    },
+    {
+      id: 'equipment',
+      title: 'Equipment & Maintenance Protocols',
+      description: 'Equipment and maintenance protocols ensure the reliability and longevity of data center hardware. Regular preventive maintenance and performance monitoring.',
+      icon: Wrench,
+      route: '/equipment-maintenance-protocols',
+      color: 'bg-orange-500'
     }
   ];
 
@@ -71,67 +91,26 @@ const ITHardwareInfrastructure = () => {
             </div>
           </div>
 
-          {/* Navigation Tabs */}
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8">
-            {tabs.map((tab, index) => (
-              <div key={tab.id} className="text-center">
-                <div className="bg-green-500 text-white px-3 py-2 rounded-lg text-xs font-medium">
-                  {tab.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Network Architecture Section */}
-      <section className="py-16 bg-gray-800">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="relative z-10 text-center">
-                  <Network className="w-24 h-24 text-blue-300 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">Network Architecture</h3>
-                  <p className="text-gray-300">3D Visualization</p>
-                </div>
-                {/* Floating network elements */}
-                <div className="absolute top-4 right-4 bg-blue-400/20 backdrop-blur rounded-lg p-3">
-                  <Wifi className="w-6 h-6 text-blue-300" />
-                </div>
-                <div className="absolute bottom-4 left-4 bg-cyan-400/20 backdrop-blur rounded-lg p-3">
-                  <Database className="w-6 h-6 text-cyan-300" />
-                </div>
-                <div className="absolute top-1/2 left-4 bg-purple-400/20 backdrop-blur rounded-lg p-3">
-                  <Shield className="w-6 h-6 text-purple-300" />
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white">Network Architecture & Connectivity</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Network architecture and connectivity are vital for seamless data center operations. Redundant fiber-optic connections ensure high-speed, low-latency data transmission. Multi-carrier redundancy and failover mechanisms safeguard against outages, enhancing reliability. Edge computing integration optimizes performance for AI, IoT, and cloud applications.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hardware Components */}
-      <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+          {/* Content Sections */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {sections.map((section) => {
+              const IconComponent = section.icon;
               return (
-                <div key={index} className="bg-gray-800 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-                  <div className={`${feature.color} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-6`}>
+                <div 
+                  key={section.id} 
+                  className="bg-gray-800 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700"
+                  onClick={() => navigate(section.route)}
+                >
+                  <div className={`${section.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{section.description}</p>
+                  <div className="mt-6">
+                    <span className="text-green-400 font-medium hover:text-green-300">
+                      Learn More →
+                    </span>
+                  </div>
                 </div>
               );
             })}
