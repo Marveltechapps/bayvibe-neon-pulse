@@ -49,9 +49,7 @@ const Sustainability = () => {
                 <span className="gradient-text">Sustainability</span> at the 
                 Core of Innovation
               </h2>
-              <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-                Our commitment to environmental responsibility drives every aspect of our operations, from renewable energy adoption to innovative cooling technologies that minimize our ecological impact.
-              </p>
+              
             </div>
 
             {/* Initiatives Grid */}
