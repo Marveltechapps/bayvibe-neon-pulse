@@ -23,8 +23,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            
-            
+            <img src="/lovable-uploads/38108738-303a-43ab-8f29-eb8c9be04fd1.png" alt="BayVibe DC" className="h-8 md:h-10" />
           </div>
 
           {/* Desktop Navigation */}
