@@ -1,49 +1,20 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
-
 const Footer = () => {
   const footerLinks = {
-    services: [
-      'Cloud Infrastructure',
-      'Colocation Services', 
-      'Managed Hosting',
-      'Network Solutions',
-      'Disaster Recovery'
-    ],
-    company: [
-      'About Us',
-      'Leadership Team',
-      'Careers',
-      'News & Events',
-      'Partner Program'
-    ],
-    resources: [
-      'Documentation',
-      'Support Center',
-      'Security Compliance',
-      'SLA Guarantees',
-      'Resource Library'
-    ],
-    legal: [
-      'Privacy Policy',
-      'Terms of Service',
-      'Cookie Policy',
-      'GDPR Compliance',
-      'Data Processing'
-    ]
+    services: ['Cloud Infrastructure', 'Colocation Services', 'Managed Hosting', 'Network Solutions', 'Disaster Recovery'],
+    company: ['About Us', 'Leadership Team', 'Careers', 'News & Events', 'Partner Program'],
+    resources: ['Documentation', 'Support Center', 'Security Compliance', 'SLA Guarantees', 'Resource Library'],
+    legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'GDPR Compliance', 'Data Processing']
   };
-
-  return (
-    <footer className="bg-darker-surface border-t border-border/30">
+  return <footer className="bg-darker-surface border-t border-border/30">
       {/* Main Footer Content */}
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 bg-background rounded-sm"></div>
-              </div>
-              <span className="text-xl font-bold gradient-text">BayVibe DC</span>
+              
+              
             </div>
             
             <p className="text-foreground/70 leading-relaxed max-w-md">
@@ -90,52 +61,44 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-6">Services</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link}>
+              {footerLinks.services.map(link => <li key={link}>
                   <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
                     {link}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-foreground mb-6">Company</h4>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link}>
+              {footerLinks.company.map(link => <li key={link}>
                   <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
                     {link}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-foreground mb-6">Resources</h4>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link}>
+              {footerLinks.resources.map(link => <li key={link}>
                   <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
                     {link}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-foreground mb-6">Legal</h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link}>
+              {footerLinks.legal.map(link => <li key={link}>
                   <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
                     {link}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
@@ -161,8 +124,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
