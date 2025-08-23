@@ -1,5 +1,5 @@
 import { Leaf, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
-import dataCenterBuilding from '@/assets/datacenter-building.jpg';
+import dataCenterBuilding from '/lovable-uploads/053e1f76-f68c-4ef0-8f41-dbd60fff80c4.png';
 const DataCenter = () => {
   const features = [{
     icon: Leaf,
