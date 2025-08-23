@@ -80,14 +80,14 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-white text-lg font-semibold mb-6">Contact us</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-gray-400" />
-                <a href="mailto:shekar@marvel100logosticspark.com" className="text-white hover:text-green-500 transition-colors">
+              <div className="flex items-start gap-3">
+                <Mail className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <a href="mailto:shekar@marvel100logosticspark.com" className="text-white hover:text-green-500 transition-colors break-all">
                   shekar@marvel100logosticspark.com
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gray-400" />
+              <div className="flex items-start gap-3">
+                <Phone className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <a href="tel:+919444126240" className="text-white hover:text-green-500 transition-colors">
                   +91 9444126240
                 </a>
