@@ -8,6 +8,12 @@ import BuildingInfrastructure from "./pages/BuildingInfrastructure";
 import ITHardwareInfrastructure from "./pages/ITHardwareInfrastructure";
 import DigitalDataInfrastructure from "./pages/DigitalDataInfrastructure";
 import Sustainability from "./pages/Sustainability";
+import LocationAccessibility from "./pages/LocationAccessibility";
+import StructuralDesign from "./pages/StructuralDesign";
+import PowerRedundancy from "./pages/PowerRedundancy";
+import CoolingClimateControl from "./pages/CoolingClimateControl";
+import SustainabilityEnergyEfficiency from "./pages/SustainabilityEnergyEfficiency";
+import ComplianceCertification from "./pages/ComplianceCertification";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +27,12 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/building-infrastructure" element={<BuildingInfrastructure />} />
+          <Route path="/location-accessibility" element={<LocationAccessibility />} />
+          <Route path="/structural-design" element={<StructuralDesign />} />
+          <Route path="/power-redundancy" element={<PowerRedundancy />} />
+          <Route path="/cooling-climate-control" element={<CoolingClimateControl />} />
+          <Route path="/sustainability-energy-efficiency" element={<SustainabilityEnergyEfficiency />} />
+          <Route path="/compliance-certification" element={<ComplianceCertification />} />
           <Route path="/it-hardware-infrastructure" element={<ITHardwareInfrastructure />} />
           <Route path="/digital-data-infrastructure" element={<DigitalDataInfrastructure />} />
           <Route path="/sustainability" element={<Sustainability />} />
