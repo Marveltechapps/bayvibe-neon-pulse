@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import BuildingInfrastructure from "./pages/BuildingInfrastructure";
 import ITHardwareInfrastructure from "./pages/ITHardwareInfrastructure";
+import DigitalDataInfrastructure from "./pages/DigitalDataInfrastructure";
 import Sustainability from "./pages/Sustainability";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/building-infrastructure" element={<BuildingInfrastructure />} />
           <Route path="/it-hardware-infrastructure" element={<ITHardwareInfrastructure />} />
+          <Route path="/digital-data-infrastructure" element={<DigitalDataInfrastructure />} />
           <Route path="/sustainability" element={<Sustainability />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
