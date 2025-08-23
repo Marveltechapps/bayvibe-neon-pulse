@@ -43,7 +43,7 @@ const DataCenter = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Next-Gen <span className="gradient-text">Data Center</span> @ 
+            Next-Gen <span className="gradient-text">Data Center</span> at 
             <br className="hidden sm:block" />
             <span className="gradient-text">Siruseri IT Corridor</span>
           </h2>
