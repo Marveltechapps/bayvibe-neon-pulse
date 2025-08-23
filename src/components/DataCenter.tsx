@@ -1,31 +1,18 @@
-import { MapPin, Building2, Wifi, Zap, Shield, Leaf, CheckCircle, Layers, Settings } from 'lucide-react';
-import dataCenterBuilding from '../assets/bayvibe-datacenter-building.jpg';
-
+import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
+import dataCenterBuilding from '@/assets/datacenter-building.jpg';
 const DataCenter = () => {
   const features = [{
     icon: MapPin,
     title: 'Location Advantage',
     description: 'Strategic location in IT corridor'
   }, {
-    icon: Leaf,
-    title: 'Sustainable Land Utilizations',
-    description: 'Eco-friendly land use and green practices'
-  }, {
     icon: Building2,
     title: 'Smart Structural Design',
-    description: 'Intelligent earthquake-resistant architecture'
-  }, {
-    icon: CheckCircle,
-    title: 'Standards Driven Construction',
-    description: 'Compliance with international standards'
+    description: 'Earthquake-resistant architecture'
   }, {
     icon: Wifi,
     title: 'IT Infrastructure',
     description: 'High-speed fiber connectivity'
-  }, {
-    icon: Layers,
-    title: 'Technology Stack',
-    description: 'Modern technology infrastructure'
   }, {
     icon: Zap,
     title: 'Power & Cooling',
@@ -35,8 +22,20 @@ const DataCenter = () => {
     title: 'Security',
     description: 'Multi-layer security systems'
   }, {
+    icon: Thermometer,
+    title: 'Climate Control',
+    description: 'Precision environmental control'
+  }, {
+    icon: Network,
+    title: 'Network Redundancy',
+    description: 'Multiple tier-1 carriers'
+  }, {
+    icon: Server,
+    title: 'Server Management',
+    description: 'Remote hands support 24/7'
+  }, {
     icon: Settings,
-    title: 'Operations & Maintenance',
+    title: 'Monitoring',
     description: 'Real-time infrastructure monitoring'
   }];
   return <section id="datacenter" className="py-20 bg-dark-surface">
@@ -79,24 +78,33 @@ const DataCenter = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
               
               {/* Glow Effect */}
-              
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300"></div>
             </div>
 
             {/* Floating Stats */}
             <div className="absolute -top-6 -right-6 bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-4 pulse-glow">
-              
+              <div className="text-2xl font-bold gradient-text">Tier III</div>
               <div className="text-sm text-foreground/60">Certified Facility</div>
             </div>
 
-            
+            <div className="absolute -bottom-6 -left-6 bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-4 pulse-glow" style={{
+            animationDelay: '1s'
+          }}>
+              
+              <div className="text-sm text-foreground/60">Power Capacity</div>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            
-            
+            <button className="btn-neon">
+              Schedule a Tour
+            </button>
+            <button className="bg-transparent border border-primary/30 text-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:border-primary hover:bg-primary/10">
+              Download Brochure
+            </button>
           </div>
         </div>
       </div>
