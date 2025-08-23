@@ -1,5 +1,5 @@
 import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
-import dataCenterBuilding from '@/assets/datacenter-building.jpg';
+
 const DataCenter = () => {
   const features = [{
     icon: MapPin,
@@ -74,7 +74,7 @@ const DataCenter = () => {
           {/* 3D Building Image */}
           <div className="relative animate-fade-in-up [animation-delay:400ms]">
             <div className="relative overflow-hidden rounded-2xl">
-              <img src={dataCenterBuilding} alt="Futuristic BayVibe DC data center building" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
+              <img src="/lovable-uploads/fc505825-59a5-4c51-aeec-63bdad2811dd.png" alt="Futuristic BayVibe DC data center building" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
               
               {/* Glow Effect */}
