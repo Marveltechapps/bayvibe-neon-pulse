@@ -108,7 +108,7 @@ const Footer = () => {
               <div className="w-5 h-5 rounded-full border-2 border-green-500 flex items-center justify-center">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               </div>
-              <span>Copyright 2025 Builtglory.com</span>
+              <span>Copyright 2025 Bayvibedc.com</span>
             </div>
           </div>
         </div>
