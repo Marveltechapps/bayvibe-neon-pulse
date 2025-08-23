@@ -13,6 +13,13 @@ const Footer = () => {
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
             
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              Contact Us
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
         </div>
       </div>
