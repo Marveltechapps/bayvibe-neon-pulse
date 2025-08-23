@@ -1,24 +1,119 @@
 import { Mail, Phone, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  return <footer className="bg-background">
+  return (
+    <footer className="bg-gray-900">
       {/* Get in Touch Section */}
-      <div className="bg-card/30 backdrop-blur-sm">
-        <div className="section-container py-20">
+      <div className="bg-gray-800/50">
+        <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Get in Touch with Us
             </h2>
-            <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
+            <p className="text-lg text-gray-300 mb-10 leading-relaxed">
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
-            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              CONTACT US
+              <ChevronRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Main Footer Content */}
-      
-    </footer>;
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Logo */}
+          <div className="col-span-1">
+            <div className="text-green-500 text-xl font-bold">Logo</div>
+          </div>
+
+          {/* Building Infrastructure */}
+          <div className="col-span-1">
+            <h3 className="text-gray-400 text-sm font-medium mb-6">Building Infrastructure</h3>
+            <ul className="space-y-4">
+              <li>
+                <Link to="/it-hardware-infrastructure" className="text-gray-400 hover:text-white transition-colors">
+                  IT & Hardware Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link to="/digital-data-infrastructure" className="text-gray-400 hover:text-white transition-colors">
+                  Digital Data Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link to="/sustainability" className="text-gray-400 hover:text-white transition-colors">
+                  Sustainability
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* About us */}
+          <div className="col-span-1">
+            <h3 className="text-gray-400 text-sm font-medium mb-6">About us</h3>
+            <ul className="space-y-4">
+              <li>
+                <Link to="#" className="text-gray-400 hover:text-white transition-colors">
+                  Business Revenue Model
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="text-gray-400 hover:text-white transition-colors">
+                  Maintenance & Future Innovations
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact us */}
+          <div className="col-span-1">
+            <h3 className="text-white text-lg font-semibold mb-6">Contact us</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-gray-400" />
+                <a href="mailto:shekar@marvel100logosticspark.com" className="text-white hover:text-green-500 transition-colors">
+                  shekar@marvel100logosticspark.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-gray-400" />
+                <a href="tel:+919444126240" className="text-white hover:text-green-500 transition-colors">
+                  +91 9444126240
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-12 mt-12 border-t border-gray-700">
+          <div className="flex gap-6 mb-4 md:mb-0">
+            <Link to="#" className="text-white hover:text-green-500 transition-colors underline">
+              Terms and condition
+            </Link>
+            <Link to="#" className="text-white hover:text-green-500 transition-colors underline">
+              Privacy policy
+            </Link>
+          </div>
+          <div className="flex items-center gap-2 text-green-500">
+            <span>All Rights Reserved.</span>
+            <div className="flex items-center gap-1">
+              <div className="w-5 h-5 rounded-full border-2 border-green-500 flex items-center justify-center">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              </div>
+              <span>Copyright 2025 Builtglory.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 export default Footer;
