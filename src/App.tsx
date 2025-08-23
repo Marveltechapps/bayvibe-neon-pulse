@@ -20,6 +20,11 @@ import CloudIntegrationHybridSystems from "./pages/CloudIntegrationHybridSystems
 import CybersecurityMeasures from "./pages/CybersecurityMeasures";
 import MultiAvailabilityDisasterRecovery from "./pages/MultiAvailabilityDisasterRecovery";
 import EquipmentMaintenanceProtocols from "./pages/EquipmentMaintenanceProtocols";
+import DataStorageManagement from "./pages/DataStorageManagement";
+import DatabaseOptimizationPerformance from "./pages/DatabaseOptimizationPerformance";
+import EncryptionComplianceSolutions from "./pages/EncryptionComplianceSolutions";
+import APIInteroperabilitySupport from "./pages/APIInteroperabilitySupport";
+import DataConnectivityInterconnectivity from "./pages/DataConnectivityInterconnectivity";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -47,6 +52,11 @@ const App = () => (
           <Route path="/multi-availability-disaster-recovery" element={<MultiAvailabilityDisasterRecovery />} />
           <Route path="/equipment-maintenance-protocols" element={<EquipmentMaintenanceProtocols />} />
           <Route path="/digital-data-infrastructure" element={<DigitalDataInfrastructure />} />
+          <Route path="/data-storage-management" element={<DataStorageManagement />} />
+          <Route path="/database-optimization-performance" element={<DatabaseOptimizationPerformance />} />
+          <Route path="/encryption-compliance-solutions" element={<EncryptionComplianceSolutions />} />
+          <Route path="/api-interoperability-support" element={<APIInteroperabilitySupport />} />
+          <Route path="/data-connectivity-interconnectivity" element={<DataConnectivityInterconnectivity />} />
           <Route path="/sustainability" element={<Sustainability />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

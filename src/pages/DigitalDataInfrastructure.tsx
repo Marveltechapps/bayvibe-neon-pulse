@@ -1,60 +1,63 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 import { 
-  Cloud, 
   Database, 
-  Globe, 
+  BarChart3, 
   Shield, 
-  Cpu, 
-  Zap,
-  Server,
-  HardDrive,
+  Code, 
   Network,
-  Lock,
-  BarChart3,
+  Cloud,
+  Globe,
+  Cpu,
+  HardDrive,
+  Server,
   RefreshCw
 } from 'lucide-react';
 
 const DigitalDataInfrastructure = () => {
-  const coreServices = [
-    { 
-      title: 'Data Storage & Management', 
-      description: 'Comprehensive solutions for enterprise workloads and AI-driven applications.'
-    },
-    { 
-      title: 'Database Optimization & Performance', 
-      description: 'High-performance database solutions with automated scaling and optimization.'
-    },
-    { 
-      title: 'Encryption & Compliance Solutions', 
-      description: 'End-to-end encryption with industry compliance standards.'
-    },
-    { 
-      title: 'API & Interoperability Support', 
-      description: 'Seamless integration with existing systems and third-party applications.'
-    },
-    { 
-      title: 'Data Connectivity & Interconnectivity', 
-      description: 'High-speed, secure connectivity for seamless data flow.'
-    }
-  ];
+  const navigate = useNavigate();
 
-  const advancedServices = [
-    { 
-      title: 'Data Processing & Computation', 
-      description: 'High-performance computing for complex data analytics and AI workloads.'
+  const sections = [
+    {
+      id: 'storage',
+      title: 'Data Storage & Management',
+      description: 'Our data center provides high-performance, scalable storage optimized for enterprise workloads and AI-driven applications.',
+      icon: Database,
+      route: '/data-storage-management',
+      color: 'bg-blue-500'
     },
-    { 
-      title: 'AI & Machine Learning Integration', 
-      description: 'Specialized infrastructure for machine learning and AI model training.'
+    {
+      id: 'optimization',
+      title: 'Database Optimization & Performance',
+      description: 'Our data center ensures high-speed data processing through optimized indexing, query tuning, and efficient storage management.',
+      icon: BarChart3,
+      route: '/database-optimization-performance',
+      color: 'bg-green-500'
     },
-    { 
-      title: 'Scalable & Distributed Computing', 
-      description: 'Elastic computing resources that scale with your business needs.'
+    {
+      id: 'encryption',
+      title: 'Encryption & Compliance Solutions',
+      description: 'Our data center ensures end-to-end encryption for data security and regulatory compliance, protecting sensitive information.',
+      icon: Shield,
+      route: '/encryption-compliance-solutions',
+      color: 'bg-red-500'
     },
-    { 
-      title: 'High-Availability & Disaster Recovery', 
-      description: 'Robust backup and recovery solutions with 99.99% uptime guarantee.'
+    {
+      id: 'api',
+      title: 'API & Interoperability Support',
+      description: 'Our data center enables seamless data exchange through standardized APIs, open protocols, and cross-platform compatibility.',
+      icon: Code,
+      route: '/api-interoperability-support',
+      color: 'bg-purple-500'
+    },
+    {
+      id: 'connectivity',
+      title: 'Data Connectivity & Interconnectivity',
+      description: 'Our data center ensures seamless data exchange through high-speed networking, standardized APIs, and cross-platform compatibility.',
+      icon: Network,
+      route: '/data-connectivity-interconnectivity',
+      color: 'bg-cyan-500'
     }
   ];
 
@@ -113,41 +116,31 @@ const DigitalDataInfrastructure = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Core Data Infrastructure Solutions</h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-              {coreServices.map((service, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium mb-2">
-                    {service.title}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="relative z-10 text-center">
-                  <Database className="w-24 h-24 text-blue-300 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">Data Storage & Management Solutions</h3>
+          {/* Content Sections */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {sections.map((section) => {
+              const IconComponent = section.icon;
+              return (
+                <div 
+                  key={section.id} 
+                  className="bg-gray-900 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700"
+                  onClick={() => navigate(section.route)}
+                >
+                  <div className={`${section.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{section.description}</p>
+                  <div className="mt-6">
+                    <span className="text-green-400 font-medium hover:text-green-300">
+                      Learn More →
+                    </span>
+                  </div>
                 </div>
-                {/* Floating elements */}
-                <div className="absolute top-4 right-4 bg-cyan-400/20 backdrop-blur rounded-lg p-3">
-                  <HardDrive className="w-6 h-6 text-cyan-300" />
-                </div>
-                <div className="absolute bottom-4 left-4 bg-purple-400/20 backdrop-blur rounded-lg p-3">
-                  <Server className="w-6 h-6 text-purple-300" />
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white">Data Storage & Management Solutions</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Our data center provides high-performance, scalable storage optimized for enterprise workloads and AI-driven applications. With distributed architecture, object-based storage, and automated redundancy, we ensure secure data accessibility and rapid processing. Compliance with industry standards like GDPR and ISO 27001 guarantees data integrity, encryption, and long-term scalability.
-              </p>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -157,15 +150,6 @@ const DigitalDataInfrastructure = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-white">Advanced Computing & Resilience</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              {advancedServices.map((service, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium mb-2">
-                    {service.title}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-16 items-center">
