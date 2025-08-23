@@ -38,10 +38,7 @@ const Sustainability = () => {
             
             {/* Floating Achievement Badge */}
             <div className="absolute top-6 right-6 bg-primary/90 text-primary-foreground rounded-full p-4 animate-pulse-glow">
-              <div className="text-center">
-                <div className="text-lg font-bold">100%</div>
-                <div className="text-xs">Green Energy</div>
-              </div>
+              
             </div>
           </div>
 
@@ -91,7 +88,9 @@ const Sustainability = () => {
               </div>
             </div>
 
-            
+            <button className="btn-neon">
+              Learn About Our Green Initiatives
+            </button>
           </div>
         </div>
       </div>
