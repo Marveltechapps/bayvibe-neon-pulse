@@ -30,7 +30,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo */}
           <div className="col-span-1">
-            <div className="text-green-500 text-xl font-bold">Logo</div>
+            <img 
+              src="/lovable-uploads/79b5855a-c8c3-4d37-bf06-efd901bde2b3.png" 
+              alt="BayVibe DC Logo" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Building Infrastructure */}
