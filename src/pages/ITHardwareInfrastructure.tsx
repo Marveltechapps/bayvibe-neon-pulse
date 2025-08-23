@@ -9,7 +9,9 @@ import {
   ChevronRight,
   Monitor,
   Database,
-  Settings
+  Settings,
+  Zap,
+  Globe
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -28,19 +30,28 @@ const ITHardwareInfrastructure = () => {
 
   const features = [
     {
-      icon: Server,
+      icon: Database,
       title: 'Server Rack',
-      description: 'Powers all core data processing and secure storage operations.'
+      description: 'Powers all core data processing and secure storage operations.',
+      color: 'from-cyan-500 to-blue-500',
+      iconBg: 'bg-cyan-500/10',
+      iconColor: 'text-cyan-500'
     },
     {
-      icon: Router,
+      icon: Network,
       title: 'Network Router / Switch',
-      description: 'Manages seamless connectivity and fast data transmission.'
+      description: 'Manages seamless connectivity and fast data transmission.',
+      color: 'from-purple-500 to-indigo-500',
+      iconBg: 'bg-purple-500/10',
+      iconColor: 'text-purple-500'
     },
     {
       icon: Monitor,
       title: 'High-end Computers',
-      description: 'Drives system performance with essential computing components.'
+      description: 'Drives system performance with essential computing components.',
+      color: 'from-orange-500 to-yellow-500',
+      iconBg: 'bg-orange-500/10',
+      iconColor: 'text-orange-500'
     }
   ];
 
@@ -49,8 +60,8 @@ const ITHardwareInfrastructure = () => {
       case 'network':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold gradient-text">Network Architecture & Connectivity</h3>
-            <p className="text-foreground/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Network Architecture & Connectivity</h3>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               Network architecture and connectivity are vital for seamless data center 
               operations. Redundant fiber optic connections ensure high-speed, low-
               latency data transmission. Multi-carrier redundancy and failover 
@@ -58,33 +69,13 @@ const ITHardwareInfrastructure = () => {
               computing integration optimizes performance for AI, IoT, and cloud 
               applications.
             </p>
-            <div className="grid md:grid-cols-2 gap-4 mt-6">
-              <div className="space-y-2">
-                <h4 className="font-semibold text-primary">Key Features:</h4>
-                <ul className="text-sm text-foreground/60 space-y-1">
-                  <li>• Redundant fiber optic connections</li>
-                  <li>• Multi-carrier network support</li>
-                  <li>• Low-latency data transmission</li>
-                  <li>• Advanced failover mechanisms</li>
-                </ul>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-semibold text-primary">Benefits:</h4>
-                <ul className="text-sm text-foreground/60 space-y-1">
-                  <li>• Enhanced system reliability</li>
-                  <li>• Optimized edge computing performance</li>
-                  <li>• Seamless cloud integration</li>
-                  <li>• AI and IoT application support</li>
-                </ul>
-              </div>
-            </div>
           </div>
         );
       case 'server':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold gradient-text">Server & Storage Solutions</h3>
-            <p className="text-foreground/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Server & Storage Solutions</h3>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               High-performance server racks and enterprise-grade storage systems ensure 
               reliable data processing and secure information management. Our scalable 
               infrastructure supports growing business needs with redundant storage 
@@ -95,8 +86,8 @@ const ITHardwareInfrastructure = () => {
       case 'cloud':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold gradient-text">Cloud Integration & Hybrid Systems</h3>
-            <p className="text-foreground/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Cloud Integration & Hybrid Systems</h3>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               Seamless integration between on-premises infrastructure and cloud services 
               creates flexible hybrid environments. Our solutions enable smooth data 
               migration, workload distribution, and cost-effective resource allocation 
@@ -107,8 +98,8 @@ const ITHardwareInfrastructure = () => {
       case 'cybersecurity':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold gradient-text">Cybersecurity Measures</h3>
-            <p className="text-foreground/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Cybersecurity Measures</h3>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               Multi-layered security protocols protect against evolving cyber threats. 
               Advanced firewalls, intrusion detection systems, and continuous monitoring 
               ensure data integrity and compliance with industry security standards.
@@ -118,8 +109,8 @@ const ITHardwareInfrastructure = () => {
       case 'availability':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold gradient-text">High-Availability & Disaster Recovery</h3>
-            <p className="text-foreground/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-4">High-Availability & Disaster Recovery</h3>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               Comprehensive disaster recovery solutions ensure business continuity 
               with minimal downtime. Automated backup systems, geographic redundancy, 
               and rapid recovery protocols protect critical business operations.
@@ -129,8 +120,8 @@ const ITHardwareInfrastructure = () => {
       case 'maintenance':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold gradient-text">Equipment & Maintenance Protocols</h3>
-            <p className="text-foreground/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Equipment & Maintenance Protocols</h3>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               Proactive maintenance schedules and real-time monitoring systems ensure 
               optimal equipment performance. Our certified technicians provide 24/7 
               support with predictive analytics to prevent potential system failures.
@@ -147,33 +138,33 @@ const ITHardwareInfrastructure = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img 
-              src="/lovable-uploads/1418bbc6-4101-4366-8c04-b87d8390d0ca.png" 
+              src="/lovable-uploads/5c0a16c7-2518-421f-bf9b-0fd5869b6bee.png" 
               alt="Data center server corridor with blue LED lighting and modern infrastructure"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-90"
             />
-            <div className="absolute inset-0 bg-background/60"></div>
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           {/* Content */}
           <div className="relative z-10 section-container text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
-              IT & Hardware <span className="gradient-text">Infrastructure</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-white">
+              IT & Hardware Infrastructure
             </h1>
 
             {/* Navigation Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-16 max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-6xl mx-auto">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 text-sm md:text-base rounded-lg transition-all duration-300 whitespace-nowrap ${
+                  className={`px-4 py-3 text-sm md:text-base rounded-lg transition-all duration-300 whitespace-nowrap font-medium ${
                     activeTab === tab.id
-                      ? 'bg-primary text-primary-foreground font-medium'
-                      : 'bg-card/30 backdrop-blur-sm text-foreground/70 hover:text-primary hover:bg-card/50'
+                      ? 'bg-emerald-500 text-white shadow-lg'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 hover:text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
                   {tab.label}
@@ -184,66 +175,75 @@ const ITHardwareInfrastructure = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-20 bg-dark-surface">
+        <section className="py-20 bg-gray-900 text-white">
           <div className="section-container">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              {/* Text Content */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* 3D Visualization - Left Side */}
               <div className="animate-fade-in-up">
-                {getTabContent()}
-              </div>
-
-              {/* Network Architecture Visualization */}
-              <div className="animate-fade-in-up [animation-delay:200ms]">
-                <div className="relative overflow-hidden rounded-2xl bg-card/20 backdrop-blur-sm border border-border/30 p-8">
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 p-8">
                   <div className="space-y-6">
-                    <h4 className="text-xl font-bold gradient-text">Network Architecture Visualization</h4>
-                    
-                    {/* Network Diagram Representation */}
-                    <div className="relative h-64 bg-gradient-to-br from-primary/10 to-tech-blue/10 rounded-xl p-6 overflow-hidden">
-                      {/* Server Icons */}
-                      <div className="absolute top-4 left-4 w-8 h-8 bg-primary/20 rounded border border-primary/40 flex items-center justify-center">
-                        <Database className="w-4 h-4 text-primary" />
-                      </div>
-                      <div className="absolute top-4 right-4 w-8 h-8 bg-tech-blue/20 rounded border border-tech-blue/40 flex items-center justify-center">
-                        <Server className="w-4 h-4 text-tech-blue" />
-                      </div>
-                      <div className="absolute bottom-4 left-4 w-8 h-8 bg-green-500/20 rounded border border-green-500/40 flex items-center justify-center">
-                        <Network className="w-4 h-4 text-green-500" />
-                      </div>
-                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-yellow-500/20 rounded border border-yellow-500/40 flex items-center justify-center">
-                        <Shield className="w-4 h-4 text-yellow-500" />
+                    {/* 3D Network Architecture Visualization */}
+                    <div className="relative h-80 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-xl p-6 overflow-hidden">
+                      {/* 3D Grid Effect */}
+                      <div className="absolute inset-0 opacity-30">
+                        <div className="grid grid-cols-8 grid-rows-6 h-full w-full">
+                          {Array.from({ length: 48 }).map((_, i) => (
+                            <div key={i} className="border border-cyan-500/20"></div>
+                          ))}
+                        </div>
                       </div>
                       
-                      {/* Connection Lines */}
+                      {/* 3D Servers */}
+                      <div className="absolute top-8 left-8 w-12 h-16 bg-gradient-to-b from-cyan-400 to-blue-600 rounded transform rotate-12 shadow-lg">
+                        <div className="w-full h-2 bg-cyan-300 rounded-t mb-1"></div>
+                        <div className="w-full h-1 bg-blue-400 mb-1"></div>
+                        <div className="w-full h-1 bg-blue-400 mb-1"></div>
+                      </div>
+                      
+                      <div className="absolute top-12 right-12 w-12 h-16 bg-gradient-to-b from-purple-400 to-indigo-600 rounded transform -rotate-12 shadow-lg">
+                        <div className="w-full h-2 bg-purple-300 rounded-t mb-1"></div>
+                        <div className="w-full h-1 bg-indigo-400 mb-1"></div>
+                        <div className="w-full h-1 bg-indigo-400 mb-1"></div>
+                      </div>
+                      
+                      <div className="absolute bottom-8 left-12 w-12 h-16 bg-gradient-to-b from-emerald-400 to-green-600 rounded transform rotate-6 shadow-lg">
+                        <div className="w-full h-2 bg-emerald-300 rounded-t mb-1"></div>
+                        <div className="w-full h-1 bg-green-400 mb-1"></div>
+                        <div className="w-full h-1 bg-green-400 mb-1"></div>
+                      </div>
+                      
+                      {/* Connection Lines with Animation */}
                       <svg className="absolute inset-0 w-full h-full">
-                        <line x1="20%" y1="20%" x2="80%" y2="20%" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.6" strokeDasharray="5,5">
-                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                        </line>
-                        <line x1="20%" y1="80%" x2="80%" y2="80%" stroke="hsl(var(--tech-blue))" strokeWidth="2" opacity="0.6" strokeDasharray="5,5">
-                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                        </line>
-                        <line x1="20%" y1="20%" x2="20%" y2="80%" stroke="rgb(34, 197, 94)" strokeWidth="2" opacity="0.6" strokeDasharray="5,5">
-                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                        </line>
-                        <line x1="80%" y1="20%" x2="80%" y2="80%" stroke="rgb(234, 179, 8)" strokeWidth="2" opacity="0.6" strokeDasharray="5,5">
-                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                        </line>
+                        <path d="M60,80 Q150,40 280,100" stroke="#06b6d4" strokeWidth="3" fill="none" opacity="0.8" strokeDasharray="8,4">
+                          <animate attributeName="stroke-dashoffset" values="0;12" dur="2s" repeatCount="indefinite" />
+                        </path>
+                        <path d="M80,200 Q200,150 300,180" stroke="#8b5cf6" strokeWidth="3" fill="none" opacity="0.8" strokeDasharray="8,4">
+                          <animate attributeName="stroke-dashoffset" values="0;12" dur="2.5s" repeatCount="indefinite" />
+                        </path>
+                        <path d="M100,120 Q180,220 280,160" stroke="#10b981" strokeWidth="3" fill="none" opacity="0.8" strokeDasharray="8,4">
+                          <animate attributeName="stroke-dashoffset" values="0;12" dur="3s" repeatCount="indefinite" />
+                        </path>
                       </svg>
                       
-                      {/* Center Hub */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-primary to-tech-blue rounded-full flex items-center justify-center border-2 border-white/20">
-                        <Settings className="w-6 h-6 text-white animate-spin" style={{ animationDuration: '4s' }} />
+                      {/* Central Hub */}
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20">
+                        <Globe className="w-8 h-8 text-white animate-pulse" />
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Text Content - Right Side */}
+              <div className="animate-fade-in-up [animation-delay:200ms]">
+                {getTabContent()}
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-black text-white">
           <div className="section-container">
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
@@ -251,16 +251,16 @@ const ITHardwareInfrastructure = () => {
                 return (
                   <div 
                     key={feature.title}
-                    className="group bg-card/30 backdrop-blur-sm border border-border/30 rounded-2xl p-8 text-center hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up"
+                    className="group bg-gray-900 border border-gray-700 rounded-2xl p-8 text-center hover:border-gray-600 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                      <IconComponent className="w-8 h-8 text-primary" />
+                    <div className={`w-20 h-20 ${feature.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
                     </div>
-                    <h4 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    <h4 className="text-xl font-bold mb-4 text-white group-hover:text-gray-200 transition-colors duration-300">
                       {feature.title}
                     </h4>
-                    <p className="text-foreground/60 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -271,22 +271,22 @@ const ITHardwareInfrastructure = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-dark-surface relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
           {/* Background Effects */}
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-tech-blue/10 rounded-full blur-2xl"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl"></div>
           </div>
 
           <div className="section-container relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Get in Touch with <span className="gradient-text">Us</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Get in Touch with Us
             </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Have questions or need expert support? Our team is ready to help you with all 
               your data center needs—reach out today!
             </p>
-            <button className="btn-neon inline-flex items-center gap-2">
+            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
               CONTACT US
               <ChevronRight className="w-5 h-5" />
             </button>
