@@ -88,9 +88,7 @@ const Sustainability = () => {
               </div>
             </div>
 
-            <button className="btn-neon">
-              Learn About Our Green Initiatives
-            </button>
+            
           </div>
         </div>
       </div>

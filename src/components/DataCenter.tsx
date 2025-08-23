@@ -97,16 +97,7 @@ const DataCenter = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <button className="btn-neon">
-              Schedule a Tour
-            </button>
-            <button className="bg-transparent border border-primary/30 text-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:border-primary hover:bg-primary/10">
-              Download Brochure
-            </button>
-          </div>
-        </div>
+        
       </div>
     </section>;
 };
