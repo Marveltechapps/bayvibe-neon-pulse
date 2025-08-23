@@ -138,37 +138,58 @@ const ITHardwareInfrastructure = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src="/lovable-uploads/5c0a16c7-2518-421f-bf9b-0fd5869b6bee.png" 
-              alt="Data center server corridor with blue LED lighting and modern infrastructure"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Content */}
-          <div className="relative z-10 section-container text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-white">
-              IT & Hardware Infrastructure
-            </h1>
-
-            {/* Navigation Tabs */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-6xl mx-auto">
+        <section className="relative min-h-screen bg-gray-100 overflow-hidden">
+          {/* Navigation Tabs */}
+          <div className="absolute top-8 left-8 z-20">
+            <div className="flex flex-wrap gap-2">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-3 text-sm md:text-base rounded-lg transition-all duration-300 whitespace-nowrap font-medium ${
+                  className={`px-4 py-2 text-sm rounded-lg transition-all duration-300 whitespace-nowrap font-medium ${
                     activeTab === tab.id
-                      ? 'bg-emerald-500 text-white shadow-lg'
-                      : 'bg-white/10 backdrop-blur-sm text-white/80 hover:text-white hover:bg-white/20 border border-white/20'
+                      ? 'bg-emerald-500 text-white border-b-2 border-emerald-400'
+                      : 'bg-transparent text-emerald-600 hover:bg-emerald-50'
                   }`}
                 >
                   {tab.label}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Main Content */}
+          <div className="flex h-screen">
+            {/* Left Side - 3D Visualization */}
+            <div className="w-1/2 bg-gray-900 flex items-center justify-center p-8">
+              <div className="relative w-full max-w-lg">
+                <img 
+                  src="/lovable-uploads/89de9c2b-58f5-45ee-99ab-6862fff812b6.png" 
+                  alt="Network Architecture 3D Visualization"
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="w-1/2 bg-white flex items-center justify-center p-12">
+              <div className="max-w-xl">
+                <h1 className="text-4xl md:text-5xl font-bold mb-8 text-emerald-600">
+                  Network Architecture & Connectivity
+                </h1>
+                <div className="space-y-6">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Network architecture and connectivity are vital for seamless data center 
+                    operations. Redundant fiber optic connections ensure high-speed, low-
+                    latency data transmission.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Multi-carrier redundancy and failover mechanisms safeguard against outages, 
+                    enhancing reliability. Edge computing integration optimizes performance for 
+                    AI, IoT, and cloud applications.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
