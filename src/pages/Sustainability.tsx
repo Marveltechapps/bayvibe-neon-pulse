@@ -148,27 +148,14 @@ const Sustainability = () => {
 
           {/* Main Content */}
           <div className="h-screen">
-            {/* Full Width - Sustainability Hero Image */}
-            <div className="w-full bg-gray-900 flex items-center justify-center p-0 h-full">
+            {/* Full Width - Net Zero Hero */}
+            <div className="w-full bg-white flex items-center justify-center p-0 h-full">
               <div className="relative w-full h-full">
                 <img 
-                  src="/lovable-uploads/cf3314ec-12bf-4e0d-94e7-541ac15dab44.png" 
-                  alt="Sustainable data center with forest and digital network visualization"
+                  src="/lovable-uploads/fc2a1e8d-e0de-4d3c-9395-540f13ed3023.png" 
+                  alt="Net Zero Commitment with sustainable forest background and environmental icons"
                   className="w-full h-full object-cover"
                 />
-                {/* Content Overlay */}
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <div className="text-center text-white max-w-4xl px-8">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                      <span className="text-emerald-400">Sustainability</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl leading-relaxed">
-                      Our data center is designed for net-zero emissions, integrating solar power, AI-driven cooling, and water recycling to minimize environmental impact. 
-                      We optimize energy efficiency through renewable sources and advanced thermal management, reducing carbon footprint while ensuring high-
-                      performance operations. Compliance with global sustainability standards ensures eco-friendly infrastructure and long-term resilience.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
