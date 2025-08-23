@@ -1,129 +1,127 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  const footerLinks = {
-    services: ['Cloud Infrastructure', 'Colocation Services', 'Managed Hosting', 'Network Solutions', 'Disaster Recovery'],
-    company: ['About Us', 'Leadership Team', 'Careers', 'News & Events', 'Partner Program'],
-    resources: ['Documentation', 'Support Center', 'Security Compliance', 'SLA Guarantees', 'Resource Library'],
-    legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'GDPR Compliance', 'Data Processing']
-  };
-  return <footer className="bg-darker-surface border-t border-border/30">
-      {/* Main Footer Content */}
-      <div className="section-container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Brand Section */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center space-x-2">
-              
-              
-            </div>
-            
-            <p className="text-foreground/70 leading-relaxed max-w-md">
-              Empowering businesses with secure, sustainable, and scalable data center solutions. Leading the future of digital infrastructure in India.
+  return (
+    <footer className="bg-background">
+      {/* Get in Touch Section */}
+      <div className="bg-card/30 backdrop-blur-sm">
+        <div className="section-container py-20">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              Get in Touch with Us
+            </h2>
+            <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
+              Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
-
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-sm">
-                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:shekar@marvel100logisticspark.com" className="text-foreground/70 hover:text-primary transition-colors">
-                  shekar@marvel100logisticspark.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="tel:+919444126240" className="text-foreground/70 hover:text-primary transition-colors">
-                  +91 9444126240
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-foreground/70">
-                  Siruseri IT Corridor, Chennai, India
-                </span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-card/50 rounded-lg flex items-center justify-center text-foreground/70 hover:text-primary hover:bg-primary/10 transition-all duration-300">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-card/50 rounded-lg flex items-center justify-center text-foreground/70 hover:text-primary hover:bg-primary/10 transition-all duration-300">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-card/50 rounded-lg flex items-center justify-center text-foreground/70 hover:text-primary hover:bg-primary/10 transition-all duration-300">
-                <Github className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Links Sections */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-6">Services</h4>
-            <ul className="space-y-3">
-              {footerLinks.services.map(link => <li key={link}>
-                  <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
-                    {link}
-                  </a>
-                </li>)}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-foreground mb-6">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map(link => <li key={link}>
-                  <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
-                    {link}
-                  </a>
-                </li>)}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-foreground mb-6">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map(link => <li key={link}>
-                  <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
-                    {link}
-                  </a>
-                </li>)}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-foreground mb-6">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map(link => <li key={link}>
-                  <a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300">
-                    {link}
-                  </a>
-                </li>)}
-            </ul>
+            <Link 
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+            >
+              CONTACT US
+              <ChevronRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="border-t border-border/30">
-        <div className="section-container py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-foreground/60">
-              <span>© 2024 BayVibe DC. All rights reserved.</span>
-              <div className="flex items-center space-x-1">
-                <span>Made with</span>
-                <span className="text-primary animate-pulse">💚</span>
-                <span>for a sustainable future</span>
+      {/* Main Footer Content */}
+      <div className="bg-darker-surface">
+        <div className="section-container py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Logo Section */}
+            <div>
+              <div className="text-primary text-2xl font-bold mb-8">
+                Logo
               </div>
             </div>
-            
-            <div className="flex items-center space-x-4 text-sm">
-              <span className="text-foreground/40">Powered by 100% Green Energy</span>
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+
+            {/* Building Infrastructure */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-6 text-lg">Building Infrastructure</h4>
+              <ul className="space-y-4">
+                <li>
+                  <Link to="/it-hardware-infrastructure" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                    IT & Hardware Infrastructure
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/digital-data-infrastructure" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                    Digital Data Infrastructure
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/sustainability" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                    Sustainability
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* About us */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-6 text-lg">About us</h4>
+              <ul className="space-y-4">
+                <li>
+                  <a href="#" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                    Business Revenue Model
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                    Maintenance & Future Innovations
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact us */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-6 text-lg">Contact us</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-foreground/70 flex-shrink-0" />
+                  <a href="mailto:shekar@marvel100logisticspark.com" className="text-foreground/70 hover:text-primary transition-colors">
+                    shekar@marvel100logisticspark.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-foreground/70 flex-shrink-0" />
+                  <a href="tel:+919444126240" className="text-foreground/70 hover:text-primary transition-colors">
+                    +91 9444126240
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-border/30">
+          <div className="section-container py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-6 text-sm">
+                <a href="#" className="text-foreground/70 hover:text-primary transition-colors underline">
+                  Terms and condition
+                </a>
+                <a href="#" className="text-foreground/70 hover:text-primary transition-colors underline">
+                  Privacy policy
+                </a>
+              </div>
+              
+              <div className="flex items-center space-x-4 text-sm text-foreground/60">
+                <span>All Rights Reserved.</span>
+                <div className="flex items-center space-x-2">
+                  <span>©</span>
+                  <span>Copyright 2025 Builtglory.com</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
