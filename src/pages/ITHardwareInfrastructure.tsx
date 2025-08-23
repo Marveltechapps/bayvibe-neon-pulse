@@ -161,12 +161,12 @@ const ITHardwareInfrastructure = () => {
           {/* Main Content */}
           <div className="flex h-screen">
             {/* Left Side - 3D Visualization */}
-            <div className="w-1/2 bg-gray-900 flex items-center justify-center p-8">
-              <div className="relative w-full max-w-lg">
+            <div className="w-1/2 bg-gray-900 flex items-center justify-center p-0">
+              <div className="relative w-full h-full">
                 <img 
                   src="/lovable-uploads/89de9c2b-58f5-45ee-99ab-6862fff812b6.png" 
                   alt="Network Architecture 3D Visualization"
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
