@@ -1,25 +1,32 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigation = [{
     name: 'Data Center',
-    href: '#datacenter'
+    href: '#datacenter',
+    isExternal: true
   }, {
     name: 'Building Infrastructure',
-    href: '/building-infrastructure'
+    href: '/building-infrastructure',
+    isExternal: false
   }, {
     name: 'IT & Hardware Infrastructure',
-    href: '/it-hardware-infrastructure'
+    href: '/it-hardware-infrastructure',
+    isExternal: false
   }, {
     name: 'Digital Data Infrastructure',
-    href: '#digital-infrastructure'
+    href: '#digital-infrastructure',
+    isExternal: true
   }, {
     name: 'Sustainability',
-    href: '#sustainability'
+    href: '/sustainability',
+    isExternal: false
   }, {
     name: 'Contact Us',
-    href: '#contact'
+    href: '#contact',
+    isExternal: true
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="section-container">
@@ -32,13 +39,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map(item => (
-              <a 
-                key={item.name} 
-                href={item.href} 
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-              >
-                {item.name}
-              </a>
+              item.isExternal ? (
+                <a 
+                  key={item.name} 
+                  href={item.href} 
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link 
+                  key={item.name} 
+                  to={item.href} 
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -58,9 +75,27 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50">
             <nav className="flex flex-col space-y-4 p-6">
-              {navigation.map(item => <a key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                  {item.name}
-                </a>)}
+              {navigation.map(item => (
+                item.isExternal ? (
+                  <a 
+                    key={item.name} 
+                    href={item.href} 
+                    onClick={() => setIsMenuOpen(false)} 
+                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link 
+                    key={item.name} 
+                    to={item.href} 
+                    onClick={() => setIsMenuOpen(false)} 
+                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              ))}
               <button className="btn-neon mt-4 self-start">
                 Get Started
               </button>
