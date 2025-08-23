@@ -23,9 +23,11 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Logo Section */}
             <div>
-              <div className="text-primary text-2xl font-bold mb-8">
-                Logo
-              </div>
+              <img 
+                src="/lovable-uploads/01cd8ac4-e86b-4ec0-a6bc-6da0663971e2.png" 
+                alt="BayVibe DC" 
+                className="h-16 w-auto mb-8"
+              />
             </div>
 
             {/* Building Infrastructure */}
