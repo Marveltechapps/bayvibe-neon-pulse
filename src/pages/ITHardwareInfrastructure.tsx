@@ -159,30 +159,65 @@ const ITHardwareInfrastructure = () => {
           </div>
 
           {/* Main Content */}
-          <div className="py-20 bg-white">
-            <div className="section-container">
-              <div className="grid lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => {
-                  const IconComponent = feature.icon;
-                  return (
-                    <div 
-                      key={feature.title}
-                      className="group bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-emerald-500 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-xl"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className={`w-20 h-20 ${feature.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
-                      </div>
-                      <h4 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  );
-                })}
+          <div className="flex h-screen">
+            {/* Left Side - 3D Visualization */}
+            <div className="w-1/2 bg-gray-900 flex items-center justify-center p-0">
+              <div className="relative w-full h-full">
+                <img 
+                  src="/lovable-uploads/cf6299df-9c85-4b37-a947-0225f4339bcf.png" 
+                  alt="Network Architecture 3D Visualization with servers and connectivity"
+                  className="w-full h-full object-cover"
+                />
               </div>
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="w-1/2 bg-white flex items-center justify-center p-12">
+              <div className="max-w-xl">
+                <h1 className="text-4xl md:text-5xl font-bold mb-8 text-emerald-600">
+                  Network Architecture & Connectivity
+                </h1>
+                <div className="space-y-6">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Network architecture and connectivity are vital for seamless data center 
+                    operations. Redundant fiber optic connections ensure high-speed, low-
+                    latency data transmission.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Multi-carrier redundancy and failover mechanisms safeguard against outages, 
+                    enhancing reliability. Edge computing integration optimizes performance for 
+                    AI, IoT, and cloud applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 bg-white">
+          <div className="section-container">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div 
+                    key={feature.title}
+                    className="group bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-emerald-500 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-xl"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className={`w-20 h-20 ${feature.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
+                    </div>
+                    <h4 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -251,34 +286,6 @@ const ITHardwareInfrastructure = () => {
               <div className="animate-fade-in-up [animation-delay:200ms]">
                 {getTabContent()}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-black text-white">
-          <div className="section-container">
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div 
-                    key={feature.title}
-                    className="group bg-gray-900 border border-gray-700 rounded-2xl p-8 text-center hover:border-gray-600 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className={`w-20 h-20 ${feature.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
-                    </div>
-                    <h4 className="text-xl font-bold mb-4 text-white group-hover:text-gray-200 transition-colors duration-300">
-                      {feature.title}
-                    </h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                );
-              })}
             </div>
           </div>
         </section>
