@@ -159,9 +159,9 @@ const ITHardwareInfrastructure = () => {
           </div>
 
           {/* Main Content */}
-          <div className="flex h-screen">
-            {/* Left Side - 3D Visualization */}
-            <div className="w-1/2 bg-gray-900 flex items-center justify-center p-0">
+          <div className="h-screen">
+            {/* Full Width - 3D Visualization */}
+            <div className="w-full bg-gray-900 flex items-center justify-center p-0 h-full">
               <div className="relative w-full h-full">
                 <img 
                   src="/lovable-uploads/cf6299df-9c85-4b37-a947-0225f4339bcf.png" 
@@ -169,10 +169,6 @@ const ITHardwareInfrastructure = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-
-            {/* Right Side - Content */}
-            <div className="w-1/2 bg-white flex items-center justify-center p-12">
             </div>
           </div>
         </section>
