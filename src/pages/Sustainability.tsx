@@ -122,11 +122,11 @@ const Sustainability = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-900">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen bg-gray-100 overflow-hidden">
+        <section className="relative min-h-screen bg-gray-900 overflow-hidden">
           {/* Navigation Tabs */}
           <div className="absolute top-8 left-8 z-20">
             <div className="flex flex-wrap gap-2">
@@ -136,8 +136,8 @@ const Sustainability = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 text-sm rounded-lg transition-all duration-300 whitespace-nowrap font-medium ${
                     activeTab === tab.id
-                      ? 'bg-emerald-500 text-white border-b-2 border-emerald-400'
-                      : 'bg-transparent text-emerald-600 hover:bg-emerald-50'
+                      ? 'bg-green-500 text-white border-b-2 border-green-400'
+                      : 'bg-gray-800/80 text-green-400 hover:bg-gray-700/80'
                   }`}
                 >
                   {tab.label}
@@ -149,7 +149,7 @@ const Sustainability = () => {
           {/* Main Content */}
           <div className="h-screen">
             {/* Full Width - Net Zero Hero */}
-            <div className="w-full bg-white flex items-center justify-center p-0 h-full">
+            <div className="w-full bg-gray-900 flex items-center justify-center p-0 h-full">
               <div className="relative w-full h-full">
                 <img 
                   src="/lovable-uploads/fc2a1e8d-e0de-4d3c-9395-540f13ed3023.png" 
@@ -162,29 +162,183 @@ const Sustainability = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-800">
           <div className="section-container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our <span className="text-green-400">Sustainability</span> Initiatives
+              </h2>
+              <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+                We're committed to creating a sustainable future through innovative technologies, 
+                renewable energy adoption, and responsible environmental practices across all our operations.
+              </p>
+            </div>
+            
             <div className="grid lg:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <div 
                     key={feature.title}
-                    className="group bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-emerald-500 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-xl"
+                    className="group bg-gray-900/50 border border-gray-700 rounded-2xl p-8 text-center hover:border-green-500 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-2xl backdrop-blur-sm"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className={`w-20 h-20 ${feature.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
                     </div>
-                    <h4 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                    <h4 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
                       {feature.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Environmental Impact Section */}
+        <section className="py-20 bg-gray-900">
+          <div className="section-container">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="animate-fade-in-up">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Measurable <span className="text-green-400">Environmental Impact</span>
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                  Our sustainability efforts are driven by measurable results and continuous improvement. 
+                  We track our environmental impact across all key metrics to ensure we're meeting our 
+                  ambitious sustainability goals.
+                </p>
+                
+                {/* Impact Stats */}
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                    <div className="text-3xl font-bold text-green-400 mb-2">85%</div>
+                    <div className="text-gray-300 text-sm">Energy Efficiency Improvement</div>
+                  </div>
+                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                    <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
+                    <div className="text-gray-300 text-sm">Renewable Energy Sources</div>
+                  </div>
+                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                    <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+                    <div className="text-gray-300 text-sm">Water Recycling Rate</div>
+                  </div>
+                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                    <div className="text-3xl font-bold text-green-400 mb-2">2025</div>
+                    <div className="text-gray-300 text-sm">Carbon Neutral Target</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="animate-fade-in-up [animation-delay:200ms]">
+                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-8 border border-green-500/20">
+                  <h3 className="text-xl font-bold text-green-400 mb-6">Sustainability Certifications</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
+                      <Award className="w-8 h-8 text-green-400" />
+                      <div>
+                        <div className="font-semibold text-white">LEED Platinum Certified</div>
+                        <div className="text-gray-400 text-sm">Green building certification</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
+                      <Target className="w-8 h-8 text-green-400" />
+                      <div>
+                        <div className="font-semibold text-white">ISO 14001 Compliance</div>
+                        <div className="text-gray-400 text-sm">Environmental management systems</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
+                      <Leaf className="w-8 h-8 text-green-400" />
+                      <div>
+                        <div className="font-semibold text-white">Energy Star Partnership</div>
+                        <div className="text-gray-400 text-sm">Energy efficiency recognition</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Green Technology Section */}
+        <section className="py-20 bg-gray-800">
+          <div className="section-container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Cutting-Edge <span className="text-green-400">Green Technology</span>
+              </h2>
+              <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+                We leverage the latest in sustainable technology to minimize our environmental footprint 
+                while maximizing operational efficiency and performance.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <Cpu className="w-6 h-6 text-green-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">AI-Powered Cooling</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Machine learning algorithms optimize cooling systems in real-time, reducing energy consumption by up to 40% while maintaining optimal temperatures.
+                </p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <Sun className="w-6 h-6 text-yellow-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Solar Microgrids</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Advanced photovoltaic systems with smart inverters and battery storage ensure consistent renewable energy supply with grid independence.
+                </p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <Wind className="w-6 h-6 text-blue-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Waste Heat Recovery</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Innovative heat exchange systems capture and repurpose waste heat for building heating and hot water, maximizing energy efficiency.
+                </p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <Recycle className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Water Recycling Systems</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Closed-loop water systems with advanced filtration and treatment processes achieve 95% water recycling rates for cooling operations.
+                </p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <Battery className="w-6 h-6 text-green-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Energy Storage Solutions</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  High-capacity lithium-ion battery systems store excess renewable energy and provide backup power during peak demand periods.
+                </p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingDown className="w-6 h-6 text-purple-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Carbon Capture Technology</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Direct air capture systems remove CO2 from the atmosphere, supporting our net-negative carbon footprint goals by 2030.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -322,22 +476,27 @@ const Sustainability = () => {
         <section className="py-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
           {/* Background Effects */}
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-green-500/10 rounded-full blur-2xl"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
           </div>
 
           <div className="section-container relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Get in Touch with Us
+              Join Our <span className="text-green-400">Sustainability Journey</span>
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Have questions or need expert support? Our team is ready to help you with all 
-              your data center needs—reach out today!
+              Partner with us to build a more sustainable future. Our team is ready to help you implement 
+              eco-friendly data center solutions that reduce environmental impact while maximizing performance.
             </p>
-            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
-              CONTACT US
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
+                Learn More About Our Green Initiatives
+                <ChevronRight className="w-5 h-5" />
+              </button>
+              <button className="bg-transparent border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+                Download Sustainability Report
+              </button>
+            </div>
           </div>
         </section>
       </main>
