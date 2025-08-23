@@ -10,7 +10,7 @@ const Header = () => {
     href: '/building-infrastructure'
   }, {
     name: 'IT & Hardware Infrastructure',
-    href: '#it-hardware'
+    href: '/it-hardware-infrastructure'
   }, {
     name: 'Digital Data Infrastructure',
     href: '#digital-infrastructure'
