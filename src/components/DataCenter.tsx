@@ -1,10 +1,10 @@
-import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
+import { Leaf, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
 import dataCenterBuilding from '@/assets/datacenter-building.jpg';
 const DataCenter = () => {
   const features = [{
-    icon: MapPin,
-    title: 'Location Advantage',
-    description: 'Strategic location in IT corridor'
+    icon: Leaf,
+    title: 'Sustainable Land Utilization',
+    description: 'Eco-friendly land development practices'
   }, {
     icon: Building2,
     title: 'Smart Structural Design',
