@@ -1,9 +1,7 @@
 import { Mail, Phone, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="bg-background">
+  return <footer className="bg-background">
       {/* Get in Touch Section */}
       <div className="bg-card/30 backdrop-blur-sm">
         <div className="section-container py-20">
@@ -14,10 +12,7 @@ const Footer = () => {
             <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
-            <Link 
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
-            >
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300">
               CONTACT US
               <ChevronRight className="w-5 h-5" />
             </Link>
@@ -31,9 +26,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Logo Section */}
             <div>
-              <div className="text-primary text-2xl font-bold mb-8">
-                Logo
-              </div>
+              
             </div>
 
             {/* Building Infrastructure */}
@@ -120,8 +113,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
