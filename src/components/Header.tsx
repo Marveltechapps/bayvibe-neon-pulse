@@ -28,10 +28,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map(item => <a key={item.name} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300 relative group">
-                {item.name}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></div>
-              </a>)}
+            {navigation.map(item => {})}
           </nav>
 
           {/* CTA Button */}
