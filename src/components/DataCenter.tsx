@@ -1,10 +1,10 @@
-import { Leaf, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
-import dataCenterBuilding from '/lovable-uploads/053e1f76-f68c-4ef0-8f41-dbd60fff80c4.png';
+import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
+import dataCenterBuilding from '@/assets/datacenter-building.jpg';
 const DataCenter = () => {
   const features = [{
-    icon: Leaf,
-    title: 'Sustainable Land Utilization',
-    description: 'Eco-friendly land development practices'
+    icon: MapPin,
+    title: 'Location Advantage',
+    description: 'Strategic location in IT corridor'
   }, {
     icon: Building2,
     title: 'Smart Structural Design',
@@ -43,7 +43,7 @@ const DataCenter = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Next-Gen <span className="gradient-text">Data Center</span> at 
+            Next-Gen <span className="gradient-text">Data Center</span> @ 
             <br className="hidden sm:block" />
             <span className="gradient-text">Siruseri IT Corridor</span>
           </h2>
@@ -78,21 +78,16 @@ const DataCenter = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
               
               {/* Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300"></div>
+              
             </div>
 
             {/* Floating Stats */}
             <div className="absolute -top-6 -right-6 bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-4 pulse-glow">
-              <div className="text-2xl font-bold gradient-text">Tier III</div>
+              
               <div className="text-sm text-foreground/60">Certified Facility</div>
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-4 pulse-glow" style={{
-            animationDelay: '1s'
-          }}>
-              <div className="text-2xl font-bold gradient-text">50MW</div>
-              <div className="text-sm text-foreground/60">Power Capacity</div>
-            </div>
+            
           </div>
         </div>
 
