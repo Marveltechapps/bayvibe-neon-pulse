@@ -25,6 +25,11 @@ import DatabaseOptimizationPerformance from "./pages/DatabaseOptimizationPerform
 import EncryptionComplianceSolutions from "./pages/EncryptionComplianceSolutions";
 import APIInteroperabilitySupport from "./pages/APIInteroperabilitySupport";
 import DataConnectivityInterconnectivity from "./pages/DataConnectivityInterconnectivity";
+import NetZeroCommitment from "./pages/NetZeroCommitment";
+import CarbonFootprintReduction from "./pages/CarbonFootprintReduction";
+import SolarEnergyUtilization from "./pages/SolarEnergyUtilization";
+import AdvancedCoolingWaterRecycling from "./pages/AdvancedCoolingWaterRecycling";
+import SustainableInfrastructureCompliance from "./pages/SustainableInfrastructureCompliance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +63,11 @@ const App = () => (
           <Route path="/api-interoperability-support" element={<APIInteroperabilitySupport />} />
           <Route path="/data-connectivity-interconnectivity" element={<DataConnectivityInterconnectivity />} />
           <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/net-zero-commitment" element={<NetZeroCommitment />} />
+          <Route path="/carbon-footprint-reduction" element={<CarbonFootprintReduction />} />
+          <Route path="/solar-energy-utilization" element={<SolarEnergyUtilization />} />
+          <Route path="/advanced-cooling-water-recycling" element={<AdvancedCoolingWaterRecycling />} />
+          <Route path="/sustainable-infrastructure-compliance" element={<SustainableInfrastructureCompliance />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

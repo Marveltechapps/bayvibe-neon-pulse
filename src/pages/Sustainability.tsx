@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { 
   Battery, 
   Wind, 
@@ -10,20 +9,58 @@ import {
   Leaf,
   Sun,
   Award,
-  Zap
+  Zap,
+  Droplets,
+  Shield,
+  Thermometer
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
 const Sustainability = () => {
-  const [activeTab, setActiveTab] = useState('net-zero');
-
-  const tabs = [
-    { id: 'net-zero', label: 'Net Zero Commitment' },
-    { id: 'carbon-footprint', label: 'Carbon Footprint Reduction' },
-    { id: 'solar-energy', label: 'Solar Energy Integration' },
-    { id: 'advanced-cooling', label: 'Advanced Cooling & Water Recycling' },
-    { id: 'sustainable-infrastructure', label: 'Sustainable Infrastructure & Compliance' }
+  const sustainabilitySections = [
+    {
+      icon: Target,
+      title: 'Net Zero Commitment',
+      description: 'Our comprehensive roadmap to achieving net-zero emissions through science-based targets and innovative solutions.',
+      path: '/net-zero-commitment',
+      color: 'text-green-500',
+      bgColor: 'bg-green-500/10'
+    },
+    {
+      icon: TrendingDown,
+      title: 'Carbon Footprint Reduction',
+      description: 'Advanced strategies and technologies delivering measurable carbon emission reductions across all operations.',
+      path: '/carbon-footprint-reduction',
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-500/10'
+    },
+    {
+      icon: Sun,
+      title: 'Solar Energy Utilization',
+      description: 'Comprehensive solar infrastructure powering our facilities with clean, renewable energy systems.',
+      path: '/solar-energy-utilization',
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-500/10'
+    },
+    {
+      icon: Droplets,
+      title: 'Advanced Cooling & Water Recycling',
+      description: 'Revolutionary cooling technology with closed-loop water recycling systems for maximum efficiency.',
+      path: '/advanced-cooling-water-recycling',
+      color: 'text-cyan-500',
+      bgColor: 'bg-cyan-500/10'
+    },
+    {
+      icon: Shield,
+      title: 'Sustainable Infrastructure & Compliance',
+      description: 'LEED-certified sustainable building practices meeting the highest environmental standards.',
+      path: '/sustainable-infrastructure-compliance',
+      color: 'text-purple-500',
+      bgColor: 'bg-purple-500/10'
+    }
   ];
 
   const features = [
@@ -53,110 +90,70 @@ const Sustainability = () => {
     }
   ];
 
-  const getTabContent = () => {
-    switch (activeTab) {
-      case 'net-zero':
-        return (
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Net Zero Commitment</h3>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              Our data center is designed to achieve net-zero emissions through 
-              renewable energy integration and AI-driven efficiency optimizations. By 
-              implementing power usage effectiveness (PUE) targets and advanced 
-              thermal management, we significantly reduce carbon footprint. 
-              Sustainability-focused initiatives ensure long-term environmental 
-              responsibility.
-            </p>
-          </div>
-        );
-      case 'carbon-footprint':
-        return (
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Carbon Footprint Reduction</h3>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              Through innovative energy management systems and renewable energy sources, 
-              we continuously reduce our carbon footprint. Our comprehensive monitoring 
-              systems track emissions in real-time, enabling proactive adjustments to 
-              maintain environmental goals.
-            </p>
-          </div>
-        );
-      case 'solar-energy':
-        return (
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Solar Energy Integration</h3>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              Our solar-powered infrastructure harnesses clean energy to power 
-              critical operations. Advanced photovoltaic systems and energy storage 
-              solutions ensure consistent, sustainable power delivery while reducing 
-              dependency on traditional energy sources.
-            </p>
-          </div>
-        );
-      case 'advanced-cooling':
-        return (
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Advanced Cooling & Water Recycling</h3>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              Smart cooling systems optimize thermal management while minimizing 
-              environmental impact. Water recycling technologies and efficient heat 
-              dissipation methods reduce resource consumption and operational costs.
-            </p>
-          </div>
-        );
-      case 'sustainable-infrastructure':
-        return (
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Sustainable Infrastructure & Compliance</h3>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              Our infrastructure meets global sustainability standards with certified 
-              green building materials and energy-efficient designs. Compliance with 
-              environmental regulations ensures responsible operations and long-term 
-              sustainability commitments.
-            </p>
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen bg-gray-900 overflow-hidden">
-          {/* Navigation Tabs */}
-          <div className="absolute top-8 left-8 z-20">
-            <div className="flex flex-wrap gap-2">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 text-sm rounded-lg transition-all duration-300 whitespace-nowrap font-medium ${
-                    activeTab === tab.id
-                      ? 'bg-green-500 text-white border-b-2 border-green-400'
-                      : 'bg-gray-800/80 text-green-400 hover:bg-gray-700/80'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <div className="section-container relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <span className="gradient-text">Sustainability</span> Leadership
+              </h1>
+              <p className="text-xl text-foreground/70 leading-relaxed mb-8">
+                Pioneering the future of sustainable data centers through innovative technology, 
+                renewable energy, and environmental stewardship that sets new industry standards.
+              </p>
             </div>
           </div>
+        </section>
 
-          {/* Main Content */}
-          <div className="h-screen">
-            {/* Full Width - Net Zero Hero */}
-            <div className="w-full bg-gray-900 flex items-center justify-center p-0 h-full">
-              <div className="relative w-full h-full">
-                <img 
-                  src="/lovable-uploads/fc2a1e8d-e0de-4d3c-9395-540f13ed3023.png" 
-                  alt="Net Zero Commitment with sustainable forest background and environmental icons"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        {/* Sustainability Sections */}
+        <section className="py-16">
+          <div className="section-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Our <span className="gradient-text">Sustainability</span> Initiatives
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+                Comprehensive environmental programs delivering measurable impact across all aspects of our operations
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sustainabilitySections.map((section, index) => {
+                const IconComponent = section.icon;
+                return (
+                  <Link 
+                    key={section.title}
+                    to={section.path}
+                    className="group"
+                  >
+                    <Card className="h-full hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 border-border/50 hover:border-primary/50">
+                      <CardHeader>
+                        <div className="flex items-start gap-4">
+                          <div className={`flex-shrink-0 w-12 h-12 ${section.bgColor} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                            <IconComponent className={`w-6 h-6 ${section.color}`} />
+                          </div>
+                          <div className="flex-grow">
+                            <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">
+                              {section.title}
+                            </CardTitle>
+                          </div>
+                          <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-base leading-relaxed">
+                          {section.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -466,7 +463,14 @@ const Sustainability = () => {
 
               {/* Text Content - Right Side */}
               <div className="animate-fade-in-up [animation-delay:200ms]">
-                {getTabContent()}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-green-400 mb-4">Comprehensive Sustainability Solutions</h3>
+                  <p className="text-white/80 leading-relaxed text-lg">
+                    Our integrated approach to sustainability combines renewable energy, advanced cooling systems, 
+                    and intelligent resource management to create the most environmentally responsible data center 
+                    infrastructure available today.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
