@@ -13,114 +13,12 @@ const Footer = () => {
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
             
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
-            >
-              Contact Us
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Link>
           </div>
         </div>
       </div>
 
       {/* Main Footer Content */}
-      <div className="bg-darker-surface">
-        <div className="section-container py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Logo Section */}
-            <div>
-              <img 
-                src="/lovable-uploads/01cd8ac4-e86b-4ec0-a6bc-6da0663971e2.png" 
-                alt="BayVibe DC" 
-                className="h-16 w-auto mb-8"
-              />
-            </div>
-
-            {/* Building Infrastructure */}
-            <div>
-              
-              <ul className="space-y-4">
-                <li>
-                  <Link to="/it-hardware-infrastructure" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                    IT & Hardware Infrastructure
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/digital-data-infrastructure" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                    Digital Data Infrastructure
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/sustainability" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                    Sustainability
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* About us */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-6 text-lg">About us</h4>
-              <ul className="space-y-4">
-                <li>
-                  <a href="#" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                    Business Revenue Model
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                    Maintenance & Future Innovations
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact us */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-6 text-lg">Contact us</h4>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-foreground/70 flex-shrink-0" />
-                  <a href="mailto:shekar@marvel100logisticspark.com" className="text-foreground/70 hover:text-primary transition-colors">
-                    shekar@marvel100logisticspark.com
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-foreground/70 flex-shrink-0" />
-                  <a href="tel:+919444126240" className="text-foreground/70 hover:text-primary transition-colors">
-                    +91 9444126240
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="border-t border-border/30">
-          <div className="section-container py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm">
-                <a href="#" className="text-foreground/70 hover:text-primary transition-colors underline">
-                  Terms and condition
-                </a>
-                <a href="#" className="text-foreground/70 hover:text-primary transition-colors underline">
-                  Privacy policy
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-4 text-sm text-foreground/60">
-                <span>All Rights Reserved.</span>
-                <div className="flex items-center space-x-2">
-                  <span>©</span>
-                  <span>Copyright 2025 Builtglory.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </footer>;
 };
 export default Footer;
