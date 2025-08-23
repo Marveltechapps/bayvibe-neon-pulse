@@ -23,10 +23,6 @@ const Header = () => {
     name: 'Sustainability',
     href: '/sustainability',
     isExternal: false
-  }, {
-    name: 'Contact Us',
-    href: '/contact',
-    isExternal: false
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="section-container">
@@ -47,7 +43,12 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            
+            <Link 
+              to="/contact" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-lg font-medium transition-colors duration-300"
+            >
+              Contact Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,9 +65,12 @@ const Header = () => {
                   </a> : <Link key={item.name} to={item.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                     {item.name}
                   </Link>)}
-              <button className="btn-neon mt-4 self-start">
-                Get Started
-              </button>
+              <Link 
+                to="/contact" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-lg font-medium transition-colors duration-300 mt-4 self-start inline-block text-center"
+              >
+                Contact Us
+              </Link>
             </nav>
           </div>}
       </div>
