@@ -144,9 +144,8 @@ const ITHardwareInfrastructure = () => {
             <img 
               src="/lovable-uploads/5c0a16c7-2518-421f-bf9b-0fd5869b6bee.png" 
               alt="Data center server corridor with blue LED lighting and modern infrastructure"
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           {/* Content */}
