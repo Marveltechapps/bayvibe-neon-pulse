@@ -29,24 +29,22 @@ const Hero = () => {
             <button className="btn-neon pulse-glow">
               Contact Us
             </button>
-            <button className="bg-transparent border border-primary/30 text-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:border-primary hover:bg-primary/10 backdrop-blur-sm">
-              Learn More
-            </button>
+            
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in-up [animation-delay:600ms]">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">99.99%</div>
-              <div className="text-foreground/60 mt-2">Uptime Guarantee</div>
+              
+              
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">24/7</div>
-              <div className="text-foreground/60 mt-2">Expert Support</div>
+              
+              
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">100%</div>
-              <div className="text-foreground/60 mt-2">Green Energy</div>
+              
+              
             </div>
           </div>
         </div>

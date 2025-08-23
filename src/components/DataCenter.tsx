@@ -1,31 +1,44 @@
-import { 
-  MapPin, 
-  Building2, 
-  Wifi, 
-  Zap, 
-  Shield, 
-  Thermometer, 
-  Network, 
-  Server, 
-  Settings 
-} from 'lucide-react';
+import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
 import dataCenterBuilding from '@/assets/datacenter-building.jpg';
-
 const DataCenter = () => {
-  const features = [
-    { icon: MapPin, title: 'Location Advantage', description: 'Strategic location in IT corridor' },
-    { icon: Building2, title: 'Smart Structural Design', description: 'Earthquake-resistant architecture' },
-    { icon: Wifi, title: 'IT Infrastructure', description: 'High-speed fiber connectivity' },
-    { icon: Zap, title: 'Power & Cooling', description: '99.9% power availability' },
-    { icon: Shield, title: 'Security', description: 'Multi-layer security systems' },
-    { icon: Thermometer, title: 'Climate Control', description: 'Precision environmental control' },
-    { icon: Network, title: 'Network Redundancy', description: 'Multiple tier-1 carriers' },
-    { icon: Server, title: 'Server Management', description: 'Remote hands support 24/7' },
-    { icon: Settings, title: 'Monitoring', description: 'Real-time infrastructure monitoring' }
-  ];
-
-  return (
-    <section id="datacenter" className="py-20 bg-dark-surface">
+  const features = [{
+    icon: MapPin,
+    title: 'Location Advantage',
+    description: 'Strategic location in IT corridor'
+  }, {
+    icon: Building2,
+    title: 'Smart Structural Design',
+    description: 'Earthquake-resistant architecture'
+  }, {
+    icon: Wifi,
+    title: 'IT Infrastructure',
+    description: 'High-speed fiber connectivity'
+  }, {
+    icon: Zap,
+    title: 'Power & Cooling',
+    description: '99.9% power availability'
+  }, {
+    icon: Shield,
+    title: 'Security',
+    description: 'Multi-layer security systems'
+  }, {
+    icon: Thermometer,
+    title: 'Climate Control',
+    description: 'Precision environmental control'
+  }, {
+    icon: Network,
+    title: 'Network Redundancy',
+    description: 'Multiple tier-1 carriers'
+  }, {
+    icon: Server,
+    title: 'Server Management',
+    description: 'Remote hands support 24/7'
+  }, {
+    icon: Settings,
+    title: 'Monitoring',
+    description: 'Real-time infrastructure monitoring'
+  }];
+  return <section id="datacenter" className="py-20 bg-dark-surface">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -43,13 +56,10 @@ const DataCenter = () => {
           {/* Features Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div 
-                  key={feature.title}
-                  className="group p-6 bg-background/30 backdrop-blur-sm rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
+            const IconComponent = feature.icon;
+            return <div key={feature.title} className="group p-6 bg-background/30 backdrop-blur-sm rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{
+              animationDelay: `${index * 50}ms`
+            }}>
                   <IconComponent className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform duration-300" />
                   <h4 className="font-semibold text-sm mb-2 text-foreground group-hover:text-primary transition-colors duration-300">
                     {feature.title}
@@ -57,19 +67,14 @@ const DataCenter = () => {
                   <p className="text-xs text-foreground/60 leading-relaxed">
                     {feature.description}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
 
           {/* 3D Building Image */}
           <div className="relative animate-fade-in-up [animation-delay:400ms]">
             <div className="relative overflow-hidden rounded-2xl">
-              <img 
-                src={dataCenterBuilding} 
-                alt="Futuristic BayVibe DC data center building"
-                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-              />
+              <img src={dataCenterBuilding} alt="Futuristic BayVibe DC data center building" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
               
               {/* Glow Effect */}
@@ -82,7 +87,9 @@ const DataCenter = () => {
               <div className="text-sm text-foreground/60">Certified Facility</div>
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-4 pulse-glow" style={{ animationDelay: '1s' }}>
+            <div className="absolute -bottom-6 -left-6 bg-card/90 backdrop-blur-sm border border-border/50 rounded-xl p-4 pulse-glow" style={{
+            animationDelay: '1s'
+          }}>
               <div className="text-2xl font-bold gradient-text">50MW</div>
               <div className="text-sm text-foreground/60">Power Capacity</div>
             </div>
@@ -92,17 +99,11 @@ const DataCenter = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <button className="btn-neon">
-              Schedule a Tour
-            </button>
-            <button className="bg-transparent border border-primary/30 text-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:border-primary hover:bg-primary/10">
-              Download Brochure
-            </button>
+            
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default DataCenter;

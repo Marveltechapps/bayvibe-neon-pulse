@@ -26,11 +26,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Logo Section */}
             <div>
-              <img 
-                src="/lovable-uploads/03a8242b-4bb2-4d89-84da-757f9d433aa0.png" 
-                alt="BayVibe DC Logo" 
-                className="h-16 w-auto"
-              />
+              
             </div>
 
             {/* Building Infrastructure */}
@@ -107,7 +103,7 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-4 text-sm text-foreground/60">
-                <span>All Rights Reserved.</span>
+                <span>Copyright 2025 bayvibedc.com</span>
                 <div className="flex items-center space-x-2">
                   <span>©</span>
                   <span>Copyright 2025 Builtglory.com</span>
