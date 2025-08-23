@@ -1,12 +1,12 @@
 import { Mail, Phone, MapPin, MessageSquare, ArrowRight } from 'lucide-react';
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-background to-darker-surface relative overflow-hidden">
+  return <section id="contact" className="py-20 bg-gradient-to-b from-background to-darker-surface relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '2s'
+      }}></div>
       </div>
 
       <div className="section-container relative z-10">
@@ -31,21 +31,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground/80 mb-2">
                       First Name
                     </label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground"
-                      placeholder="John"
-                    />
+                    <input type="text" className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground" placeholder="John" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground/80 mb-2">
                       Last Name
                     </label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground"
-                      placeholder="Doe"
-                    />
+                    <input type="text" className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground" placeholder="Doe" />
                   </div>
                 </div>
                 
@@ -53,33 +45,21 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground/80 mb-2">
                     Email Address
                   </label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground"
-                    placeholder="john@example.com"
-                  />
+                  <input type="email" className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground" placeholder="john@example.com" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground/80 mb-2">
                     Phone Number
                   </label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground"
-                    placeholder="+91 9876543210"
-                  />
+                  <input type="tel" className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground" placeholder="+91 9876543210" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground/80 mb-2">
                     Message
                   </label>
-                  <textarea 
-                    rows={4}
-                    className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground resize-none"
-                    placeholder="Tell us about your requirements..."
-                  ></textarea>
+                  <textarea rows={4} className="w-full px-4 py-3 bg-input border border-border/50 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 text-foreground resize-none" placeholder="Tell us about your requirements..."></textarea>
                 </div>
 
                 <button type="submit" className="btn-neon w-full group">
@@ -113,9 +93,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
                   <p className="text-foreground/70 text-sm mb-2">Get in touch via email</p>
-                  <a href="mailto:info@bayvibedc.com" className="text-primary hover:text-primary/80 transition-colors">
-                    info@bayvibedc.com
-                  </a>
+                  <a href="mailto:info@bayvibedc.com" className="text-primary hover:text-primary/80 transition-colors">shekar@marvel100logisticspark.com</a>
                 </div>
               </div>
 
@@ -126,9 +104,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
                   <p className="text-foreground/70 text-sm mb-2">Speak with our experts</p>
-                  <a href="tel:+919876543210" className="text-primary hover:text-primary/80 transition-colors">
-                    +91 98765 43210
-                  </a>
+                  <a href="tel:+919876543210" className="text-primary hover:text-primary/80 transition-colors">+91 9444126240</a>
                 </div>
               </div>
 
@@ -167,8 +143,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
