@@ -173,23 +173,6 @@ const ITHardwareInfrastructure = () => {
 
             {/* Right Side - Content */}
             <div className="w-1/2 bg-white flex items-center justify-center p-12">
-              <div className="max-w-xl">
-                <h1 className="text-4xl md:text-5xl font-bold mb-8 text-emerald-600">
-                  Network Architecture & Connectivity
-                </h1>
-                <div className="space-y-6">
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    Network architecture and connectivity are vital for seamless data center 
-                    operations. Redundant fiber optic connections ensure high-speed, low-
-                    latency data transmission.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    Multi-carrier redundancy and failover mechanisms safeguard against outages, 
-                    enhancing reliability. Edge computing integration optimizes performance for 
-                    AI, IoT, and cloud applications.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
