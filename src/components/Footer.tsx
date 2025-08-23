@@ -12,10 +12,7 @@ const Footer = () => {
             <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300">
-              CONTACT US
-              <ChevronRight className="w-5 h-5" />
-            </Link>
+            
           </div>
         </div>
       </div>
@@ -26,7 +23,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Logo Section */}
             <div>
-              
+              <div className="text-primary text-2xl font-bold mb-8">
+                Logo
+              </div>
             </div>
 
             {/* Building Infrastructure */}
@@ -103,7 +102,7 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-4 text-sm text-foreground/60">
-                <span>Copyright 2025 bayvibedc.com</span>
+                <span>All Rights Reserved.</span>
                 <div className="flex items-center space-x-2">
                   <span>©</span>
                   <span>Copyright 2025 Builtglory.com</span>
