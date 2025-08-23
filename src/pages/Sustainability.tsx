@@ -58,7 +58,7 @@ const Sustainability = () => {
       case 'net-zero':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Net Zero Commitment</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Net Zero Commitment</h3>
             <p className="text-foreground/80 leading-relaxed text-lg">
               Our data center is designed to achieve net-zero emissions through 
               renewable energy integration and AI-driven efficiency optimizations. By 
@@ -72,7 +72,7 @@ const Sustainability = () => {
       case 'carbon-footprint':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Carbon Footprint Reduction</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Carbon Footprint Reduction</h3>
             <p className="text-foreground/80 leading-relaxed text-lg">
               Through innovative energy management systems and renewable energy sources, 
               we continuously reduce our carbon footprint. Our comprehensive monitoring 
@@ -84,7 +84,7 @@ const Sustainability = () => {
       case 'solar-energy':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Solar Energy Integration</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Solar Energy Integration</h3>
             <p className="text-foreground/80 leading-relaxed text-lg">
               Our solar-powered infrastructure harnesses clean energy to power 
               critical operations. Advanced photovoltaic systems and energy storage 
@@ -96,7 +96,7 @@ const Sustainability = () => {
       case 'advanced-cooling':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Advanced Cooling & Water Recycling</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Advanced Cooling & Water Recycling</h3>
             <p className="text-foreground/80 leading-relaxed text-lg">
               Smart cooling systems optimize thermal management while minimizing 
               environmental impact. Water recycling technologies and efficient heat 
@@ -107,7 +107,7 @@ const Sustainability = () => {
       case 'sustainable-infrastructure':
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-4">Sustainable Infrastructure & Compliance</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Sustainable Infrastructure & Compliance</h3>
             <p className="text-foreground/80 leading-relaxed text-lg">
               Our infrastructure meets global sustainability standards with certified 
               green building materials and energy-efficient designs. Compliance with 
@@ -241,7 +241,7 @@ const Sustainability = () => {
               {/* Content - Right Side */}
               <div className="animate-fade-in-up [animation-delay:200ms]">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-emerald-400 mb-4">Net Zero Commitment</h3>
+                  <h3 className="text-2xl font-bold text-green-400 mb-4">Net Zero Commitment</h3>
                   <p className="text-white/80 leading-relaxed text-lg">
                     Our data center is designed to achieve net-zero emissions through 
                     renewable energy integration and AI-driven efficiency optimizations. By 
