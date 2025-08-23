@@ -1,5 +1,6 @@
 import { Mail, Phone, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 const Footer = () => {
   return <footer className="bg-background">
       {/* Get in Touch Section */}
@@ -13,6 +14,11 @@ const Footer = () => {
               Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
             </p>
             
+            <Link to="/contact">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
