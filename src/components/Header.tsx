@@ -38,32 +38,16 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map(item => (
-              item.isExternal ? (
-                <a 
-                  key={item.name} 
-                  href={item.href} 
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                >
+            {navigation.map(item => item.isExternal ? <a key={item.name} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                   {item.name}
-                </a>
-              ) : (
-                <Link 
-                  key={item.name} 
-                  to={item.href} 
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                >
+                </a> : <Link key={item.name} to={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                   {item.name}
-                </Link>
-              )
-            ))}
+                </Link>)}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="btn-neon">
-              Get Started
-            </button>
+            
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,27 +59,11 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50">
             <nav className="flex flex-col space-y-4 p-6">
-              {navigation.map(item => (
-                item.isExternal ? (
-                  <a 
-                    key={item.name} 
-                    href={item.href} 
-                    onClick={() => setIsMenuOpen(false)} 
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                  >
+              {navigation.map(item => item.isExternal ? <a key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                     {item.name}
-                  </a>
-                ) : (
-                  <Link 
-                    key={item.name} 
-                    to={item.href} 
-                    onClick={() => setIsMenuOpen(false)} 
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                  >
+                  </a> : <Link key={item.name} to={item.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                     {item.name}
-                  </Link>
-                )
-              ))}
+                  </Link>)}
               <button className="btn-neon mt-4 self-start">
                 Get Started
               </button>

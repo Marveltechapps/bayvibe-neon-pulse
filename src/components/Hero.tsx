@@ -1,15 +1,9 @@
 import heroServers from '@/assets/hero-servers.jpg';
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroServers} 
-          alt="Futuristic data center servers"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroServers} alt="Futuristic data center servers" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-background/70"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/80"></div>
       </div>
@@ -18,7 +12,7 @@ const Hero = () => {
       <div className="relative z-10 section-container text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Main Heading */}
-          <h1 className="hero-text animate-fade-in-up">
+          <h1 className="hero-text animate-fade-in-up mx-[6px] my-[21px]">
             Empowering Your{' '}
             <span className="gradient-text">Digital Future</span>{' '}
             with Secure, Sustainable{' '}
@@ -64,8 +58,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
