@@ -7,7 +7,7 @@ const Header = () => {
     href: '#datacenter'
   }, {
     name: 'Building Infrastructure',
-    href: '#building-infrastructure'
+    href: '/building-infrastructure'
   }, {
     name: 'IT & Hardware Infrastructure',
     href: '#it-hardware'
