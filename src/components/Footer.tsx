@@ -1,6 +1,7 @@
 import { Mail, Phone, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import bayVibeLogo from '@/assets/bayvibe-dc-logo.png';
 const Footer = () => {
   return <footer className="bg-background">
       {/* Get in Touch Section */}
@@ -29,9 +30,11 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Logo Section */}
             <div>
-              <div className="text-primary text-2xl font-bold mb-8">
-                Logo
-              </div>
+              <img 
+                src={bayVibeLogo} 
+                alt="BayVibe DC Logo" 
+                className="h-12 mb-8 object-contain"
+              />
             </div>
 
             {/* Building Infrastructure */}
