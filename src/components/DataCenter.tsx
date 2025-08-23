@@ -1,4 +1,4 @@
-import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
+import { MapPin, Building2, Wifi, Zap, Shield, Leaf, CheckCircle, Layers, Settings } from 'lucide-react';
 
 const DataCenter = () => {
   const features = [{
@@ -6,13 +6,25 @@ const DataCenter = () => {
     title: 'Location Advantage',
     description: 'Strategic location in IT corridor'
   }, {
+    icon: Leaf,
+    title: 'Sustainable Land Utilizations',
+    description: 'Eco-friendly land use and green practices'
+  }, {
     icon: Building2,
     title: 'Smart Structural Design',
-    description: 'Earthquake-resistant architecture'
+    description: 'Intelligent earthquake-resistant architecture'
+  }, {
+    icon: CheckCircle,
+    title: 'Standards Driven Construction',
+    description: 'Compliance with international standards'
   }, {
     icon: Wifi,
     title: 'IT Infrastructure',
     description: 'High-speed fiber connectivity'
+  }, {
+    icon: Layers,
+    title: 'Technology Stack',
+    description: 'Modern technology infrastructure'
   }, {
     icon: Zap,
     title: 'Power & Cooling',
@@ -22,20 +34,8 @@ const DataCenter = () => {
     title: 'Security',
     description: 'Multi-layer security systems'
   }, {
-    icon: Thermometer,
-    title: 'Climate Control',
-    description: 'Precision environmental control'
-  }, {
-    icon: Network,
-    title: 'Network Redundancy',
-    description: 'Multiple tier-1 carriers'
-  }, {
-    icon: Server,
-    title: 'Server Management',
-    description: 'Remote hands support 24/7'
-  }, {
     icon: Settings,
-    title: 'Monitoring',
+    title: 'Operations & Maintenance',
     description: 'Real-time infrastructure monitoring'
   }];
   return <section id="datacenter" className="py-20 bg-dark-surface">
