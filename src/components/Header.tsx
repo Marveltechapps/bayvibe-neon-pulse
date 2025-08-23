@@ -3,19 +3,22 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigation = [{
-    name: 'Home',
-    href: '#home'
-  }, {
-    name: 'Services',
-    href: '#services'
-  }, {
     name: 'Data Center',
     href: '#datacenter'
+  }, {
+    name: 'Building Infrastructure',
+    href: '#building-infrastructure'
+  }, {
+    name: 'IT & Hardware Infrastructure',
+    href: '#it-hardware'
+  }, {
+    name: 'Digital Data Infrastructure',
+    href: '#digital-infrastructure'
   }, {
     name: 'Sustainability',
     href: '#sustainability'
   }, {
-    name: 'Contact',
+    name: 'Contact Us',
     href: '#contact'
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -28,7 +31,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map(item => {})}
+            {navigation.map(item => (
+              <a 
+                key={item.name} 
+                href={item.href} 
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
           </nav>
 
           {/* CTA Button */}
