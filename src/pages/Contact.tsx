@@ -1,0 +1,278 @@
+import { useState } from 'react';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    company: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log('Form submitted:', formData);
+    alert('Message sent successfully!');
+    // Reset form
+    setFormData({
+      name: '',
+      phone: '',
+      company: '',
+      email: '',
+      message: ''
+    });
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <div className="section-container relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <span className="gradient-text">Contact</span> Us
+              </h1>
+              <p className="text-xl text-foreground/70 leading-relaxed mb-8">
+                Get in touch with our team of experts to discuss your data center needs 
+                and discover how we can support your business growth.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16">
+          <div className="section-container">
+            <div className="grid lg:grid-cols-2 gap-16">
+              {/* Contact Form */}
+              <div>
+                <Card className="border-border/50">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Send us a Message</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div>
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone number"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div>
+                          <input
+                            type="text"
+                            name="company"
+                            placeholder="Company name"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email id"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <textarea
+                          name="message"
+                          placeholder="Your Message"
+                          rows={6}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
+                        />
+                      </div>
+
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
+                      >
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Map and Contact Info */}
+              <div className="space-y-8">
+                {/* Contact Information */}
+                <Card className="border-border/50">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Get in Touch</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Our Location</h4>
+                        <p className="text-foreground/70 leading-relaxed">
+                          123 Data Center Drive<br />
+                          Tech District, Silicon Valley<br />
+                          California, USA 94088
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Phone Number</h4>
+                        <p className="text-foreground/70 leading-relaxed">
+                          +1 (555) 123-4567<br />
+                          Available 24/7 for support
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Email Address</h4>
+                        <p className="text-foreground/70 leading-relaxed">
+                          info@datacenter.com<br />
+                          support@datacenter.com
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Map Placeholder */}
+                <Card className="border-border/50">
+                  <CardContent className="p-0">
+                    <div className="h-80 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <MapPin className="w-16 h-16 text-primary/50 mx-auto mb-4" />
+                        <p className="text-foreground/60">Interactive Map</p>
+                        <p className="text-sm text-foreground/40">Data Center Location</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Contact Options */}
+        <section className="py-16 bg-card/30">
+          <div className="section-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Multiple Ways to <span className="gradient-text">Connect</span>
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+                Choose the communication method that works best for you
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Phone className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">Call Us</h3>
+                  <p className="text-foreground/70 mb-4">
+                    Speak directly with our technical experts for immediate assistance.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    +1 (555) 123-4567
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Mail className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">Email Us</h3>
+                  <p className="text-foreground/70 mb-4">
+                    Send detailed inquiries and receive comprehensive responses.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    info@datacenter.com
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <MapPin className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
+                  <p className="text-foreground/70 mb-4">
+                    Schedule a tour of our state-of-the-art facilities.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    Schedule Tour
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Contact;

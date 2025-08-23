@@ -30,6 +30,7 @@ import CarbonFootprintReduction from "./pages/CarbonFootprintReduction";
 import SolarEnergyUtilization from "./pages/SolarEnergyUtilization";
 import AdvancedCoolingWaterRecycling from "./pages/AdvancedCoolingWaterRecycling";
 import SustainableInfrastructureCompliance from "./pages/SustainableInfrastructureCompliance";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/solar-energy-utilization" element={<SolarEnergyUtilization />} />
           <Route path="/advanced-cooling-water-recycling" element={<AdvancedCoolingWaterRecycling />} />
           <Route path="/sustainable-infrastructure-compliance" element={<SustainableInfrastructureCompliance />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
