@@ -13,6 +13,12 @@ const CybersecurityMeasures = () => {
           <div className="relative rounded-2xl overflow-hidden mb-12">
             <div className="h-96 bg-gradient-to-r from-blue-900 via-cyan-900 to-blue-800 relative">
               <div className="absolute inset-0 bg-black/30"></div>
+              
+              {/* Transparent Overlay Image */}
+              <div className="absolute inset-0 z-5">
+                <img src="/lovable-uploads/c51057de-c6b3-47bb-846d-8415dea91426.png" alt="Cybersecurity professional working with digital security interface showing shield protection and biometric authentication" className="w-full h-full object-cover opacity-40" />
+              </div>
+              
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center z-10">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
