@@ -26,8 +26,13 @@ const Sustainability = () => {
     title: 'Emission Reduction',
     description: 'Continuous innovation through green tech and efficient operations to achieve net-zero emissions.'
   }];
-  return <section id="sustainability" className="py-20 bg-gradient-to-b from-darker-surface to-background">
-      <div className="section-container">
+  return <section id="sustainability" className="py-20 bg-gradient-to-b from-darker-surface to-background relative overflow-hidden">
+      <img 
+        src="/lovable-uploads/6c36c2b1-445f-4b42-86d3-b6f621e3f0fc.png" 
+        alt="Digital forest representing sustainable technology" 
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+      />
+      <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Sustainability Image */}
           <div className="relative animate-fade-in-up">
