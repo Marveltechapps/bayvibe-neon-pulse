@@ -171,7 +171,7 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Phone Number</h4>
                         <p className="text-foreground/70 leading-relaxed">
-                          +1 (555) 123-4567<br />
+                          9444126240<br />
                           Available 24/7 for support
                         </p>
                       </div>
@@ -232,7 +232,7 @@ const Contact = () => {
                     Speak directly with our technical experts for immediate assistance.
                   </p>
                   <Button variant="outline" className="w-full">
-                    +1 (555) 123-4567
+                    9444126240
                   </Button>
                 </CardContent>
               </Card>
