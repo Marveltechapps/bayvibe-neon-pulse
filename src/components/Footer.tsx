@@ -1,28 +1,10 @@
 import { Mail, Phone, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900">
+  return <footer className="bg-gray-900">
       {/* Get in Touch Section */}
       <div className="bg-gray-800/50">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Get in Touch with Us
-            </h2>
-            <p className="text-lg text-gray-300 mb-10 leading-relaxed">
-              Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-            >
-              CONTACT US
-              <ChevronRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
+        
       </div>
 
       {/* Main Footer Content */}
@@ -30,11 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo */}
           <div className="col-span-1">
-            <img 
-              src="/lovable-uploads/79b5855a-c8c3-4d37-bf06-efd901bde2b3.png" 
-              alt="BayVibe DC Logo" 
-              className="h-12 w-auto"
-            />
+            <img src="/lovable-uploads/79b5855a-c8c3-4d37-bf06-efd901bde2b3.png" alt="BayVibe DC Logo" className="h-12 w-auto" />
           </div>
 
           {/* Building Infrastructure */}
@@ -64,7 +42,7 @@ const Footer = () => {
             <h3 className="text-gray-400 text-sm font-medium mb-6">About us</h3>
             <ul className="space-y-4">
               <li>
-                <Link to="/business-revenue-model" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="#" className="text-gray-400 hover:text-white transition-colors">
                   Business Revenue Model
                 </Link>
               </li>
@@ -117,7 +95,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
 export default Footer;
