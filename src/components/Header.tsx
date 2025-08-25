@@ -28,9 +28,9 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img src="/lovable-uploads/38108738-303a-43ab-8f29-eb8c9be04fd1.png" alt="BayVibe DC" className="h-8 md:h-10" />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
