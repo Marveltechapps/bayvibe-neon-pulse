@@ -1,72 +1,53 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Network, 
-  Server, 
-  Shield, 
-  Cloud, 
-  RefreshCw, 
-  Wrench
-} from 'lucide-react';
-
+import { Network, Server, Shield, Cloud, RefreshCw, Wrench } from 'lucide-react';
 const ITHardwareInfrastructure = () => {
   const navigate = useNavigate();
-
-  const sections = [
-    {
-      id: 'network',
-      title: 'Network Architecture & Connectivity',
-      description: 'Network architecture and connectivity are vital for seamless data center operations. Redundant fiber-optic connections ensure high-speed, low-latency data transmission.',
-      icon: Network,
-      route: '/network-architecture-connectivity',
-      color: 'bg-blue-500'
-    },
-    {
-      id: 'server',
-      title: 'Server & Storage Solutions',
-      description: 'Server and storage solutions in a data center ensure high-performance computing. High-quality servers support virtualization and their workloads.',
-      icon: Server,
-      route: '/server-storage-solutions',
-      color: 'bg-green-500'
-    },
-    {
-      id: 'cloud',
-      title: 'Cloud Integration & Hybrid Systems',
-      description: 'Cloud integration and hybrid systems deliver data center flexibility and scalability. Seamless integration of private and public cloud environments.',
-      icon: Cloud,
-      route: '/cloud-integration-hybrid-systems',
-      color: 'bg-purple-500'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Measures',
-      description: 'Cybersecurity measures in a data center ensure protection against threats and data breaches. Multi-layered security architecture and firewall protection.',
-      icon: Shield,
-      route: '/cybersecurity-measures',
-      color: 'bg-red-500'
-    },
-    {
-      id: 'disaster',
-      title: 'Multi-Availability & Disaster Recovery',
-      description: 'High-availability and disaster recovery ensure continuous data center operations and minimal downtime. Scalable backup systems and failover mechanisms.',
-      icon: RefreshCw,
-      route: '/multi-availability-disaster-recovery',
-      color: 'bg-cyan-500'
-    },
-    {
-      id: 'equipment',
-      title: 'Equipment & Maintenance Protocols',
-      description: 'Equipment and maintenance protocols ensure the reliability and longevity of data center hardware. Regular preventive maintenance and performance monitoring.',
-      icon: Wrench,
-      route: '/equipment-maintenance-protocols',
-      color: 'bg-orange-500'
-    }
-  ];
-
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
+  const sections = [{
+    id: 'network',
+    title: 'Network Architecture & Connectivity',
+    description: 'Network architecture and connectivity are vital for seamless data center operations. Redundant fiber-optic connections ensure high-speed, low-latency data transmission.',
+    icon: Network,
+    route: '/network-architecture-connectivity',
+    color: 'bg-blue-500'
+  }, {
+    id: 'server',
+    title: 'Server & Storage Solutions',
+    description: 'Server and storage solutions in a data center ensure high-performance computing. High-quality servers support virtualization and their workloads.',
+    icon: Server,
+    route: '/server-storage-solutions',
+    color: 'bg-green-500'
+  }, {
+    id: 'cloud',
+    title: 'Cloud Integration & Hybrid Systems',
+    description: 'Cloud integration and hybrid systems deliver data center flexibility and scalability. Seamless integration of private and public cloud environments.',
+    icon: Cloud,
+    route: '/cloud-integration-hybrid-systems',
+    color: 'bg-purple-500'
+  }, {
+    id: 'cybersecurity',
+    title: 'Cybersecurity Measures',
+    description: 'Cybersecurity measures in a data center ensure protection against threats and data breaches. Multi-layered security architecture and firewall protection.',
+    icon: Shield,
+    route: '/cybersecurity-measures',
+    color: 'bg-red-500'
+  }, {
+    id: 'disaster',
+    title: 'Multi-Availability & Disaster Recovery',
+    description: 'High-availability and disaster recovery ensure continuous data center operations and minimal downtime. Scalable backup systems and failover mechanisms.',
+    icon: RefreshCw,
+    route: '/multi-availability-disaster-recovery',
+    color: 'bg-cyan-500'
+  }, {
+    id: 'equipment',
+    title: 'Equipment & Maintenance Protocols',
+    description: 'Equipment and maintenance protocols ensure the reliability and longevity of data center hardware. Regular preventive maintenance and performance monitoring.',
+    icon: Wrench,
+    route: '/equipment-maintenance-protocols',
+    color: 'bg-orange-500'
+  }];
+  return <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       
       {/* Hero Section */}
@@ -75,12 +56,6 @@ const ITHardwareInfrastructure = () => {
           <div className="relative rounded-2xl overflow-hidden mb-12">
             <div className="h-96 bg-gradient-to-r from-blue-900 via-cyan-900 to-blue-800 relative">
               <div className="absolute inset-0 bg-black/30"></div>
-              
-              {/* Transparent Overlay Image */}
-              <div className="absolute inset-0 z-5">
-                <img src="/lovable-uploads/c6060126-4abb-4652-8aa7-3fb376c6c567.png" alt="Data center server corridor with blue LED lighting and modern server racks" className="w-full h-full object-cover opacity-40" />
-              </div>
-              
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center z-10">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -99,14 +74,9 @@ const ITHardwareInfrastructure = () => {
 
           {/* Content Sections */}
           <div className="grid md:grid-cols-2 gap-8">
-            {sections.map((section) => {
-              const IconComponent = section.icon;
-              return (
-                <div 
-                  key={section.id} 
-                  className="bg-gray-800 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700"
-                  onClick={() => navigate(section.route)}
-                >
+            {sections.map(section => {
+            const IconComponent = section.icon;
+            return <div key={section.id} className="bg-gray-800 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700" onClick={() => navigate(section.route)}>
                   <div className={`${section.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -117,9 +87,8 @@ const ITHardwareInfrastructure = () => {
                       Learn More →
                     </span>
                   </div>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -131,15 +100,11 @@ const ITHardwareInfrastructure = () => {
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-300">
-            CONTACT US →
-          </button>
+          
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ITHardwareInfrastructure;
