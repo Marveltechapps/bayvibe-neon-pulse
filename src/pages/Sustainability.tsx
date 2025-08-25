@@ -300,15 +300,7 @@ const Sustainability = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
-          {/* Background Effects */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
-          </div>
-
-          
-        </section>
+        
       </main>
       <Footer />
     </div>;
