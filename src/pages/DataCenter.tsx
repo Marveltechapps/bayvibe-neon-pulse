@@ -76,11 +76,11 @@ const DataCenter = () => {
         <section className="relative py-20 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
           <div className="absolute inset-0">
             <img 
-              src="/lovable-uploads/ad92ddc8-a4e0-4a30-9c49-eb7249e8b3e2.png" 
-              alt="Data Center Facility" 
-              className="w-full h-full object-cover opacity-60"
+              src="/lovable-uploads/d6ec8bdf-4e8f-431e-bac4-9fb9c6c761a6.png" 
+              alt="Data Center Building at Night" 
+              className="w-full h-full object-cover opacity-70"
             />
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto">
