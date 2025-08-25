@@ -18,6 +18,11 @@ const PowerRedundancy = () => {
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/40002f09-af34-4493-b9de-029751d4171e.png" alt="Data center server racks with power infrastructure and green LED lighting" className="w-full h-full object-cover opacity-40" />
+          </div>
+
           <div className="relative z-10 section-container text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
               Power Redundancy & <span className="text-green-400">Backup</span>
