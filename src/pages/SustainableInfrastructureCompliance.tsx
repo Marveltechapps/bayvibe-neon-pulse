@@ -120,6 +120,11 @@ const SustainableInfrastructureCompliance = () => {
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-green-500/10 to-blue-500/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <img 
+            src="/lovable-uploads/72ef39fd-7a44-43b7-8cb4-f3fab9b6aa49.png" 
+            alt="Sustainable Infrastructure Building Blocks" 
+            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+          />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
