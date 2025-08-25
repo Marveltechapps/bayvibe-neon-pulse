@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import { Network, Server, Shield, Cloud, RefreshCw, Wrench } from 'lucide-react';
+import { Button } from '../components/ui/button';
 const ITHardwareInfrastructure = () => {
   const navigate = useNavigate();
   const sections = [{
@@ -105,7 +106,13 @@ const ITHardwareInfrastructure = () => {
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
           </p>
-          
+          <Button 
+            onClick={() => navigate('/contact')}
+            size="lg"
+            className="px-8 py-3"
+          >
+            Contact Us
+          </Button>
         </div>
       </section>
 
