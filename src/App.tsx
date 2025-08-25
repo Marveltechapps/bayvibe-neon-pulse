@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import DataCenter from "./pages/DataCenter";
 import BuildingInfrastructure from "./pages/BuildingInfrastructure";
 import ITHardwareInfrastructure from "./pages/ITHardwareInfrastructure";
 import DigitalDataInfrastructure from "./pages/DigitalDataInfrastructure";
@@ -44,6 +45,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/data-center" element={<DataCenter />} />
           <Route path="/building-infrastructure" element={<BuildingInfrastructure />} />
           <Route path="/location-accessibility" element={<LocationAccessibility />} />
           <Route path="/structural-design" element={<StructuralDesign />} />

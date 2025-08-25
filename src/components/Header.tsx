@@ -5,7 +5,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigation = [{
     name: 'Data Center',
-    href: '/',
+    href: '/data-center',
     isExternal: false
   }, {
     name: 'Building Infrastructure',
