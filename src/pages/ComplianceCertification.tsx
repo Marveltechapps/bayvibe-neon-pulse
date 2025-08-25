@@ -18,6 +18,11 @@ const ComplianceCertification = () => {
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/8aece7d1-1f82-4292-b6f3-0fdca443e2e7.png" alt="Professional presenting holographic data compliance visualization with blue geometric structures" className="w-full h-full object-cover opacity-40" />
+          </div>
+
           <div className="relative z-10 section-container text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
               Compliance & <span className="text-green-400">Certification Standards</span>
