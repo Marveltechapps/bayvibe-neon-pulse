@@ -13,6 +13,11 @@ const DataConnectivityInterconnectivity = () => {
           <div className="relative rounded-2xl overflow-hidden mb-12">
             <div className="h-96 bg-gradient-to-r from-blue-900 via-cyan-900 to-blue-800 relative">
               <div className="absolute inset-0 bg-black/30"></div>
+              <img 
+                src="/lovable-uploads/a5e51d7d-8ca8-4ba8-bd3a-c100c56d0def.png" 
+                alt="Global Data Connectivity Network" 
+                className="absolute inset-0 w-full h-full object-cover opacity-30"
+              />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center z-10">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
