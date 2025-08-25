@@ -1,89 +1,62 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Database, 
-  BarChart3, 
-  Shield, 
-  Code, 
-  Network,
-  Cloud,
-  Globe,
-  Cpu,
-  HardDrive,
-  Server,
-  RefreshCw
-} from 'lucide-react';
-
+import { Database, BarChart3, Shield, Code, Network, Cloud, Globe, Cpu, HardDrive, Server, RefreshCw } from 'lucide-react';
 const DigitalDataInfrastructure = () => {
   const navigate = useNavigate();
-
-  const sections = [
-    {
-      id: 'storage',
-      title: 'Data Storage & Management',
-      description: 'Our data center provides high-performance, scalable storage optimized for enterprise workloads and AI-driven applications.',
-      icon: Database,
-      route: '/data-storage-management',
-      color: 'bg-blue-500'
-    },
-    {
-      id: 'optimization',
-      title: 'Database Optimization & Performance',
-      description: 'Our data center ensures high-speed data processing through optimized indexing, query tuning, and efficient storage management.',
-      icon: BarChart3,
-      route: '/database-optimization-performance',
-      color: 'bg-green-500'
-    },
-    {
-      id: 'encryption',
-      title: 'Encryption & Compliance Solutions',
-      description: 'Our data center ensures end-to-end encryption for data security and regulatory compliance, protecting sensitive information.',
-      icon: Shield,
-      route: '/encryption-compliance-solutions',
-      color: 'bg-red-500'
-    },
-    {
-      id: 'api',
-      title: 'API & Interoperability Support',
-      description: 'Our data center enables seamless data exchange through standardized APIs, open protocols, and cross-platform compatibility.',
-      icon: Code,
-      route: '/api-interoperability-support',
-      color: 'bg-purple-500'
-    },
-    {
-      id: 'connectivity',
-      title: 'Data Connectivity & Interconnectivity',
-      description: 'Our data center ensures seamless data exchange through high-speed networking, standardized APIs, and cross-platform compatibility.',
-      icon: Network,
-      route: '/data-connectivity-interconnectivity',
-      color: 'bg-cyan-500'
-    }
-  ];
-
-  const infrastructureCards = [
-    {
-      icon: Cloud,
-      title: 'Cloud Computing',
-      description: 'Scalable and on-demand digital services for storage, apps and operations.',
-      color: 'bg-blue-500'
-    },
-    {
-      icon: Database,
-      title: 'Database Systems',
-      description: 'Secure, structured storage for managing and retrieving vital data efficiently.',
-      color: 'bg-purple-500'
-    },
-    {
-      icon: Globe,
-      title: 'Network & Data Transfer',
-      description: 'High-speed, secure connectivity for seamless information and data flow.',
-      color: 'bg-orange-500'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
+  const sections = [{
+    id: 'storage',
+    title: 'Data Storage & Management',
+    description: 'Our data center provides high-performance, scalable storage optimized for enterprise workloads and AI-driven applications.',
+    icon: Database,
+    route: '/data-storage-management',
+    color: 'bg-blue-500'
+  }, {
+    id: 'optimization',
+    title: 'Database Optimization & Performance',
+    description: 'Our data center ensures high-speed data processing through optimized indexing, query tuning, and efficient storage management.',
+    icon: BarChart3,
+    route: '/database-optimization-performance',
+    color: 'bg-green-500'
+  }, {
+    id: 'encryption',
+    title: 'Encryption & Compliance Solutions',
+    description: 'Our data center ensures end-to-end encryption for data security and regulatory compliance, protecting sensitive information.',
+    icon: Shield,
+    route: '/encryption-compliance-solutions',
+    color: 'bg-red-500'
+  }, {
+    id: 'api',
+    title: 'API & Interoperability Support',
+    description: 'Our data center enables seamless data exchange through standardized APIs, open protocols, and cross-platform compatibility.',
+    icon: Code,
+    route: '/api-interoperability-support',
+    color: 'bg-purple-500'
+  }, {
+    id: 'connectivity',
+    title: 'Data Connectivity & Interconnectivity',
+    description: 'Our data center ensures seamless data exchange through high-speed networking, standardized APIs, and cross-platform compatibility.',
+    icon: Network,
+    route: '/data-connectivity-interconnectivity',
+    color: 'bg-cyan-500'
+  }];
+  const infrastructureCards = [{
+    icon: Cloud,
+    title: 'Cloud Computing',
+    description: 'Scalable and on-demand digital services for storage, apps and operations.',
+    color: 'bg-blue-500'
+  }, {
+    icon: Database,
+    title: 'Database Systems',
+    description: 'Secure, structured storage for managing and retrieving vital data efficiently.',
+    color: 'bg-purple-500'
+  }, {
+    icon: Globe,
+    title: 'Network & Data Transfer',
+    description: 'High-speed, secure connectivity for seamless information and data flow.',
+    color: 'bg-orange-500'
+  }];
+  return <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       
       {/* Hero Section */}
@@ -120,14 +93,9 @@ const DigitalDataInfrastructure = () => {
 
           {/* Content Sections */}
           <div className="grid md:grid-cols-2 gap-8">
-            {sections.map((section) => {
-              const IconComponent = section.icon;
-              return (
-                <div 
-                  key={section.id} 
-                  className="bg-gray-900 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700"
-                  onClick={() => navigate(section.route)}
-                >
+            {sections.map(section => {
+            const IconComponent = section.icon;
+            return <div key={section.id} className="bg-gray-900 rounded-xl p-8 cursor-pointer hover:transform hover:scale-105 transition-all duration-300 hover:bg-gray-700" onClick={() => navigate(section.route)}>
                   <div className={`${section.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -138,9 +106,8 @@ const DigitalDataInfrastructure = () => {
                       Learn More →
                     </span>
                   </div>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -185,37 +152,23 @@ const DigitalDataInfrastructure = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {infrastructureCards.map((card, index) => {
-              const IconComponent = card.icon;
-              return (
-                <div key={index} className="bg-gray-900 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+            const IconComponent = card.icon;
+            return <div key={index} className="bg-gray-900 rounded-xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
                   <div className={`${card.color} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{card.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{card.description}</p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Get in Touch with Us</h2>
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
-          </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-300">
-            CONTACT US →
-          </button>
-        </div>
-      </section>
+      
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default DigitalDataInfrastructure;
