@@ -75,6 +75,12 @@ const ITHardwareInfrastructure = () => {
           <div className="relative rounded-2xl overflow-hidden mb-12">
             <div className="h-96 bg-gradient-to-r from-blue-900 via-cyan-900 to-blue-800 relative">
               <div className="absolute inset-0 bg-black/30"></div>
+              
+              {/* Transparent Overlay Image */}
+              <div className="absolute inset-0 z-5">
+                <img src="/lovable-uploads/c6060126-4abb-4652-8aa7-3fb376c6c567.png" alt="Data center server corridor with blue LED lighting and modern server racks" className="w-full h-full object-cover opacity-40" />
+              </div>
+              
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center z-10">
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
