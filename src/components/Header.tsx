@@ -20,10 +20,6 @@ const Header = () => {
     href: '/digital-data-infrastructure',
     isExternal: false
   }, {
-    name: 'Business Revenue Model',
-    href: '/business-revenue-model',
-    isExternal: false
-  }, {
     name: 'Sustainability',
     href: '/sustainability',
     isExternal: false
