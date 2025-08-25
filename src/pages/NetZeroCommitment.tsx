@@ -56,6 +56,11 @@ const NetZeroCommitment = () => {
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <img 
+            src="/lovable-uploads/44c183d2-beca-48cf-abd8-95e23fd702bf.png" 
+            alt="Net Zero Sustainability Icons" 
+            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+          />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
