@@ -84,6 +84,11 @@ const AdvancedCoolingWaterRecycling = () => {
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <img 
+            src="/lovable-uploads/dd199b64-98a2-43f5-81f8-e977087035f7.png" 
+            alt="Advanced Water Treatment and Cooling Facility" 
+            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+          />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
