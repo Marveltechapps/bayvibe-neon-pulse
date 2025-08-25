@@ -53,12 +53,14 @@ const Sustainability = () => {
 
           {/* Content */}
           <div className="space-y-8 animate-fade-in-up [animation-delay:200ms]">
-            <div>
+            <div className="mb-8">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                <span className="gradient-text">Sustainability</span> at the 
-                Core of Innovation
+                <span className="gradient-text">Sustainability</span> Leadership
               </h2>
-              
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-4xl">
+                Pioneering the future of sustainable data centers through innovative technology, 
+                renewable energy, and environmental stewardship that sets new industry standards.
+              </p>
             </div>
 
             {/* Initiatives Grid */}
