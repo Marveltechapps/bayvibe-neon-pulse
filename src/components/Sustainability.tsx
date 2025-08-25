@@ -30,7 +30,7 @@ const Sustainability = () => {
       <img 
         src="/lovable-uploads/6c36c2b1-445f-4b42-86d3-b6f621e3f0fc.png" 
         alt="Digital forest representing sustainable technology" 
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
       />
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
