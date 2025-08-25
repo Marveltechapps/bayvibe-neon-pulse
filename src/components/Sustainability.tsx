@@ -34,6 +34,11 @@ const Sustainability = () => {
           backgroundSize: 'cover'
         }}
       ></div>
+      <img 
+        src="/lovable-uploads/99575429-f019-461a-8825-da80aace2f98.png" 
+        alt="Sustainability Leadership Background" 
+        className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+      />
       <div 
         className="absolute inset-0 w-full h-full opacity-20 z-0"
         style={{
