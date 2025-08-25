@@ -18,6 +18,11 @@ const CoolingClimateControl = () => {
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/6089eeb6-cde4-42fa-88c1-ee8506345f04.png" alt="Data center cooling fans with blue lighting and precision temperature control systems" className="w-full h-full object-cover opacity-40" />
+          </div>
+
           <div className="relative z-10 section-container text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
               Cooling & <span className="text-green-400">Climate Control</span>
