@@ -27,15 +27,21 @@ const Sustainability = () => {
     description: 'Continuous innovation through green tech and efficient operations to achieve net-zero emissions.'
   }];
   return <section id="sustainability" className="py-20 bg-gradient-to-b from-darker-surface to-background relative overflow-hidden">
-      <img 
-        src="/lovable-uploads/6c36c2b1-445f-4b42-86d3-b6f621e3f0fc.png" 
-        alt="Digital forest representing sustainable technology" 
-        className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
-        onError={(e) => {
-          console.log('Image failed to load:', e);
-          e.currentTarget.style.display = 'none';
+      <div 
+        className="absolute inset-0 w-full h-full opacity-30 z-0"
+        style={{
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #064e3b 50%, #166534 75%, #365314 100%)',
+          backgroundSize: 'cover'
         }}
-      />
+      ></div>
+      <div 
+        className="absolute inset-0 w-full h-full opacity-20 z-0"
+        style={{
+          backgroundImage: `radial-gradient(circle at 20% 80%, #10b981 0%, transparent 50%),
+                           radial-gradient(circle at 80% 20%, #059669 0%, transparent 50%),
+                           radial-gradient(circle at 40% 40%, #047857 0%, transparent 50%)`,
+        }}
+      ></div>
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Sustainability Image */}
