@@ -1,63 +1,56 @@
-import { 
-  MapPin, 
-  Building2, 
-  Zap, 
-  Wind, 
-  Leaf, 
-  Shield,
-  ChevronRight,
-  Cpu,
-  Target,
-  Layers
-} from 'lucide-react';
+import { MapPin, Building2, Zap, Wind, Leaf, Shield, ChevronRight, Cpu, Target, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import buildingHero from '/lovable-uploads/8ce75b7a-cec9-451f-8bac-48e378819448.png';
 import techInfra from '@/assets/tech-infrastructure.jpg';
-
 const BuildingInfrastructure = () => {
-  const sections = [
-    { id: 'location', label: 'Location & Accessibility', path: '/location-accessibility' },
-    { id: 'structural', label: 'Structural Design & Layout', path: '/structural-design' },
-    { id: 'power', label: 'Power Redundancy & Backup', path: '/power-redundancy' },
-    { id: 'cooling', label: 'Cooling & Climate Control', path: '/cooling-climate-control' },
-    { id: 'sustainability', label: 'Sustainability & Energy Efficiency', path: '/sustainability-energy-efficiency' },
-    { id: 'compliance', label: 'Compliance & Certification Standards', path: '/compliance-certification' }
-  ];
-
-  const features = [
-    {
-      icon: Target,
-      title: 'Precision Planning',
-      description: 'Detailed architectural and engineering plans optimize space, cooling, and power distribution to maintain operational excellence.'
-    },
-    {
-      icon: Building2,
-      title: 'Skyscraper',
-      description: 'Our state-of-the-art buildings are engineered to withstand environmental challenges, ensuring maximum uptime and protection.'
-    },
-    {
-      icon: Layers,
-      title: 'Scalable Construction',
-      description: 'Built with future growth in mind, our infrastructure supports seamless expansion without disruption.'
-    }
-  ];
-
-
-  return (
-    <div className="min-h-screen bg-gray-900">
+  const sections = [{
+    id: 'location',
+    label: 'Location & Accessibility',
+    path: '/location-accessibility'
+  }, {
+    id: 'structural',
+    label: 'Structural Design & Layout',
+    path: '/structural-design'
+  }, {
+    id: 'power',
+    label: 'Power Redundancy & Backup',
+    path: '/power-redundancy'
+  }, {
+    id: 'cooling',
+    label: 'Cooling & Climate Control',
+    path: '/cooling-climate-control'
+  }, {
+    id: 'sustainability',
+    label: 'Sustainability & Energy Efficiency',
+    path: '/sustainability-energy-efficiency'
+  }, {
+    id: 'compliance',
+    label: 'Compliance & Certification Standards',
+    path: '/compliance-certification'
+  }];
+  const features = [{
+    icon: Target,
+    title: 'Precision Planning',
+    description: 'Detailed architectural and engineering plans optimize space, cooling, and power distribution to maintain operational excellence.'
+  }, {
+    icon: Building2,
+    title: 'Skyscraper',
+    description: 'Our state-of-the-art buildings are engineered to withstand environmental challenges, ensuring maximum uptime and protection.'
+  }, {
+    icon: Layers,
+    title: 'Scalable Construction',
+    description: 'Built with future growth in mind, our infrastructure supports seamless expansion without disruption.'
+  }];
+  return <div className="min-h-screen bg-gray-900">
       <Header />
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
-            <img 
-              src={buildingHero} 
-              alt="Modern data center infrastructure with glass walls and blue lighting"
-              className="w-full h-full object-cover opacity-30"
-            />
+            <img src={buildingHero} alt="Modern data center infrastructure with glass walls and blue lighting" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
@@ -76,12 +69,7 @@ const BuildingInfrastructure = () => {
         <section className="py-20 bg-gray-800">
           <div className="section-container">
             <div className="grid gap-12">
-              {sections.map((section, index) => (
-                <Link
-                  key={section.id}
-                  to={section.path}
-                  className="group block bg-gray-700/30 rounded-2xl p-8 hover:bg-gray-700/50 transition-all duration-300 hover:-translate-y-2"
-                >
+              {sections.map((section, index) => <Link key={section.id} to={section.path} className="group block bg-gray-700/30 rounded-2xl p-8 hover:bg-gray-700/50 transition-all duration-300 hover:-translate-y-2">
                   <div className="flex items-center justify-between">
                     <h2 className="text-2xl md:text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
                       {section.label}
@@ -91,8 +79,7 @@ const BuildingInfrastructure = () => {
                   <p className="text-gray-300 mt-4 text-lg">
                     Click to explore detailed information about {section.label.toLowerCase()}
                   </p>
-                </Link>
-              ))}
+                </Link>)}
             </div>
           </div>
         </section>
@@ -102,12 +89,8 @@ const BuildingInfrastructure = () => {
           <div className="section-container">
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div 
-                    key={feature.title}
-                    className="group bg-gray-700/30 rounded-2xl p-8 text-center hover:bg-gray-700/50 transition-all duration-300 hover:-translate-y-2"
-                  >
+              const IconComponent = feature.icon;
+              return <div key={feature.title} className="group bg-gray-700/30 rounded-2xl p-8 text-center hover:bg-gray-700/50 transition-all duration-300 hover:-translate-y-2">
                     <div className="w-16 h-16 bg-green-400/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-400/20 transition-colors duration-300">
                       <IconComponent className="w-8 h-8 text-green-400" />
                     </div>
@@ -117,33 +100,16 @@ const BuildingInfrastructure = () => {
                     <p className="text-gray-300 leading-relaxed">
                       {feature.description}
                     </p>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-800 relative overflow-hidden">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Get in Touch with <span className="text-green-400">Us</span>
-            </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Have questions or need expert support? Our team is ready to help you with all 
-              your data center needs—reach out today!
-            </p>
-            <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 inline-flex items-center gap-2">
-              CONTACT US
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-        </section>
+        
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BuildingInfrastructure;
