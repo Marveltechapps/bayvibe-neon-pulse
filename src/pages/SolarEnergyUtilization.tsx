@@ -84,6 +84,11 @@ const SolarEnergyUtilization = () => {
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-yellow-500/10 to-orange-500/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <img 
+            src="/lovable-uploads/be354ace-ee11-46ba-9931-73db611eb706.png" 
+            alt="Solar Energy Data Center Infrastructure" 
+            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+          />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
