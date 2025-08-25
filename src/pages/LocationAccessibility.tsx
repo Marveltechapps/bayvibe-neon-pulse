@@ -18,6 +18,11 @@ const LocationAccessibility = () => {
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/b58dfe06-bed5-48d7-93c9-eb05ba00d038.png" alt="Network connectivity visualization with purple buildings and connection paths" className="w-full h-full object-cover opacity-40" />
+          </div>
+
           <div className="relative z-10 section-container text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
               Location & <span className="text-green-400">Accessibility</span>
