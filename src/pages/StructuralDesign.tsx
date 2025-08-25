@@ -18,6 +18,11 @@ const StructuralDesign = () => {
             <div className="absolute inset-0 bg-gray-900/80"></div>
           </div>
 
+          {/* Transparent Overlay Image */}
+          <div className="absolute inset-0 z-5">
+            <img src="/lovable-uploads/cec5cde1-5bd6-42df-b7af-d2456332544b.png" alt="3D architectural cutaway view of data center building with solar panels and internal infrastructure" className="w-full h-full object-cover opacity-40" />
+          </div>
+
           <div className="relative z-10 section-container text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white">
               Structural Design & <span className="text-green-400">Layout</span>
