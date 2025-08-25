@@ -1,97 +1,68 @@
-import { 
-  Battery, 
-  Wind, 
-  Recycle, 
-  Target, 
-  TrendingDown, 
-  Cpu,
-  ChevronRight,
-  Leaf,
-  Sun,
-  Award,
-  Zap,
-  Droplets,
-  Shield,
-  Thermometer
-} from 'lucide-react';
+import { Battery, Wind, Recycle, Target, TrendingDown, Cpu, ChevronRight, Leaf, Sun, Award, Zap, Droplets, Shield, Thermometer } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-
 const Sustainability = () => {
-  const sustainabilitySections = [
-    {
-      icon: Target,
-      title: 'Net Zero Commitment',
-      description: 'Our comprehensive roadmap to achieving net-zero emissions through science-based targets and innovative solutions.',
-      path: '/net-zero-commitment',
-      color: 'text-green-500',
-      bgColor: 'bg-green-500/10'
-    },
-    {
-      icon: TrendingDown,
-      title: 'Carbon Footprint Reduction',
-      description: 'Advanced strategies and technologies delivering measurable carbon emission reductions across all operations.',
-      path: '/carbon-footprint-reduction',
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-500/10'
-    },
-    {
-      icon: Sun,
-      title: 'Solar Energy Utilization',
-      description: 'Comprehensive solar infrastructure powering our facilities with clean, renewable energy systems.',
-      path: '/solar-energy-utilization',
-      color: 'text-yellow-500',
-      bgColor: 'bg-yellow-500/10'
-    },
-    {
-      icon: Droplets,
-      title: 'Advanced Cooling & Water Recycling',
-      description: 'Revolutionary cooling technology with closed-loop water recycling systems for maximum efficiency.',
-      path: '/advanced-cooling-water-recycling',
-      color: 'text-cyan-500',
-      bgColor: 'bg-cyan-500/10'
-    },
-    {
-      icon: Shield,
-      title: 'Sustainable Infrastructure & Compliance',
-      description: 'LEED-certified sustainable building practices meeting the highest environmental standards.',
-      path: '/sustainable-infrastructure-compliance',
-      color: 'text-purple-500',
-      bgColor: 'bg-purple-500/10'
-    }
-  ];
-
-  const features = [
-    {
-      icon: Sun,
-      title: 'Solar-Powered Infrastructure',
-      description: 'Harnessing solar energy to power data centers with zero emissions.',
-      color: 'from-yellow-500 to-orange-500',
-      iconBg: 'bg-yellow-500/10',
-      iconColor: 'text-yellow-500'
-    },
-    {
-      icon: Cpu,
-      title: 'Smart Cooling Systems',
-      description: 'Eco-efficient cooling systems reduce energy and environmental impact greatly.',
-      color: 'from-blue-500 to-cyan-500',
-      iconBg: 'bg-blue-500/10',
-      iconColor: 'text-blue-500'
-    },
-    {
-      icon: Award,
-      title: 'Certified Green Standards',
-      description: 'Certified by global eco-standards for sustainability and operational excellence.',
-      color: 'from-green-500 to-emerald-500',
-      iconBg: 'bg-green-500/10',
-      iconColor: 'text-green-500'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const sustainabilitySections = [{
+    icon: Target,
+    title: 'Net Zero Commitment',
+    description: 'Our comprehensive roadmap to achieving net-zero emissions through science-based targets and innovative solutions.',
+    path: '/net-zero-commitment',
+    color: 'text-green-500',
+    bgColor: 'bg-green-500/10'
+  }, {
+    icon: TrendingDown,
+    title: 'Carbon Footprint Reduction',
+    description: 'Advanced strategies and technologies delivering measurable carbon emission reductions across all operations.',
+    path: '/carbon-footprint-reduction',
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-500/10'
+  }, {
+    icon: Sun,
+    title: 'Solar Energy Utilization',
+    description: 'Comprehensive solar infrastructure powering our facilities with clean, renewable energy systems.',
+    path: '/solar-energy-utilization',
+    color: 'text-yellow-500',
+    bgColor: 'bg-yellow-500/10'
+  }, {
+    icon: Droplets,
+    title: 'Advanced Cooling & Water Recycling',
+    description: 'Revolutionary cooling technology with closed-loop water recycling systems for maximum efficiency.',
+    path: '/advanced-cooling-water-recycling',
+    color: 'text-cyan-500',
+    bgColor: 'bg-cyan-500/10'
+  }, {
+    icon: Shield,
+    title: 'Sustainable Infrastructure & Compliance',
+    description: 'LEED-certified sustainable building practices meeting the highest environmental standards.',
+    path: '/sustainable-infrastructure-compliance',
+    color: 'text-purple-500',
+    bgColor: 'bg-purple-500/10'
+  }];
+  const features = [{
+    icon: Sun,
+    title: 'Solar-Powered Infrastructure',
+    description: 'Harnessing solar energy to power data centers with zero emissions.',
+    color: 'from-yellow-500 to-orange-500',
+    iconBg: 'bg-yellow-500/10',
+    iconColor: 'text-yellow-500'
+  }, {
+    icon: Cpu,
+    title: 'Smart Cooling Systems',
+    description: 'Eco-efficient cooling systems reduce energy and environmental impact greatly.',
+    color: 'from-blue-500 to-cyan-500',
+    iconBg: 'bg-blue-500/10',
+    iconColor: 'text-blue-500'
+  }, {
+    icon: Award,
+    title: 'Certified Green Standards',
+    description: 'Certified by global eco-standards for sustainability and operational excellence.',
+    color: 'from-green-500 to-emerald-500',
+    iconBg: 'bg-green-500/10',
+    iconColor: 'text-green-500'
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
@@ -124,13 +95,8 @@ const Sustainability = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {sustainabilitySections.map((section, index) => {
-                const IconComponent = section.icon;
-                return (
-                  <Link 
-                    key={section.title}
-                    to={section.path}
-                    className="group"
-                  >
+              const IconComponent = section.icon;
+              return <Link key={section.title} to={section.path} className="group">
                     <Card className="h-full hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 border-border/50 hover:border-primary/50">
                       <CardHeader>
                         <div className="flex items-start gap-4">
@@ -151,9 +117,8 @@ const Sustainability = () => {
                         </CardDescription>
                       </CardContent>
                     </Card>
-                  </Link>
-                );
-              })}
+                  </Link>;
+            })}
             </div>
           </div>
         </section>
@@ -173,13 +138,10 @@ const Sustainability = () => {
             
             <div className="grid lg:grid-cols-3 gap-8">
               {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div 
-                    key={feature.title}
-                    className="group bg-gray-900/50 border border-gray-700 rounded-2xl p-8 text-center hover:border-green-500 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-2xl backdrop-blur-sm"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
+              const IconComponent = feature.icon;
+              return <div key={feature.title} className="group bg-gray-900/50 border border-gray-700 rounded-2xl p-8 text-center hover:border-green-500 transition-all duration-300 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-2xl backdrop-blur-sm" style={{
+                animationDelay: `${index * 100}ms`
+              }}>
                     <div className={`w-20 h-20 ${feature.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
                     </div>
@@ -189,156 +151,17 @@ const Sustainability = () => {
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
                     </p>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </section>
 
         {/* Environmental Impact Section */}
-        <section className="py-20 bg-gray-900">
-          <div className="section-container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-fade-in-up">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Measurable <span className="text-green-400">Environmental Impact</span>
-                </h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                  Our sustainability efforts are driven by measurable results and continuous improvement. 
-                  We track our environmental impact across all key metrics to ensure we're meeting our 
-                  ambitious sustainability goals.
-                </p>
-                
-                {/* Impact Stats */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                    <div className="text-3xl font-bold text-green-400 mb-2">85%</div>
-                    <div className="text-gray-300 text-sm">Energy Efficiency Improvement</div>
-                  </div>
-                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                    <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-                    <div className="text-gray-300 text-sm">Renewable Energy Sources</div>
-                  </div>
-                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                    <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
-                    <div className="text-gray-300 text-sm">Water Recycling Rate</div>
-                  </div>
-                  <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                    <div className="text-3xl font-bold text-green-400 mb-2">2025</div>
-                    <div className="text-gray-300 text-sm">Carbon Neutral Target</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="animate-fade-in-up [animation-delay:200ms]">
-                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-8 border border-green-500/20">
-                  <h3 className="text-xl font-bold text-green-400 mb-6">Sustainability Certifications</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
-                      <Award className="w-8 h-8 text-green-400" />
-                      <div>
-                        <div className="font-semibold text-white">LEED Platinum Certified</div>
-                        <div className="text-gray-400 text-sm">Green building certification</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
-                      <Target className="w-8 h-8 text-green-400" />
-                      <div>
-                        <div className="font-semibold text-white">ISO 14001 Compliance</div>
-                        <div className="text-gray-400 text-sm">Environmental management systems</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg">
-                      <Leaf className="w-8 h-8 text-green-400" />
-                      <div>
-                        <div className="font-semibold text-white">Energy Star Partnership</div>
-                        <div className="text-gray-400 text-sm">Energy efficiency recognition</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Green Technology Section */}
-        <section className="py-20 bg-gray-800">
-          <div className="section-container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Cutting-Edge <span className="text-green-400">Green Technology</span>
-              </h2>
-              <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                We leverage the latest in sustainable technology to minimize our environmental footprint 
-                while maximizing operational efficiency and performance.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Cpu className="w-6 h-6 text-green-400" />
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">AI-Powered Cooling</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Machine learning algorithms optimize cooling systems in real-time, reducing energy consumption by up to 40% while maintaining optimal temperatures.
-                </p>
-              </div>
-              
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Sun className="w-6 h-6 text-yellow-400" />
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">Solar Microgrids</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Advanced photovoltaic systems with smart inverters and battery storage ensure consistent renewable energy supply with grid independence.
-                </p>
-              </div>
-              
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Wind className="w-6 h-6 text-blue-400" />
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">Waste Heat Recovery</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Innovative heat exchange systems capture and repurpose waste heat for building heating and hot water, maximizing energy efficiency.
-                </p>
-              </div>
-              
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Recycle className="w-6 h-6 text-cyan-400" />
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">Water Recycling Systems</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Closed-loop water systems with advanced filtration and treatment processes achieve 95% water recycling rates for cooling operations.
-                </p>
-              </div>
-              
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Battery className="w-6 h-6 text-green-400" />
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">Energy Storage Solutions</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  High-capacity lithium-ion battery systems store excess renewable energy and provide backup power during peak demand periods.
-                </p>
-              </div>
-              
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingDown className="w-6 h-6 text-purple-400" />
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">Carbon Capture Technology</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Direct air capture systems remove CO2 from the atmosphere, supporting our net-negative carbon footprint goals by 2030.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Net Zero Commitment Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -420,9 +243,9 @@ const Sustainability = () => {
                       {/* 3D Grid Effect */}
                       <div className="absolute inset-0 opacity-30">
                         <div className="grid grid-cols-8 grid-rows-6 h-full w-full">
-                          {Array.from({ length: 48 }).map((_, i) => (
-                            <div key={i} className="border border-emerald-500/20"></div>
-                          ))}
+                          {Array.from({
+                          length: 48
+                        }).map((_, i) => <div key={i} className="border border-emerald-500/20"></div>)}
                         </div>
                       </div>
                       
@@ -484,29 +307,10 @@ const Sustainability = () => {
             <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
           </div>
 
-          <div className="section-container relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Join Our <span className="text-green-400">Sustainability Journey</span>
-            </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Partner with us to build a more sustainable future. Our team is ready to help you implement 
-              eco-friendly data center solutions that reduce environmental impact while maximizing performance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
-                Learn More About Our Green Initiatives
-                <ChevronRight className="w-5 h-5" />
-              </button>
-              <button className="bg-transparent border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
-                Download Sustainability Report
-              </button>
-            </div>
-          </div>
+          
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Sustainability;
