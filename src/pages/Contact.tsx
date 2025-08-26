@@ -184,8 +184,8 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Email Address</h4>
                         <p className="text-foreground/70 leading-relaxed">
-                          info@datacenter.com<br />
-                          support@datacenter.com
+                          shekar@marvel100logisticspark.com<br />
+                          Available for all inquiries
                         </p>
                       </div>
                     </div>
@@ -247,7 +247,7 @@ const Contact = () => {
                     Send detailed inquiries and receive comprehensive responses.
                   </p>
                   <Button variant="outline" className="w-full">
-                    info@datacenter.com
+                    shekar@marvel100logisticspark.com
                   </Button>
                 </CardContent>
               </Card>
