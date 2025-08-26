@@ -1,9 +1,11 @@
 import { Battery, Wind, Recycle, Target, TrendingDown, Cpu, ChevronRight, Leaf, Sun, Award, Zap, Droplets, Shield, Thermometer } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 const Sustainability = () => {
+  const navigate = useNavigate();
   const sustainabilitySections = [{
     icon: Target,
     title: 'Net Zero Commitment',
@@ -300,6 +302,21 @@ const Sustainability = () => {
         </section>
 
         {/* CTA Section */}
+        <section className="py-16 bg-gray-900 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Get in Touch with Us</h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
+            </p>
+            <Button 
+              onClick={() => navigate('/contact')}
+              size="lg"
+              className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white"
+            >
+              CONTACT US →
+            </Button>
+          </div>
+        </section>
         
       </main>
       <Footer />

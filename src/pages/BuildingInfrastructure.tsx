@@ -1,10 +1,12 @@
 import { MapPin, Building2, Zap, Wind, Leaf, Shield, ChevronRight, Cpu, Target, Layers } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Button } from '../components/ui/button';
 import buildingHero from '/lovable-uploads/8ce75b7a-cec9-451f-8bac-48e378819448.png';
 import techInfra from '@/assets/tech-infrastructure.jpg';
 const BuildingInfrastructure = () => {
+  const navigate = useNavigate();
   const sections = [{
     id: 'location',
     label: 'Location & Accessibility',
@@ -112,6 +114,21 @@ const BuildingInfrastructure = () => {
         </section>
 
         {/* CTA Section */}
+        <section className="py-16 bg-gray-900 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Get in Touch with Us</h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              Have questions or need expert support? Our team is ready to help you with all your data center needs—reach out today!
+            </p>
+            <Button 
+              onClick={() => navigate('/contact')}
+              size="lg"
+              className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white"
+            >
+              CONTACT US →
+            </Button>
+          </div>
+        </section>
         
       </main>
       <Footer />
