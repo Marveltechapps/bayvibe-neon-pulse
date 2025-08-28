@@ -54,9 +54,9 @@ const BusinessRevenueModel = () => {
         <section className="relative py-20 bg-gradient-to-br from-blue-600 to-blue-800 overflow-hidden">
           <div className="absolute inset-0">
             <img 
-              src="/lovable-uploads/6dcc78f1-4be1-4973-bff9-63e8bc5ba76f.png" 
+              src="/lovable-uploads/2e358459-9c71-469b-9523-881d299cf09c.png" 
               alt="Business Revenue Model - Data Center Buildings with Dollar Signs" 
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover opacity-80"
             />
           </div>
           <div className="section-container relative z-10">
