@@ -102,16 +102,18 @@ const BusinessRevenueModel = () => {
               {/* Colocation Services */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative">
-                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/colocation-services'}>
-                    <img 
-                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
-                      alt="Colocation Services" 
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
+                  <Link to="/server-storage-solutions">
+                    <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        alt="Colocation Services" 
+                        className="w-full h-[300px] object-cover"
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div>
-                  <Link to="/colocation-services" className="block hover:opacity-80 transition-opacity">
+                  <Link to="/server-storage-solutions" className="block hover:opacity-80 transition-opacity">
                     <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Colocation Services</h2>
                   </Link>
                   <p className="text-gray-300 leading-relaxed">
@@ -123,16 +125,18 @@ const BusinessRevenueModel = () => {
               {/* Cloud Hosting & Virtualization */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="lg:order-2 relative">
-                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/cloud-hosting-virtualization'}>
-                    <img 
-                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
-                      alt="Cloud Hosting & Virtualization" 
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
+                  <Link to="/cloud-integration-hybrid-systems">
+                    <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        alt="Cloud Hosting & Virtualization" 
+                        className="w-full h-[300px] object-cover"
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div className="lg:order-1">
-                  <Link to="/cloud-hosting-virtualization" className="block hover:opacity-80 transition-opacity">
+                  <Link to="/cloud-integration-hybrid-systems" className="block hover:opacity-80 transition-opacity">
                     <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Cloud Hosting & Virtualization</h2>
                   </Link>
                   <p className="text-gray-300 leading-relaxed">
@@ -144,16 +148,18 @@ const BusinessRevenueModel = () => {
               {/* Managed IT & Security Services */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative">
-                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/managed-it-security-services'}>
-                    <img 
-                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
-                      alt="Managed IT & Security Services" 
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
+                  <Link to="/cybersecurity-measures">
+                    <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        alt="Managed IT & Security Services" 
+                        className="w-full h-[300px] object-cover"
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div>
-                  <Link to="/managed-it-security-services" className="block hover:opacity-80 transition-opacity">
+                  <Link to="/cybersecurity-measures" className="block hover:opacity-80 transition-opacity">
                     <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Managed IT & Security Services</h2>
                   </Link>
                   <p className="text-gray-300 leading-relaxed">
@@ -165,16 +171,18 @@ const BusinessRevenueModel = () => {
               {/* Subscription-Based Storage & Computing */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="lg:order-2 relative">
-                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/subscription-based-storage-computing'}>
-                    <img 
-                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
-                      alt="Subscription-Based Storage & Computing" 
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
+                  <Link to="/data-storage-management">
+                    <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        alt="Subscription-Based Storage & Computing" 
+                        className="w-full h-[300px] object-cover"
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div className="lg:order-1">
-                  <Link to="/subscription-based-storage-computing" className="block hover:opacity-80 transition-opacity">
+                  <Link to="/data-storage-management" className="block hover:opacity-80 transition-opacity">
                     <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Subscription-Based Storage & Computing</h2>
                   </Link>
                   <p className="text-gray-300 leading-relaxed">
@@ -186,16 +194,18 @@ const BusinessRevenueModel = () => {
               {/* Disaster Recovery & Business Continuity */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative">
-                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/disaster-recovery-business-continuity'}>
-                    <img 
-                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
-                      alt="Disaster Recovery & Business Continuity" 
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
+                  <Link to="/multi-availability-disaster-recovery">
+                    <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        alt="Disaster Recovery & Business Continuity" 
+                        className="w-full h-[300px] object-cover"
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div>
-                  <Link to="/disaster-recovery-business-continuity" className="block hover:opacity-80 transition-opacity">
+                  <Link to="/multi-availability-disaster-recovery" className="block hover:opacity-80 transition-opacity">
                     <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Disaster Recovery & Business Continuity</h2>
                   </Link>
                   <p className="text-gray-300 leading-relaxed">
