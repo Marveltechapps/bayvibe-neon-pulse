@@ -166,66 +166,43 @@ const Sustainability = () => {
         
 
         {/* Net Zero Commitment Section */}
-        <section className="py-20 bg-gray-900 text-white">
+        <section className="py-20 bg-background">
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Net Zero Image - Left Side */}
-              <div className="animate-fade-in-up">
-                <div className="relative overflow-hidden rounded-2xl">
-                  <div className="bg-gradient-to-br from-green-900 to-emerald-900 p-8 rounded-2xl">
-                    {/* Net Zero Badge/Graphic */}
-                    <div className="text-center mb-8">
-                      <div className="inline-flex items-center justify-center w-32 h-32 bg-white/10 rounded-full border-4 border-emerald-400 mb-6">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-emerald-400">NET</div>
-                          <div className="text-2xl font-bold text-emerald-400">ZERO</div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Sustainability Icons Grid */}
-                    <div className="grid grid-cols-3 gap-6">
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <Recycle className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                        <div className="text-xs text-white/80">Recycle</div>
-                      </div>
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <Wind className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                        <div className="text-xs text-white/80">Wind</div>
-                      </div>
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <Sun className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                        <div className="text-xs text-white/80">Solar</div>
-                      </div>
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <Battery className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                        <div className="text-xs text-white/80">Storage</div>
-                      </div>
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <Leaf className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                        <div className="text-xs text-white/80">Green</div>
-                      </div>
-                      <div className="bg-white/10 rounded-lg p-4 text-center">
-                        <Target className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                        <div className="text-xs text-white/80">Target</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Left side - Image from Figma design */}
+              <div className="relative animate-fade-in-up">
+                <img 
+                  src="/lovable-uploads/458bf90b-f196-49ea-b82d-f49bfe2c5157.png" 
+                  alt="Net Zero Commitment - Sustainable technology with hexagonal icons showing CO2 reduction, recycling, and environmental initiatives" 
+                  className="w-full h-auto object-cover rounded-2xl shadow-lg"
+                />
               </div>
 
-              {/* Content - Right Side */}
-              <div className="animate-fade-in-up [animation-delay:200ms]">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-green-400 mb-4">Net Zero Commitment</h3>
-                  <p className="text-white/80 leading-relaxed text-lg">
-                    Our data center is designed to achieve net-zero emissions through 
-                    renewable energy integration and AI-driven efficiency optimizations. By 
-                    implementing power usage effectiveness (PUE) targets and advanced 
-                    thermal management, we significantly reduce carbon footprint. 
-                    Sustainability-focused initiatives ensure long-term environmental 
-                    responsibility.
+              {/* Right side - Content */}
+              <div className="space-y-8 animate-fade-in-up [animation-delay:200ms]">
+                <div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                    Net Zero Commitment
+                  </h2>
+                  <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                    We are committed to achieving net-zero carbon emissions by 2025 through innovative 
+                    sustainable technologies, renewable energy integration, and comprehensive environmental 
+                    stewardship. Our data center operations are designed with the future of our planet 
+                    in mind, implementing cutting-edge green solutions that reduce our environmental impact 
+                    while maintaining the highest standards of performance and reliability.
                   </p>
+                </div>
+
+                {/* Commitment stats */}
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="p-6 bg-card/30 backdrop-blur-sm rounded-xl border border-border/30">
+                    <div className="text-2xl font-bold gradient-text mb-2">100%</div>
+                    <div className="text-sm text-foreground/60">Renewable Energy</div>
+                  </div>
+                  <div className="p-6 bg-card/30 backdrop-blur-sm rounded-xl border border-border/30">
+                    <div className="text-2xl font-bold gradient-text mb-2">2025</div>
+                    <div className="text-sm text-foreground/60">Net Zero Target</div>
+                  </div>
                 </div>
               </div>
             </div>
