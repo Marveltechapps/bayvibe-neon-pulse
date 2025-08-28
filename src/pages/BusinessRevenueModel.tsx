@@ -94,34 +94,116 @@ const BusinessRevenueModel = () => {
           </div>
         </section>
 
-        {/* Colocation Services Section */}
+        {/* Services Sections */}
         <section className="py-20 bg-slate-900">
           <div className="section-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="relative">
-                <div className="relative rounded-2xl overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/0b8f1acd-8f87-46c7-919e-9bd3e9f5c057.png" 
-                    alt="Colocation Services - Futuristic Digital City" 
-                    className="w-full h-[350px] object-cover"
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center mb-6">
-                  <div className="p-3 rounded-lg bg-blue-500/20 mr-4">
-                    <Server className="w-8 h-8 text-blue-400" />
+            <div className="space-y-16">
+              
+              {/* Colocation Services */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative">
+                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/colocation-services'}>
+                    <img 
+                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                      alt="Colocation Services" 
+                      className="w-full h-[300px] object-cover"
+                    />
                   </div>
-                  <h2 className="text-3xl font-bold text-white">Colocation Services</h2>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Our data center offers secure server space rentals, providing businesses 
-                  to host their infrastructure with high uptime and redundancy. Clients 
-                  benefit from scalable power, cooling, and network ensuring optimal 
-                  performance and compliance. Flexible pricing models enable customized 
-                  resource allocation.
-                </p>
+                <div>
+                  <Link to="/colocation-services" className="block hover:opacity-80 transition-opacity">
+                    <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Colocation Services</h2>
+                  </Link>
+                  <p className="text-gray-300 leading-relaxed">
+                    Our data center offers secure server space rentals, allowing businesses to host their infrastructure with high uptime and redundancy. Clients benefit from scalable power, cooling, and network connectivity ensuring optimal performance and compliance. Flexible pricing models support customized resource allocation.
+                  </p>
+                </div>
               </div>
+
+              {/* Cloud Hosting & Virtualization */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="lg:order-2 relative">
+                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/cloud-hosting-virtualization'}>
+                    <img 
+                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                      alt="Cloud Hosting & Virtualization" 
+                      className="w-full h-[300px] object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="lg:order-1">
+                  <Link to="/cloud-hosting-virtualization" className="block hover:opacity-80 transition-opacity">
+                    <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Cloud Hosting & Virtualization</h2>
+                  </Link>
+                  <p className="text-gray-300 leading-relaxed">
+                    We provide public, private, and hybrid cloud solutions, enabling businesses to deploy applications seamlessly. Virtualization enhances server efficiency, reducing costs while ensuring high availability and security. AI-driven resources allocation optimizes performance and scalability.
+                  </p>
+                </div>
+              </div>
+
+              {/* Managed IT & Security Services */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative">
+                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/managed-it-security-services'}>
+                    <img 
+                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                      alt="Managed IT & Security Services" 
+                      className="w-full h-[300px] object-cover"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Link to="/managed-it-security-services" className="block hover:opacity-80 transition-opacity">
+                    <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Managed IT & Security Services</h2>
+                  </Link>
+                  <p className="text-gray-300 leading-relaxed">
+                    Our end-to-end IT management includes cybersecurity, data backup, and disaster recovery solutions. Businesses benefit from real-time monitoring, AI-driven threat detection, and compliance support. This ensures secure operations and minimal downtime.
+                  </p>
+                </div>
+              </div>
+
+              {/* Subscription-Based Storage & Computing */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="lg:order-2 relative">
+                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/subscription-based-storage-computing'}>
+                    <img 
+                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                      alt="Subscription-Based Storage & Computing" 
+                      className="w-full h-[300px] object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="lg:order-1">
+                  <Link to="/subscription-based-storage-computing" className="block hover:opacity-80 transition-opacity">
+                    <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Subscription-Based Storage & Computing</h2>
+                  </Link>
+                  <p className="text-gray-300 leading-relaxed">
+                    Clients subscribe to on-demand storage and computing power, paying for usage-based resources. This model supports big data analytics, AI workloads, and scalable enterprise applications. Automated data replication and optimization enhance efficiency.
+                  </p>
+                </div>
+              </div>
+
+              {/* Disaster Recovery & Business Continuity */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative">
+                  <div className="relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => window.location.href = '/disaster-recovery-business-continuity'}>
+                    <img 
+                      src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                      alt="Disaster Recovery & Business Continuity" 
+                      className="w-full h-[300px] object-cover"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Link to="/disaster-recovery-business-continuity" className="block hover:opacity-80 transition-opacity">
+                    <h2 className="text-2xl font-bold text-green-400 mb-4 cursor-pointer">Disaster Recovery & Business Continuity</h2>
+                  </Link>
+                  <p className="text-gray-300 leading-relaxed">
+                    We provide backup solutions, failover systems, and multi-region data replication to ensure business continuity. AI-driven predictive maintenance prevents failures, while cloud-based recovery ensures rapid restoration in case of disruptions.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
