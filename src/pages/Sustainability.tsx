@@ -179,9 +179,11 @@ const Sustainability = () => {
                     </p>
                   </div>
                   <div className="relative order-1 lg:order-2">
-                    <div className="w-full h-64 bg-gradient-to-b from-cyan-100 to-cyan-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                      <div className="text-6xl">💧</div>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/c5089621-e76f-4473-91de-fa6d94e5d1d6.png" 
+                      alt="Water treatment facility with circular settling tanks and recycling infrastructure for advanced cooling systems" 
+                      className="w-full h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 </div>
               </Link>
