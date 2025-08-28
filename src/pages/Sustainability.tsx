@@ -84,43 +84,127 @@ const Sustainability = () => {
         </section>
 
         {/* Sustainability Sections */}
-        <section className="py-16">
+        <section className="py-16 bg-background">
           <div className="section-container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Our <span className="gradient-text">Sustainability</span> Initiatives
-              </h2>
-              <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-                Comprehensive environmental programs delivering measurable impact across all aspects of our operations
-              </p>
-            </div>
+            <div className="space-y-16">
+              
+              {/* Net Zero Commitment */}
+              <Link to="/net-zero-commitment" className="group block">
+                <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
+                  <div className="relative">
+                    <img 
+                      src="/lovable-uploads/458bf90b-f196-49ea-b82d-f49bfe2c5157.png" 
+                      alt="Net Zero Commitment - Sustainable technology with hexagonal icons showing environmental initiatives" 
+                      className="w-full h-auto object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">
+                      Net Zero Commitment
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed">
+                      Our data center is designed to achieve net-zero emissions through 
+                      innovative energy management and sustainable technology implementation. 
+                      We prioritize renewable power sources, energy-efficient infrastructure, waste 
+                      reduction, and environmental stewardship to ensure long-term environmental 
+                      responsibility.
+                    </p>
+                  </div>
+                </div>
+              </Link>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sustainabilitySections.map((section, index) => {
-              const IconComponent = section.icon;
-              return <Link key={section.title} to={section.path} className="group">
-                    <Card className="h-full hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 border-border/50 hover:border-primary/50">
-                      <CardHeader>
-                        <div className="flex items-start gap-4">
-                          <div className={`flex-shrink-0 w-12 h-12 ${section.bgColor} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                            <IconComponent className={`w-6 h-6 ${section.color}`} />
-                          </div>
-                          <div className="flex-grow">
-                            <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">
-                              {section.title}
-                            </CardTitle>
-                          </div>
-                          <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-base leading-relaxed">
-                          {section.description}
-                        </CardDescription>
-                      </CardContent>
-                    </Card>
-                  </Link>;
-            })}
+              {/* Carbon Footprint Reduction */}
+              <Link to="/carbon-footprint-reduction" className="group block">
+                <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
+                  <div className="order-2 lg:order-1 space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">
+                      Carbon Footprint Reduction
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed">
+                      Through advanced infrastructure and optimized workflow management, 
+                      we substantially reduce carbon emissions. Our use of power-
+                      saving technologies, including optimized PUE, renewable energy solutions, allow for carbon-
+                      neutral operations. Compliance with global environmental standards 
+                      ensures measurable, responsible, and sustainable.
+                    </p>
+                  </div>
+                  <div className="relative order-1 lg:order-2">
+                    <div className="w-full h-64 bg-gradient-to-b from-green-100 to-green-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <div className="text-6xl">🌱</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Solar Energy Utilization */}
+              <Link to="/solar-energy-utilization" className="group block">
+                <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
+                  <div className="relative">
+                    <div className="w-full h-64 bg-gradient-to-b from-blue-100 to-blue-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <div className="text-6xl">☀️</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">
+                      Solar Energy Utilization
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed">
+                      Our facility is powered by high-efficiency solar photovoltaic panels, 
+                      reducing dependency on grid-based electricity. Energy storage systems 
+                      ensure a sustainable and reliable power supply, optimizing renewable energy use even 
+                      during peak demands. This strategy significantly lowers operational costs 
+                      and environmental impact.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Advanced Cooling & Water Recycling */}
+              <Link to="/advanced-cooling-water-recycling" className="group block">
+                <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
+                  <div className="order-2 lg:order-1 space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">
+                      Advanced Cooling & Water Recycling
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed">
+                      We implement top-of-the-line efficient cooling/optimization and AI-driven 
+                      thermal regulation for energy-efficient operations. Our closed-loop water 
+                      recycling systems ensure waste consumption, ensuring zero-waste and 
+                      sustainable supply infrastructure. Advanced thermal management provides 
+                      optimal operational temperature efficiently and environmental impact.
+                    </p>
+                  </div>
+                  <div className="relative order-1 lg:order-2">
+                    <div className="w-full h-64 bg-gradient-to-b from-cyan-100 to-cyan-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <div className="text-6xl">💧</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Sustainable Infrastructure & Compliance */}
+              <Link to="/sustainable-infrastructure-compliance" className="group block">
+                <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
+                  <div className="relative">
+                    <div className="w-full h-64 bg-gradient-to-b from-green-100 to-emerald-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <div className="text-6xl">🏢</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">
+                      Sustainable Infrastructure & Compliance
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed">
+                      By taking steps forward to using high materials, AI-optimized energy distribution 
+                      and eco-friendly structure, we ensure efficient operations. Our compliance 
+                      with LEED BREEAM and other global sustainability standards maintained 
+                      commitment to responsible operations. These measures make our 
+                      data center fully sustainable and environmentally friendly.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
             </div>
           </div>
         </section>
