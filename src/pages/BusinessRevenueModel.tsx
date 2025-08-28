@@ -3,6 +3,13 @@ import Footer from '@/components/Footer';
 import { Server, Shield, Gauge, TrendingUp, DollarSign, Globe, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Import new service images
+import colocationServicesImg from '@/assets/colocation-services.jpg';
+import cloudHostingImg from '@/assets/cloud-hosting.jpg';
+import managedITSecurityImg from '@/assets/managed-it-security.jpg';
+import subscriptionStorageImg from '@/assets/subscription-storage.jpg';
+import disasterRecoveryImg from '@/assets/disaster-recovery.jpg';
+
 const BusinessRevenueModel = () => {
   const revenueStreams = [
     "Colocation Services",
@@ -105,7 +112,7 @@ const BusinessRevenueModel = () => {
                   <Link to="/server-storage-solutions">
                     <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
                       <img 
-                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        src={colocationServicesImg} 
                         alt="Colocation Services" 
                         className="w-full h-[300px] object-cover"
                       />
@@ -128,7 +135,7 @@ const BusinessRevenueModel = () => {
                   <Link to="/cloud-integration-hybrid-systems">
                     <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
                       <img 
-                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        src={cloudHostingImg} 
                         alt="Cloud Hosting & Virtualization" 
                         className="w-full h-[300px] object-cover"
                       />
@@ -151,7 +158,7 @@ const BusinessRevenueModel = () => {
                   <Link to="/cybersecurity-measures">
                     <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
                       <img 
-                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        src={managedITSecurityImg} 
                         alt="Managed IT & Security Services" 
                         className="w-full h-[300px] object-cover"
                       />
@@ -174,7 +181,7 @@ const BusinessRevenueModel = () => {
                   <Link to="/data-storage-management">
                     <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
                       <img 
-                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        src={subscriptionStorageImg} 
                         alt="Subscription-Based Storage & Computing" 
                         className="w-full h-[300px] object-cover"
                       />
@@ -197,7 +204,7 @@ const BusinessRevenueModel = () => {
                   <Link to="/multi-availability-disaster-recovery">
                     <div className="relative rounded-2xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
                       <img 
-                        src="/lovable-uploads/96646f8d-3e54-45a3-97c2-ca6c3ea6002a.png" 
+                        src={disasterRecoveryImg} 
                         alt="Disaster Recovery & Business Continuity" 
                         className="w-full h-[300px] object-cover"
                       />
