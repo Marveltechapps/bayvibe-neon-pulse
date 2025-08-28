@@ -129,9 +129,11 @@ const Sustainability = () => {
                     </p>
                   </div>
                   <div className="relative order-1 lg:order-2">
-                    <div className="w-full h-64 bg-gradient-to-b from-green-100 to-green-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                      <div className="text-6xl">🌱</div>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/308884e4-1dfc-45d0-a38e-683c4988de14.png" 
+                      alt="Hand holding green sphere with CO2 footprint symbol representing carbon footprint reduction" 
+                      className="w-full h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 </div>
               </Link>
