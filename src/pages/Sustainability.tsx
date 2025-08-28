@@ -192,9 +192,11 @@ const Sustainability = () => {
               <Link to="/sustainable-infrastructure-compliance" className="group block">
                 <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
                   <div className="relative">
-                    <div className="w-full h-64 bg-gradient-to-b from-green-100 to-emerald-200 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                      <div className="text-6xl">🏢</div>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/057145e6-55e0-4553-9402-a5e0d5cb2b1e.png" 
+                      alt="Sustainable infrastructure concept with wooden blocks showing green buildings, renewable energy, and environmental partnership symbols" 
+                      className="w-full h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">
