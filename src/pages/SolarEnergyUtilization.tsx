@@ -2,93 +2,85 @@ import { Sun, Battery, Zap, TrendingUp, Award, CheckCircle } from 'lucide-react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-
 const SolarEnergyUtilization = () => {
-  const solarFeatures = [
-    {
-      icon: Sun,
-      title: 'High-Efficiency Solar Panels',
-      description: 'State-of-the-art photovoltaic systems with 22% efficiency rating and 25-year warranties.',
-      capacity: '50MW',
-      color: 'text-yellow-500'
-    },
-    {
-      icon: Battery,
-      title: 'Energy Storage Systems',
-      description: 'Advanced lithium-ion battery storage for 24/7 renewable energy availability.',
-      capacity: '200MWh',
-      color: 'text-blue-500'
-    },
-    {
-      icon: Zap,
-      title: 'Smart Grid Integration',
-      description: 'Intelligent power management systems optimize energy distribution and consumption.',
-      capacity: '99.9%',
-      color: 'text-green-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and predictive maintenance for maximum solar output.',
-      capacity: '24/7',
-      color: 'text-purple-500'
-    }
-  ];
-
-  const benefits = [
-    { metric: '100%', label: 'Renewable Energy', description: 'Complete solar-powered operations' },
-    { metric: '15MW', label: 'Solar Capacity', description: 'Total installed solar power' },
-    { metric: '85%', label: 'Energy Independence', description: 'Reduced grid dependency' },
-    { metric: '$2.3M', label: 'Annual Savings', description: 'Energy cost reduction' }
-  ];
-
-  const phases = [
-    {
-      phase: 'Phase 1',
-      title: 'Initial Installation',
-      description: 'Deployed 5MW solar array with basic monitoring systems',
-      year: '2021',
-      status: 'completed',
-      output: '5MW'
-    },
-    {
-      phase: 'Phase 2',
-      title: 'Expansion & Storage',
-      description: 'Added 10MW capacity with battery storage integration',
-      year: '2022',
-      status: 'completed',
-      output: '15MW'
-    },
-    {
-      phase: 'Phase 3',
-      title: 'Smart Grid Integration',
-      description: 'Advanced AI-powered energy management and optimization',
-      year: '2023',
-      status: 'completed',
-      output: '15MW+'
-    },
-    {
-      phase: 'Phase 4',
-      title: 'Future Expansion',
-      description: 'Planned 20MW additional capacity with next-gen solar tech',
-      year: '2024',
-      status: 'planned',
-      output: '35MW'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const solarFeatures = [{
+    icon: Sun,
+    title: 'High-Efficiency Solar Panels',
+    description: 'State-of-the-art photovoltaic systems with 22% efficiency rating and 25-year warranties.',
+    capacity: '50MW',
+    color: 'text-yellow-500'
+  }, {
+    icon: Battery,
+    title: 'Energy Storage Systems',
+    description: 'Advanced lithium-ion battery storage for 24/7 renewable energy availability.',
+    capacity: '200MWh',
+    color: 'text-blue-500'
+  }, {
+    icon: Zap,
+    title: 'Smart Grid Integration',
+    description: 'Intelligent power management systems optimize energy distribution and consumption.',
+    capacity: '99.9%',
+    color: 'text-green-500'
+  }, {
+    icon: TrendingUp,
+    title: 'Performance Monitoring',
+    description: 'Real-time monitoring and predictive maintenance for maximum solar output.',
+    capacity: '24/7',
+    color: 'text-purple-500'
+  }];
+  const benefits = [{
+    metric: '100%',
+    label: 'Renewable Energy',
+    description: 'Complete solar-powered operations'
+  }, {
+    metric: '15MW',
+    label: 'Solar Capacity',
+    description: 'Total installed solar power'
+  }, {
+    metric: '85%',
+    label: 'Energy Independence',
+    description: 'Reduced grid dependency'
+  }, {
+    metric: '$2.3M',
+    label: 'Annual Savings',
+    description: 'Energy cost reduction'
+  }];
+  const phases = [{
+    phase: 'Phase 1',
+    title: 'Initial Installation',
+    description: 'Deployed 5MW solar array with basic monitoring systems',
+    year: '2021',
+    status: 'completed',
+    output: '5MW'
+  }, {
+    phase: 'Phase 2',
+    title: 'Expansion & Storage',
+    description: 'Added 10MW capacity with battery storage integration',
+    year: '2022',
+    status: 'completed',
+    output: '15MW'
+  }, {
+    phase: 'Phase 3',
+    title: 'Smart Grid Integration',
+    description: 'Advanced AI-powered energy management and optimization',
+    year: '2023',
+    status: 'completed',
+    output: '15MW+'
+  }, {
+    phase: 'Phase 4',
+    title: 'Future Expansion',
+    description: 'Planned 20MW additional capacity with next-gen solar tech',
+    year: '2024',
+    status: 'planned',
+    output: '35MW'
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-yellow-500/10 to-orange-500/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <img 
-            src="/lovable-uploads/be354ace-ee11-46ba-9931-73db611eb706.png" 
-            alt="Solar Energy Data Center Infrastructure" 
-            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
-          />
+          <img src="/lovable-uploads/be354ace-ee11-46ba-9931-73db611eb706.png" alt="Solar Energy Data Center Infrastructure" className="absolute inset-0 w-full h-full object-cover opacity-40 z-0" />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -129,8 +121,7 @@ const SolarEnergyUtilization = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <Card key={benefit.label} className="text-center hover:shadow-lg transition-all duration-300">
+              {benefits.map((benefit, index) => <Card key={benefit.label} className="text-center hover:shadow-lg transition-all duration-300">
                   <CardContent className="pt-6">
                     <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                       {benefit.metric}
@@ -138,8 +129,7 @@ const SolarEnergyUtilization = () => {
                     <div className="font-semibold mb-2">{benefit.label}</div>
                     <div className="text-sm text-foreground/60">{benefit.description}</div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -158,9 +148,8 @@ const SolarEnergyUtilization = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {solarFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <Card key={feature.title} className="group hover:shadow-lg transition-all duration-300">
+              const IconComponent = feature.icon;
+              return <Card key={feature.title} className="group hover:shadow-lg transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -179,9 +168,8 @@ const SolarEnergyUtilization = () => {
                         {feature.description}
                       </CardDescription>
                     </CardContent>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </div>
         </section>
@@ -199,16 +187,11 @@ const SolarEnergyUtilization = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {phases.map((phase, index) => (
-                <Card key={phase.phase} className={`relative overflow-hidden ${
-                  phase.status === 'completed' ? 'border-green-500/50' : 'border-yellow-500/50'
-                }`}>
+              {phases.map((phase, index) => <Card key={phase.phase} className={`relative overflow-hidden ${phase.status === 'completed' ? 'border-green-500/50' : 'border-yellow-500/50'}`}>
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-2">
                       <div className="text-sm font-semibold text-primary">{phase.phase}</div>
-                      <div className={`w-3 h-3 rounded-full ${
-                        phase.status === 'completed' ? 'bg-green-500' : 'bg-yellow-500'
-                      }`}></div>
+                      <div className={`w-3 h-3 rounded-full ${phase.status === 'completed' ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
                     </div>
                     <CardTitle className="text-lg">{phase.title}</CardTitle>
                     <div className="text-sm text-foreground/60">{phase.year}</div>
@@ -221,11 +204,8 @@ const SolarEnergyUtilization = () => {
                       Output: {phase.output}
                     </div>
                   </CardContent>
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 ${
-                    phase.status === 'completed' ? 'bg-green-500' : 'bg-yellow-500'
-                  }`}></div>
-                </Card>
-              ))}
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 ${phase.status === 'completed' ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
+                </Card>)}
             </div>
           </div>
         </section>
@@ -326,24 +306,9 @@ const SolarEnergyUtilization = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-yellow-500/10 to-orange-500/10">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Power Your Future with <span className="gradient-text">Solar</span>
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Experience the reliability and sustainability of solar-powered data center services 
-              that reduce costs while protecting the environment.
-            </p>
-            <button className="btn-neon">
-              Explore Solar Solutions
-            </button>
-          </div>
-        </section>
+        
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default SolarEnergyUtilization;
