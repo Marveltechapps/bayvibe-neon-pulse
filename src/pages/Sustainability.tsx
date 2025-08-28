@@ -93,7 +93,7 @@ const Sustainability = () => {
                 <div className="grid lg:grid-cols-2 gap-8 items-center hover:shadow-lg transition-all duration-300 rounded-2xl p-6 hover:bg-card/30">
                   <div className="relative">
                     <img 
-                      src="/lovable-uploads/5728d5c2-614a-4698-b918-693bac427fab.png" 
+                      src="/lovable-uploads/0b794b39-5730-40cf-8bee-fbb8b0a06002.png" 
                       alt="Net Zero Commitment - Sustainable technology with hexagonal icons showing CO2 reduction, recycling, and environmental initiatives" 
                       className="w-full h-auto object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -264,7 +264,7 @@ const Sustainability = () => {
               {/* Left side - Image from Figma design */}
               <div className="relative animate-fade-in-up">
                 <img 
-                  src="/lovable-uploads/5728d5c2-614a-4698-b918-693bac427fab.png" 
+                  src="/lovable-uploads/0b794b39-5730-40cf-8bee-fbb8b0a06002.png" 
                   alt="Net Zero Commitment - Sustainable technology with hexagonal icons showing CO2 reduction, recycling, and environmental initiatives" 
                   className="w-full h-auto object-cover rounded-2xl shadow-lg"
                 />
