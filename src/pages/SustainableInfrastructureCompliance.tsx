@@ -2,133 +2,102 @@ import { Award, CheckCircle, FileCheck, Globe, Leaf, Shield } from 'lucide-react
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-
 const SustainableInfrastructureCompliance = () => {
-  const certifications = [
-    {
-      icon: Award,
-      title: 'LEED Platinum Certification',
-      description: 'Highest level of green building certification for sustainable design and construction practices.',
-      issuer: 'U.S. Green Building Council',
-      status: 'Certified',
-      color: 'text-green-500'
-    },
-    {
-      icon: Globe,
-      title: 'ISO 14001 Environmental Management',
-      description: 'International standard for environmental management systems and continuous improvement.',
-      issuer: 'International Organization for Standardization',
-      status: 'Certified',
-      color: 'text-blue-500'
-    },
-    {
-      icon: Leaf,
-      title: 'Energy Star Partnership',
-      description: 'EPA recognition for superior energy efficiency and environmental performance.',
-      issuer: 'U.S. Environmental Protection Agency',
-      status: 'Active Partner',
-      color: 'text-yellow-500'
-    },
-    {
-      icon: Shield,
-      title: 'ISO 50001 Energy Management',
-      description: 'International standard for energy management systems and energy performance improvement.',
-      issuer: 'International Organization for Standardization',
-      status: 'Certified',
-      color: 'text-purple-500'
-    }
-  ];
-
-  const complianceAreas = [
-    {
-      category: 'Building Materials',
-      requirements: [
-        'Recycled content materials (minimum 30%)',
-        'Low-emission building materials',
-        'Sustainably sourced wood products',
-        'Non-toxic construction materials'
-      ],
-      compliance: '100%'
-    },
-    {
-      category: 'Energy Efficiency',
-      requirements: [
-        'High-performance building envelope',
-        'LED lighting systems throughout',
-        'Smart HVAC control systems',
-        'Energy recovery ventilation'
-      ],
-      compliance: '98%'
-    },
-    {
-      category: 'Water Conservation',
-      requirements: [
-        'Low-flow fixtures and fittings',
-        'Rainwater harvesting systems',
-        'Greywater recycling infrastructure',
-        'Native landscaping with minimal irrigation'
-      ],
-      compliance: '95%'
-    },
-    {
-      category: 'Waste Management',
-      requirements: [
-        'Construction waste diversion (>75%)',
-        'Comprehensive recycling programs',
-        'Organic waste composting systems',
-        'Hazardous material proper disposal'
-      ],
-      compliance: '92%'
-    }
-  ];
-
-  const sustainabilityFeatures = [
-    {
-      title: 'Green Roof Systems',
-      description: 'Living roof installation that reduces stormwater runoff, provides insulation, and creates habitat.',
-      benefit: '40% stormwater reduction'
-    },
-    {
-      title: 'Smart Building Automation',
-      description: 'Integrated systems that optimize energy consumption, air quality, and occupant comfort.',
-      benefit: '30% energy savings'
-    },
-    {
-      title: 'Renewable Material Usage',
-      description: 'Extensive use of recycled steel, concrete, and other sustainable building materials.',
-      benefit: '45% recycled content'
-    },
-    {
-      title: 'Carbon-Neutral Construction',
-      description: 'Construction process offset through verified carbon credit programs and clean energy.',
-      benefit: 'Net-zero construction'
-    }
-  ];
-
-  const auditResults = [
-    { area: 'Energy Performance', score: 94, benchmark: 'Exceeds industry standard by 25%' },
-    { area: 'Water Efficiency', score: 91, benchmark: 'Top 10% of data centers globally' },
-    { area: 'Materials & Resources', score: 88, benchmark: 'LEED Platinum qualification' },
-    { area: 'Indoor Environmental Quality', score: 96, benchmark: 'Exceeds ASHRAE standards' },
-    { area: 'Innovation in Design', score: 92, benchmark: 'Industry leadership recognition' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const certifications = [{
+    icon: Award,
+    title: 'LEED Platinum Certification',
+    description: 'Highest level of green building certification for sustainable design and construction practices.',
+    issuer: 'U.S. Green Building Council',
+    status: 'Certified',
+    color: 'text-green-500'
+  }, {
+    icon: Globe,
+    title: 'ISO 14001 Environmental Management',
+    description: 'International standard for environmental management systems and continuous improvement.',
+    issuer: 'International Organization for Standardization',
+    status: 'Certified',
+    color: 'text-blue-500'
+  }, {
+    icon: Leaf,
+    title: 'Energy Star Partnership',
+    description: 'EPA recognition for superior energy efficiency and environmental performance.',
+    issuer: 'U.S. Environmental Protection Agency',
+    status: 'Active Partner',
+    color: 'text-yellow-500'
+  }, {
+    icon: Shield,
+    title: 'ISO 50001 Energy Management',
+    description: 'International standard for energy management systems and energy performance improvement.',
+    issuer: 'International Organization for Standardization',
+    status: 'Certified',
+    color: 'text-purple-500'
+  }];
+  const complianceAreas = [{
+    category: 'Building Materials',
+    requirements: ['Recycled content materials (minimum 30%)', 'Low-emission building materials', 'Sustainably sourced wood products', 'Non-toxic construction materials'],
+    compliance: '100%'
+  }, {
+    category: 'Energy Efficiency',
+    requirements: ['High-performance building envelope', 'LED lighting systems throughout', 'Smart HVAC control systems', 'Energy recovery ventilation'],
+    compliance: '98%'
+  }, {
+    category: 'Water Conservation',
+    requirements: ['Low-flow fixtures and fittings', 'Rainwater harvesting systems', 'Greywater recycling infrastructure', 'Native landscaping with minimal irrigation'],
+    compliance: '95%'
+  }, {
+    category: 'Waste Management',
+    requirements: ['Construction waste diversion (>75%)', 'Comprehensive recycling programs', 'Organic waste composting systems', 'Hazardous material proper disposal'],
+    compliance: '92%'
+  }];
+  const sustainabilityFeatures = [{
+    title: 'Green Roof Systems',
+    description: 'Living roof installation that reduces stormwater runoff, provides insulation, and creates habitat.',
+    benefit: '40% stormwater reduction'
+  }, {
+    title: 'Smart Building Automation',
+    description: 'Integrated systems that optimize energy consumption, air quality, and occupant comfort.',
+    benefit: '30% energy savings'
+  }, {
+    title: 'Renewable Material Usage',
+    description: 'Extensive use of recycled steel, concrete, and other sustainable building materials.',
+    benefit: '45% recycled content'
+  }, {
+    title: 'Carbon-Neutral Construction',
+    description: 'Construction process offset through verified carbon credit programs and clean energy.',
+    benefit: 'Net-zero construction'
+  }];
+  const auditResults = [{
+    area: 'Energy Performance',
+    score: 94,
+    benchmark: 'Exceeds industry standard by 25%'
+  }, {
+    area: 'Water Efficiency',
+    score: 91,
+    benchmark: 'Top 10% of data centers globally'
+  }, {
+    area: 'Materials & Resources',
+    score: 88,
+    benchmark: 'LEED Platinum qualification'
+  }, {
+    area: 'Indoor Environmental Quality',
+    score: 96,
+    benchmark: 'Exceeds ASHRAE standards'
+  }, {
+    area: 'Innovation in Design',
+    score: 92,
+    benchmark: 'Industry leadership recognition'
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-green-500/10 to-blue-500/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <img 
-            src="/lovable-uploads/72ef39fd-7a44-43b7-8cb4-f3fab9b6aa49.png" 
-            alt="Sustainable Infrastructure Building Blocks" 
-            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
-          />
+          <img src="/lovable-uploads/72ef39fd-7a44-43b7-8cb4-f3fab9b6aa49.png" alt="Sustainable Infrastructure Building Blocks" className="absolute inset-0 w-full h-full object-cover opacity-40 z-0" />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Sustainable Infrastructure &<br/><span className="gradient-text">Compliance</span>
+                Sustainable Infrastructure &<br /><span className="gradient-text">Compliance</span>
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed mb-8">
                 Our commitment to sustainable infrastructure goes beyond compliance, setting new 
@@ -166,9 +135,8 @@ const SustainableInfrastructureCompliance = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {certifications.map((cert, index) => {
-                const IconComponent = cert.icon;
-                return (
-                  <Card key={cert.title} className="group hover:shadow-lg transition-all duration-300">
+              const IconComponent = cert.icon;
+              return <Card key={cert.title} className="group hover:shadow-lg transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -188,9 +156,8 @@ const SustainableInfrastructureCompliance = () => {
                         {cert.description}
                       </CardDescription>
                     </CardContent>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </div>
         </section>
@@ -208,8 +175,7 @@ const SustainableInfrastructureCompliance = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {complianceAreas.map((area, index) => (
-                <Card key={area.category} className="hover:shadow-lg transition-all duration-300">
+              {complianceAreas.map((area, index) => <Card key={area.category} className="hover:shadow-lg transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-xl">{area.category}</CardTitle>
@@ -218,16 +184,13 @@ const SustainableInfrastructureCompliance = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      {area.requirements.map((requirement, reqIndex) => (
-                        <div key={reqIndex} className="flex items-center gap-3">
+                      {area.requirements.map((requirement, reqIndex) => <div key={reqIndex} className="flex items-center gap-3">
                           <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                           <span className="text-sm">{requirement}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -245,8 +208,7 @@ const SustainableInfrastructureCompliance = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {sustainabilityFeatures.map((feature, index) => (
-                <Card key={feature.title} className="text-center hover:shadow-lg transition-all duration-300">
+              {sustainabilityFeatures.map((feature, index) => <Card key={feature.title} className="text-center hover:shadow-lg transition-all duration-300">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
@@ -258,76 +220,13 @@ const SustainableInfrastructureCompliance = () => {
                       {feature.benefit}
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
 
         {/* Audit Results */}
-        <section className="py-16">
-          <div className="section-container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Third-Party <span className="gradient-text">Audit Results</span>
-                </h2>
-                <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-                  Independent verification of our sustainability performance across all key metrics, 
-                  demonstrating industry-leading environmental stewardship.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Annual independent sustainability audits</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Continuous monitoring and reporting</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Public transparency and accountability</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Benchmark comparison with industry leaders</span>
-                  </div>
-                </div>
-              </div>
-
-              <Card className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border-green-500/20">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <FileCheck className="w-6 h-6 text-green-500" />
-                    Latest Audit Scores
-                  </CardTitle>
-                  <CardDescription>
-                    Independently verified sustainability performance metrics
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {auditResults.map((result, index) => (
-                    <div key={result.area} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium">{result.area}</span>
-                        <span className="text-lg font-bold text-green-600">{result.score}/100</span>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <div 
-                          className="bg-green-500 h-2 rounded-full transition-all duration-300" 
-                          style={{ width: `${result.score}%` }}
-                        ></div>
-                      </div>
-                      <div className="text-xs text-foreground/60">{result.benchmark}</div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Future Commitments */}
         <section className="py-16 bg-card/30">
@@ -391,24 +290,9 @@ const SustainableInfrastructureCompliance = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-green-500/10 to-blue-500/10">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Partner with <span className="gradient-text">Sustainability Leaders</span>
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Join us in setting new standards for sustainable data center infrastructure that 
-              delivers exceptional performance while protecting our planet's future.
-            </p>
-            <button className="btn-neon">
-              Download Sustainability Report
-            </button>
-          </div>
-        </section>
+        
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default SustainableInfrastructureCompliance;
