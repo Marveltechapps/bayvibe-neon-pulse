@@ -16,8 +16,8 @@ const AboutUs = () => {
           <div className="text-center mb-12">
             <div className="relative mb-8">
               <img 
-                src="/lovable-uploads/1c0df045-8bfb-45ac-a8bc-72b27521f3b3.png" 
-                alt="Modern data center with blue server racks and advanced infrastructure" 
+                src="/lovable-uploads/a3559e42-6053-42f4-a276-44e79280862f.png" 
+                alt="Futuristic data center corridor with blue lighting and server racks" 
                 className="w-full rounded-lg shadow-2xl"
               />
             </div>
