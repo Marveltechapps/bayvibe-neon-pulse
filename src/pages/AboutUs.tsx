@@ -104,8 +104,8 @@ const AboutUs = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/maintenance-technician.png" 
-                  alt="Sustainable data center with earth and technology integration" 
+                  src="/lovable-uploads/1fa4f355-375a-4f15-bdf4-a9dc73957021.png" 
+                  alt="Sustainable data center infrastructure with green cloud technology and renewable energy" 
                   className="w-full rounded-lg shadow-xl bg-white/10 backdrop-blur-sm"
                 />
               </div>
