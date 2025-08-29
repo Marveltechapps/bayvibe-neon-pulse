@@ -56,7 +56,17 @@ const BusinessRevenueModel = () => {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-background to-green-900/20"></div>
-        <div className="max-w-7xl mx-auto px-6 relative">
+        
+        {/* Transparent Revenue Model Image Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/lovable-uploads/1fda760c-4d3d-4178-a311-2398db42091b.png" 
+            alt="Business Revenue Model - Buildings with dollar signs" 
+            className="w-full max-w-2xl opacity-30 object-contain"
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-2xl p-8 mb-12">
             <img 
               src="/lovable-uploads/2b985d06-1427-448f-9db6-7c734f3dc606.png" 
