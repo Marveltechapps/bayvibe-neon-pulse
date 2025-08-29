@@ -43,11 +43,11 @@ const MaintenanceFutureInnovations = () => {
           <div className="space-y-16">
             {/* Expansion Plans & New Technologies */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="relative cursor-pointer" onClick={() => window.location.href = '/expansion-plans-new-technologies'}>
                 <img 
-                  src="/lovable-uploads/846d8f0d-d552-47d0-8b9b-d89242d05d23.png" 
-                  alt="Expansion Plans & New Technologies - Digital dashboard analytics" 
-                  className="w-full rounded-lg shadow-xl"
+                  src="/lovable-uploads/40b163c4-12d9-46da-91e2-ec7065adbdc8.png" 
+                  alt="Expansion Plans & New Technologies - Digital dashboard analytics with transparent overlay" 
+                  className="w-full rounded-lg shadow-xl hover:opacity-90 transition-opacity bg-white/10 backdrop-blur-sm"
                 />
               </div>
               <div className="space-y-6">
