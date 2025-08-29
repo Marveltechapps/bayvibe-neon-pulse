@@ -4,53 +4,50 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Mail, Phone } from 'lucide-react';
-
 const BusinessRevenueModel = () => {
   const [activeTab, setActiveTab] = useState('colocation');
-
-  const tabs = [
-    { id: 'colocation', label: 'Colocation Services' },
-    { id: 'cloud', label: 'Cloud Operations' },
-    { id: 'hosting', label: 'Hosting Services' },
-    { id: 'managed', label: 'Managed Solutions' },
-    { id: 'information', label: 'Information Services' }
-  ];
-
-  const features = [
-    {
-      icon: '🔄',
-      title: 'High Availability & Reliability',
-      description: 'Provides uninterrupted operations with redundant systems and seamless failover.'
-    },
-    {
-      icon: '📊',
-      title: 'Scalable Infrastructure',
-      description: 'Easily accommodate scaling for businesses to build and grow their IT infrastructure.'
-    },
-    {
-      icon: '🛡️',
-      title: 'Advanced Security & Compliance',
-      description: 'Protects data with encryption, AI threat detection, and industry compliance.'
-    },
-    {
-      icon: '⚡',
-      title: 'Optimized Performance',
-      description: 'Accelerated workloads by caching analytics, faster networking and cost processing.'
-    },
-    {
-      icon: '💰',
-      title: 'Cost Efficiency',
-      description: 'Lower operational costs with pay-as-you-go and efficient infrastructure.'
-    },
-    {
-      icon: '🔒',
-      title: 'Business Continuity & Disaster Recovery',
-      description: 'Multi-region backup and digital services to reduce business continuity risk.'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const tabs = [{
+    id: 'colocation',
+    label: 'Colocation Services'
+  }, {
+    id: 'cloud',
+    label: 'Cloud Operations'
+  }, {
+    id: 'hosting',
+    label: 'Hosting Services'
+  }, {
+    id: 'managed',
+    label: 'Managed Solutions'
+  }, {
+    id: 'information',
+    label: 'Information Services'
+  }];
+  const features = [{
+    icon: '🔄',
+    title: 'High Availability & Reliability',
+    description: 'Provides uninterrupted operations with redundant systems and seamless failover.'
+  }, {
+    icon: '📊',
+    title: 'Scalable Infrastructure',
+    description: 'Easily accommodate scaling for businesses to build and grow their IT infrastructure.'
+  }, {
+    icon: '🛡️',
+    title: 'Advanced Security & Compliance',
+    description: 'Protects data with encryption, AI threat detection, and industry compliance.'
+  }, {
+    icon: '⚡',
+    title: 'Optimized Performance',
+    description: 'Accelerated workloads by caching analytics, faster networking and cost processing.'
+  }, {
+    icon: '💰',
+    title: 'Cost Efficiency',
+    description: 'Lower operational costs with pay-as-you-go and efficient infrastructure.'
+  }, {
+    icon: '🔒',
+    title: 'Business Continuity & Disaster Recovery',
+    description: 'Multi-region backup and digital services to reduce business continuity risk.'
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -59,20 +56,12 @@ const BusinessRevenueModel = () => {
         
         {/* Transparent Revenue Model Image Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <img 
-            src="/lovable-uploads/1fda760c-4d3d-4178-a311-2398db42091b.png" 
-            alt="Business Revenue Model - Buildings with dollar signs" 
-            className="w-full max-w-2xl opacity-30 object-contain"
-          />
+          <img src="/lovable-uploads/1fda760c-4d3d-4178-a311-2398db42091b.png" alt="Business Revenue Model - Buildings with dollar signs" className="w-full max-w-2xl opacity-30 object-contain" />
         </div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-2xl p-8 mb-12">
-            <img 
-              src="/lovable-uploads/2b985d06-1427-448f-9db6-7c734f3dc606.png" 
-              alt="Business Revenue Model - Data center with global connectivity" 
-              className="w-full h-64 object-cover rounded-lg mb-6"
-            />
+          <div className="bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-2xl p-8 mb-12 mx-[12px] px-px">
+            
             <p className="text-gray-300 text-lg leading-relaxed">
               Our data center operates on a multi-stream revenue model, including colocation services, cloud hosting, and enterprise solutions. We generate income 
               through server rentals, data storage, and managed IT services, ensuring scalability and security for businesses. Additionally, subscription-based cloud 
@@ -89,30 +78,15 @@ const BusinessRevenueModel = () => {
           
           {/* Tabs */}
           <div className="flex flex-wrap gap-4 mb-12 justify-center">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-lg transition-all ${
-                  activeTab === tab.id
-                    ? 'bg-primary text-black font-semibold'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
-              >
+            {tabs.map(tab => <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-6 py-3 rounded-lg transition-all ${activeTab === tab.id ? 'bg-primary text-black font-semibold' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
                 {tab.label}
-              </button>
-            ))}
+              </button>)}
           </div>
 
           {/* Active Tab Content */}
-          {activeTab === 'colocation' && (
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+          {activeTab === 'colocation' && <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
               <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-6 rounded-lg">
-                <img 
-                  src="/src/assets/colocation-services.jpg" 
-                  alt="Colocation Services - Modern data center facility" 
-                  className="w-full h-48 object-cover rounded-lg"
-                />
+                <img src="/src/assets/colocation-services.jpg" alt="Colocation Services - Modern data center facility" className="w-full h-48 object-cover rounded-lg" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Colocation Services</h3>
@@ -124,8 +98,7 @@ const BusinessRevenueModel = () => {
                   center.
                 </p>
               </div>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
@@ -133,13 +106,11 @@ const BusinessRevenueModel = () => {
       <section className="py-16 bg-gray-900/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 border border-gray-700 p-6 rounded-lg hover:border-primary/50 transition-colors">
+            {features.map((feature, index) => <div key={index} className="bg-gray-800/50 border border-gray-700 p-6 rounded-lg hover:border-primary/50 transition-colors">
                 <div className="text-3xl mb-4 text-primary">{feature.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -161,8 +132,6 @@ const BusinessRevenueModel = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BusinessRevenueModel;
