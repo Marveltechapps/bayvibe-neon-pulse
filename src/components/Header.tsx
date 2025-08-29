@@ -23,6 +23,10 @@ const Header = () => {
     name: 'Sustainability',
     href: '/sustainability',
     isExternal: false
+  }, {
+    name: 'About Us',
+    href: '/about-us',
+    isExternal: false
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="section-container">
