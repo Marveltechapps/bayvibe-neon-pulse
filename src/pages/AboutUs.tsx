@@ -60,8 +60,8 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1">
               <img 
-                src="/lovable-uploads/40b163c4-12d9-46da-91e2-ec7065adbdc8.png" 
-                alt="Digital transformation analytics with glowing data visualization" 
+                src="/lovable-uploads/5870d442-e73f-45a9-afd9-9126e26f2336.png" 
+                alt="Futuristic digital innovation with glowing circular interface and business icons" 
                 className="w-full rounded-lg shadow-xl bg-white/10 backdrop-blur-sm"
               />
             </div>
