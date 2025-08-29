@@ -35,6 +35,7 @@ import Contact from "./pages/Contact";
 import BusinessRevenueModel from "./pages/BusinessRevenueModel";
 import MaintenanceFutureInnovations from "./pages/MaintenanceFutureInnovations";
 import AboutUs from "./pages/AboutUs";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 import NotFound from "./pages/NotFound";
 
@@ -79,6 +80,7 @@ const App = () => (
           <Route path="/maintenance-future-innovations" element={<MaintenanceFutureInnovations />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

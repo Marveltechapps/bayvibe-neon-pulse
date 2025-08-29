@@ -82,7 +82,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 mt-12 border-t border-gray-700">
           <div className="flex gap-6 mb-4 md:mb-0">
-            <Link to="#" className="text-white hover:text-green-500 transition-colors underline">
+            <Link to="/terms-and-conditions" className="text-white hover:text-green-500 transition-colors underline">
               Terms and condition
             </Link>
             <Link to="#" className="text-white hover:text-green-500 transition-colors underline">
