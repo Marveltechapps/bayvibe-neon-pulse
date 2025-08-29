@@ -93,11 +93,11 @@ const MaintenanceFutureInnovations = () => {
 
             {/* AI & Edge Computing Integration */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="relative cursor-pointer" onClick={() => window.location.href = '/ai-edge-computing-integration'}>
                 <img 
-                  src="/lovable-uploads/846d8f0d-d552-47d0-8b9b-d89242d05d23.png" 
-                  alt="AI & Edge Computing - Blue AI cube on circuit board" 
-                  className="w-full rounded-lg shadow-xl"
+                  src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" 
+                  alt="AI & Edge Computing - Blue AI cube processor on circuit board with glowing connections" 
+                  className="w-full rounded-lg shadow-xl hover:opacity-90 transition-opacity bg-white/10 backdrop-blur-sm"
                 />
               </div>
               <div className="space-y-6">
