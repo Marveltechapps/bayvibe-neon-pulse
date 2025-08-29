@@ -40,30 +40,80 @@ const MaintenanceFutureInnovations = () => {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Future Innovations & Roadmap</h2>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="bg-green-500/20 p-4 rounded-lg border border-green-500/30">
-                  <h4 className="text-green-400 font-semibold mb-2">Expansion Plans & New Technologies</h4>
-                </div>
-                <div className="bg-blue-500/20 p-4 rounded-lg border border-blue-500/30">
-                  <h4 className="text-blue-400 font-semibold mb-2">Emerging Trends in Data Center Infrastructure</h4>
-                </div>
-                <div className="bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">
-                  <h4 className="text-purple-400 font-semibold mb-2">AI & Edge Computing Integration</h4>
-                </div>
+          <div className="space-y-16">
+            {/* Expansion Plans & New Technologies */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <img 
+                  src="/lovable-uploads/846d8f0d-d552-47d0-8b9b-d89242d05d23.png" 
+                  alt="Expansion Plans & New Technologies - Digital dashboard analytics" 
+                  className="w-full rounded-lg shadow-xl"
+                />
+              </div>
+              <div className="space-y-6">
+                <Link to="/expansion-plans-new-technologies">
+                  <h3 className="text-green-400 text-2xl font-bold hover:text-green-300 cursor-pointer transition-colors">
+                    Expansion Plans & New Technologies
+                  </h3>
+                </Link>
+                <p className="text-gray-300 leading-relaxed">
+                  We are scaling our data center footprint with next-gen infrastructure, 
+                  including liquid cooling, modular designs, and renewable energy 
+                  integration. Our expansion focuses on high-density computing 
+                  environments to support AI-driven workloads. Future upgrades will 
+                  enhance efficiency, security, and sustainability.
+                </p>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-8 rounded-lg">
-              <h3 className="text-primary text-xl font-bold mb-4">Expansion Plans & New Technologies</h3>
-              <p className="text-gray-300 leading-relaxed">
-                We are scaling our data center footprint with next-gen infrastructure, 
-                including liquid cooling, modular designs, and renewable energy 
-                integration. Our expansion focuses on high-density computing 
-                environments to support AI-driven workloads. Future upgrades will 
-                enhance efficiency, security, and sustainability.
-              </p>
+
+            {/* Emerging Trends in Data Center Infrastructure */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1 space-y-6">
+                <Link to="/emerging-trends-data-center-infrastructure">
+                  <h3 className="text-blue-400 text-2xl font-bold hover:text-blue-300 cursor-pointer transition-colors">
+                    Emerging Trends in Data Center Infrastructure
+                  </h3>
+                </Link>
+                <p className="text-gray-300 leading-relaxed">
+                  The industry is shifting toward hyperscale data centers, energy-efficient 
+                  cooling, and cloud repatriation strategies. Innovations like two-phase 
+                  liquid cooling and AI-powered automation are redefining performance 
+                  and sustainability. We are adopting cutting-edge solutions to stay ahead 
+                  of evolving demands.
+                </p>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/lovable-uploads/846d8f0d-d552-47d0-8b9b-d89242d05d23.png" 
+                  alt="Emerging Trends - Data center infrastructure with blue lighting" 
+                  className="w-full rounded-lg shadow-xl"
+                />
+              </div>
+            </div>
+
+            {/* AI & Edge Computing Integration */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <img 
+                  src="/lovable-uploads/846d8f0d-d552-47d0-8b9b-d89242d05d23.png" 
+                  alt="AI & Edge Computing - Blue AI cube on circuit board" 
+                  className="w-full rounded-lg shadow-xl"
+                />
+              </div>
+              <div className="space-y-6">
+                <Link to="/ai-edge-computing-integration">
+                  <h3 className="text-purple-400 text-2xl font-bold hover:text-purple-300 cursor-pointer transition-colors">
+                    AI & Edge Computing Integration
+                  </h3>
+                </Link>
+                <p className="text-gray-300 leading-relaxed">
+                  AI-driven data processing and edge computing are transforming real-time 
+                  analytics and decentralized infrastructure. Our roadmap includes 
+                  low-latency edge deployments to support AI inferencing and high-speed 
+                  data transmission. These advancements ensure scalability, security, and 
+                  optimized performance.
+                </p>
+              </div>
             </div>
           </div>
         </div>
