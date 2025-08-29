@@ -45,8 +45,8 @@ const AboutUs = () => {
             </div>
             <div className="relative">
               <img 
-                src="/lovable-uploads/b62a70c3-2070-4796-87cc-bc4b11af0096.png" 
-                alt="Futuristic digital technology visualization with blue glowing elements" 
+                src="/lovable-uploads/c1f12c46-b5df-406c-bd3e-102ac0968d8b.png" 
+                alt="Futuristic digital interface with circular blue holographic elements and hand interaction" 
                 className="w-full rounded-lg shadow-xl bg-white/10 backdrop-blur-sm"
               />
             </div>
