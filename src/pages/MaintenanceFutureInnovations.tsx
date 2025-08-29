@@ -82,11 +82,11 @@ const MaintenanceFutureInnovations = () => {
                   of evolving demands.
                 </p>
               </div>
-              <div className="order-1 md:order-2">
+              <div className="order-1 md:order-2 relative cursor-pointer" onClick={() => window.location.href = '/emerging-trends-data-center-infrastructure'}>
                 <img 
-                  src="/lovable-uploads/846d8f0d-d552-47d0-8b9b-d89242d05d23.png" 
-                  alt="Emerging Trends - Data center infrastructure with blue lighting" 
-                  className="w-full rounded-lg shadow-xl"
+                  src="/lovable-uploads/b7c7eb17-c398-4f74-b5e4-296c5476de4e.png" 
+                  alt="Emerging Trends - Modern data center infrastructure with blue server lighting and energy flows" 
+                  className="w-full rounded-lg shadow-xl hover:opacity-90 transition-opacity bg-white/10 backdrop-blur-sm"
                 />
               </div>
             </div>
