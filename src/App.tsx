@@ -33,6 +33,7 @@ import AdvancedCoolingWaterRecycling from "./pages/AdvancedCoolingWaterRecycling
 import SustainableInfrastructureCompliance from "./pages/SustainableInfrastructureCompliance";
 import Contact from "./pages/Contact";
 import BusinessRevenueModel from "./pages/BusinessRevenueModel";
+import MaintenanceFutureInnovations from "./pages/MaintenanceFutureInnovations";
 
 import NotFound from "./pages/NotFound";
 
@@ -74,6 +75,7 @@ const App = () => (
           <Route path="/advanced-cooling-water-recycling" element={<AdvancedCoolingWaterRecycling />} />
           <Route path="/sustainable-infrastructure-compliance" element={<SustainableInfrastructureCompliance />} />
           <Route path="/business-revenue-model" element={<BusinessRevenueModel />} />
+          <Route path="/maintenance-future-innovations" element={<MaintenanceFutureInnovations />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
