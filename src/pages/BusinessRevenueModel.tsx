@@ -79,14 +79,16 @@ const BusinessRevenueModel = () => {
           {/* Tabs */}
           <div className="flex flex-wrap gap-4 mb-12 justify-center">
             {tabs.map(tab => <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-6 py-3 rounded-lg transition-all ${activeTab === tab.id ? 'bg-primary text-black font-semibold' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}>
-                {tab.label}
+                <Link to={`/${tab.id === 'colocation' ? 'colocation-services' : tab.id === 'cloud' ? 'cloud-operations' : tab.id === 'hosting' ? 'hosting-services' : tab.id === 'managed' ? 'managed-solutions' : 'information-services'}`} className="block w-full h-full">
+                  {tab.label}
+                </Link>
               </button>)}
           </div>
 
           {/* Active Tab Content */}
           {activeTab === 'colocation' && <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
               <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-6 rounded-lg">
-                <img src="/src/assets/colocation-services.jpg" alt="Colocation Services - Modern data center facility" className="w-full h-48 object-cover rounded-lg" />
+                <img src="/lovable-uploads/60f5b35b-6248-4369-8fe3-5e2cf5915aeb.png" alt="Colocation Services - Modern data center facility" className="w-full h-48 object-cover rounded-lg" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Colocation Services</h3>
@@ -96,6 +98,66 @@ const BusinessRevenueModel = () => {
                   consumption, and network connectivity. This allows businesses to leverage 
                   advanced infrastructure without the cost of building their own data 
                   center.
+                </p>
+              </div>
+            </div>}
+
+          {activeTab === 'cloud' && <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+              <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-6 rounded-lg">
+                <img src="/lovable-uploads/60f5b35b-6248-4369-8fe3-5e2cf5915aeb.png" alt="Cloud Operations - Cloud computing infrastructure" className="w-full h-48 object-cover rounded-lg" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Cloud Operations</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Comprehensive cloud computing services including virtual machines, storage, 
+                  and networking resources. Our cloud platform offers scalable solutions 
+                  with pay-as-you-use pricing, automated backup, and multi-region 
+                  availability for enterprise-grade performance and reliability.
+                </p>
+              </div>
+            </div>}
+
+          {activeTab === 'hosting' && <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+              <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-6 rounded-lg">
+                <img src="/lovable-uploads/60f5b35b-6248-4369-8fe3-5e2cf5915aeb.png" alt="Hosting Services - Web and application hosting" className="w-full h-48 object-cover rounded-lg" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Hosting Services</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Professional web and application hosting solutions with high-performance 
+                  servers, content delivery networks, and managed databases. We provide 
+                  shared, VPS, and dedicated hosting options with 99.9% uptime guarantee 
+                  and 24/7 technical support for optimal performance.
+                </p>
+              </div>
+            </div>}
+
+          {activeTab === 'managed' && <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+              <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-6 rounded-lg">
+                <img src="/lovable-uploads/60f5b35b-6248-4369-8fe3-5e2cf5915aeb.png" alt="Managed Solutions - IT infrastructure management" className="w-full h-48 object-cover rounded-lg" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Managed Solutions</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Complete IT infrastructure management including server monitoring, 
+                  security updates, backup management, and performance optimization. 
+                  Our expert team handles all technical aspects, allowing you to focus 
+                  on your core business while ensuring maximum system reliability.
+                </p>
+              </div>
+            </div>}
+
+          {activeTab === 'information' && <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+              <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 p-6 rounded-lg">
+                <img src="/lovable-uploads/60f5b35b-6248-4369-8fe3-5e2cf5915aeb.png" alt="Information Services - Data analytics and interconnectivity" className="w-full h-48 object-cover rounded-lg" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Information Services</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Advanced data analytics, interconnectivity solutions, and digital 
+                  transformation services. We provide real-time data processing, 
+                  business intelligence tools, and seamless integration between 
+                  different systems for enhanced operational efficiency and insights.
                 </p>
               </div>
             </div>}
