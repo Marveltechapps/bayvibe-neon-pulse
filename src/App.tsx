@@ -39,6 +39,7 @@ import EmergingTrendsDataCenter from "./pages/EmergingTrendsDataCenter";
 import AIEdgeComputingIntegration from "./pages/AIEdgeComputingIntegration";
 import AboutUs from "./pages/AboutUs";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ColocationServices from "./pages/ColocationServices";
 import CloudOperations from "./pages/CloudOperations";
 import HostingServices from "./pages/HostingServices";
@@ -92,6 +93,7 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/colocation-services" element={<ColocationServices />} />
           <Route path="/cloud-operations" element={<CloudOperations />} />
           <Route path="/hosting-services" element={<HostingServices />} />
