@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <div className="text-sm text-gray-500 mt-12 pt-8 border-t border-gray-700">
-              <p>All Rights Reserved. © Copyright 2024 BayVibe.com</p>
+              <p>All Rights Reserved. © Copyright 2025 bayvibedc.com</p>
             </div>
           </div>
         </div>
