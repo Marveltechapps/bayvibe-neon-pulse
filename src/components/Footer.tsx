@@ -17,7 +17,9 @@ const Footer = () => {
 
           {/* Building Infrastructure */}
           <div className="col-span-1">
-            <h3 className="text-gray-400 text-sm font-medium mb-6">Building Infrastructure</h3>
+            <Link to="/building-infrastructure">
+              <h3 className="text-gray-400 text-sm font-medium mb-6 hover:text-white transition-colors cursor-pointer">Building Infrastructure</h3>
+            </Link>
             <ul className="space-y-4">
               <li>
                 <Link to="/it-hardware-infrastructure" className="text-gray-400 hover:text-white transition-colors">
