@@ -191,18 +191,6 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                {/* Map Placeholder */}
-                <Card className="border-border/50">
-                  <CardContent className="p-0">
-                    <div className="h-80 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg flex items-center justify-center">
-                      <div className="text-center">
-                        <MapPin className="w-16 h-16 text-primary/50 mx-auto mb-4" />
-                        <p className="text-foreground/60">Interactive Map</p>
-                        <p className="text-sm text-foreground/40">Data Center Location</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
