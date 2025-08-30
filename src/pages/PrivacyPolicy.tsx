@@ -20,11 +20,11 @@ const PrivacyPolicy = () => {
       {/* Hero Section with Image */}
       <div className="relative h-96 bg-gradient-to-br from-blue-900 to-gray-900 overflow-hidden">
         <img 
-          src="/lovable-uploads/56cf1113-2660-48f6-854a-cc22b1c82ebf.png" 
+          src="/lovable-uploads/52321dd8-a4bc-432d-8ec8-5d6ff9a4bdf7.png" 
           alt="Cybersecurity shield with digital network connections"
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="absolute bottom-6 left-6 text-white">
           <p className="text-sm max-w-2xl">
             Bayvibe DC is committed to protecting your privacy. Your personal information is handled securely and used only 
