@@ -157,9 +157,8 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Our Location</h4>
                         <p className="text-foreground/70 leading-relaxed">
-                          123 Data Center Drive<br />
-                          Tech District, Silicon Valley<br />
-                          California, USA 94088
+                          No.63,Third Floor,L.B.Road,<br />
+                          Adyar,Chennai-600020
                         </p>
                       </div>
                     </div>
