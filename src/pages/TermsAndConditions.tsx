@@ -20,11 +20,11 @@ const TermsAndConditions = () => {
       {/* Hero Section with Image */}
       <div className="relative h-96 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden">
         <img 
-          src="/lovable-uploads/c250e488-52a9-450b-95ad-b7f9f4f858bb.png" 
+          src="/lovable-uploads/bce4f30b-6ea0-48fc-985b-db1da5c1e682.png" 
           alt="Hand writing terms and conditions with a pen"
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="absolute bottom-6 left-6 text-white">
           <p className="text-sm max-w-2xl">
             By accessing or using this website, you agree to comply with BayVibe DC's terms and conditions. 
