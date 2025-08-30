@@ -34,6 +34,9 @@ import SustainableInfrastructureCompliance from "./pages/SustainableInfrastructu
 import Contact from "./pages/Contact";
 import BusinessRevenueModel from "./pages/BusinessRevenueModel";
 import MaintenanceFutureInnovations from "./pages/MaintenanceFutureInnovations";
+import ExpansionPlansNewTechnologies from "./pages/ExpansionPlansNewTechnologies";
+import EmergingTrendsDataCenter from "./pages/EmergingTrendsDataCenter";
+import AIEdgeComputingIntegration from "./pages/AIEdgeComputingIntegration";
 import AboutUs from "./pages/AboutUs";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ColocationServices from "./pages/ColocationServices";
@@ -83,6 +86,9 @@ const App = () => (
           <Route path="/sustainable-infrastructure-compliance" element={<SustainableInfrastructureCompliance />} />
           <Route path="/business-revenue-model" element={<BusinessRevenueModel />} />
           <Route path="/maintenance-future-innovations" element={<MaintenanceFutureInnovations />} />
+          <Route path="/expansion-plans-new-technologies" element={<ExpansionPlansNewTechnologies />} />
+          <Route path="/emerging-trends-data-center-infrastructure" element={<EmergingTrendsDataCenter />} />
+          <Route path="/ai-edge-computing-integration" element={<AIEdgeComputingIntegration />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
