@@ -39,7 +39,7 @@ const Footer = () => {
 
           {/* About us */}
           <div className="col-span-1">
-            <h3 className="text-gray-400 text-sm font-medium mb-6">About us</h3>
+            
             <ul className="space-y-4">
               <li>
                 <Link to="/about-us" className="text-gray-400 hover:text-white transition-colors">
