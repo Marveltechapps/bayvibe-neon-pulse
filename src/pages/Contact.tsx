@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,16 +13,15 @@ const Contact = () => {
     email: '',
     message: ''
   });
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
@@ -36,7 +36,9 @@ const Contact = () => {
       message: ''
     });
   };
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
@@ -69,27 +71,69 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
-                          <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
                         </div>
                         <div>
-                          <input type="tel" name="phone" placeholder="Phone number" value={formData.phone} onChange={handleInputChange} required className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
+                          <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone number"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
                         </div>
                       </div>
                       
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
-                          <input type="text" name="company" placeholder="Company name" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
+                          <input
+                            type="text"
+                            name="company"
+                            placeholder="Company name"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
                         </div>
                         <div>
-                          <input type="email" name="email" placeholder="Email id" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email id"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                          />
                         </div>
                       </div>
 
                       <div>
-                        <textarea name="message" placeholder="Your Message" rows={6} value={formData.message} onChange={handleInputChange} required className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none" />
+                        <textarea
+                          name="message"
+                          placeholder="Your Message"
+                          rows={6}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
+                        />
                       </div>
 
-                      <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2">
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
+                      >
                         <Send className="w-5 h-5" />
                         Send Message
                       </Button>
@@ -113,9 +157,8 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Our Location</h4>
                         <p className="text-foreground/70 leading-relaxed">
-                          123 Data Center Drive<br />
-                          Tech District, Silicon Valley<br />
-                          California, USA 94088
+                          No.63,Third Floor,L.B.Road,<br />
+                          Adyar,Chennai-600020
                         </p>
                       </div>
                     </div>
@@ -150,7 +193,15 @@ const Contact = () => {
 
                 {/* Map Placeholder */}
                 <Card className="border-border/50">
-                  
+                  <CardContent className="p-0">
+                    <div className="h-80 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <MapPin className="w-16 h-16 text-primary/50 mx-auto mb-4" />
+                        <p className="text-foreground/60">Interactive Map</p>
+                        <p className="text-sm text-foreground/40">Data Center Location</p>
+                      </div>
+                    </div>
+                  </CardContent>
                 </Card>
               </div>
             </div>
@@ -200,12 +251,27 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              
+              <Card className="text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <MapPin className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
+                  <p className="text-foreground/70 mb-4">
+                    Schedule a tour of our state-of-the-art facilities.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    Schedule Tour
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;
