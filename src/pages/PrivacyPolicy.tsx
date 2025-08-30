@@ -1,21 +1,10 @@
-import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      {/* Navigation */}
-      <nav className="bg-black/20 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-white hover:text-green-400 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Back to Home
-          </Link>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section with Image */}
       <div className="relative h-96 bg-gradient-to-br from-blue-900 to-gray-900 overflow-hidden">
@@ -110,6 +99,7 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
