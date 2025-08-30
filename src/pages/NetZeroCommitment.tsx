@@ -207,21 +207,6 @@ const NetZeroCommitment = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Join Our <span className="gradient-text">Sustainability Journey</span>
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Partner with us to build a sustainable future through innovative data center solutions 
-              that prioritize environmental responsibility without compromising performance.
-            </p>
-            <button className="btn-neon">
-              Learn More About Our Impact
-            </button>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
