@@ -347,21 +347,6 @@ const AdvancedCoolingWaterRecycling = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Experience <span className="gradient-text">Sustainable Cooling</span>
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Discover how our advanced cooling and water recycling systems deliver superior 
-              performance while protecting precious water resources.
-            </p>
-            <button className="btn-neon">
-              Learn More About Our Technology
-            </button>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
