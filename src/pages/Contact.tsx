@@ -196,66 +196,6 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Additional Contact Options */}
-        <section className="py-16 bg-card/30">
-          <div className="section-container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Multiple Ways to <span className="gradient-text">Connect</span>
-              </h2>
-              <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-                Choose the communication method that works best for you
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Phone className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Call Us</h3>
-                  <p className="text-foreground/70 mb-4">
-                    Speak directly with our technical experts for immediate assistance.
-                  </p>
-                  <Button variant="outline" className="w-full">
-                    9444126240
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Mail className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Email Us</h3>
-                  <p className="text-foreground/70 mb-4">
-                    Send detailed inquiries and receive comprehensive responses.
-                  </p>
-                  <Button variant="outline" className="w-full">
-                    shekar@marvel100logisticspark.com
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <MapPin className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
-                  <p className="text-foreground/70 mb-4">
-                    Schedule a tour of our state-of-the-art facilities.
-                  </p>
-                  <Button variant="outline" className="w-full">
-                    Schedule Tour
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
