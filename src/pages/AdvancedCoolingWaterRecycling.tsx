@@ -2,97 +2,107 @@ import { Droplets, Thermometer, Recycle, Cpu, TrendingDown, CheckCircle } from '
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-
 const AdvancedCoolingWaterRecycling = () => {
-  const coolingTechnologies = [
-    {
-      icon: Thermometer,
-      title: 'AI-Powered Thermal Management',
-      description: 'Machine learning algorithms optimize cooling systems in real-time, reducing energy consumption by 45%.',
-      efficiency: '45% savings',
-      color: 'text-blue-500'
-    },
-    {
-      icon: Droplets,
-      title: 'Closed-Loop Water Recycling',
-      description: 'Advanced filtration and treatment systems achieve 98% water recycling rate with zero waste discharge.',
-      efficiency: '98% recycling',
-      color: 'text-cyan-500'
-    },
-    {
-      icon: Cpu,
-      title: 'Precision Liquid Cooling',
-      description: 'Direct-to-chip cooling technology for high-density servers with unprecedented thermal efficiency.',
-      efficiency: '60°C reduction',
-      color: 'text-purple-500'
-    },
-    {
-      icon: Recycle,
-      title: 'Heat Recovery Systems',
-      description: 'Waste heat capture and repurposing for facility heating and hot water generation.',
-      efficiency: '85% recovery',
-      color: 'text-green-500'
-    }
-  ];
-
-  const waterMetrics = [
-    { metric: '98%', label: 'Water Recycling Rate', description: 'Closed-loop system efficiency' },
-    { metric: '2.3M', label: 'Gallons Saved Annually', description: 'Water conservation impact' },
-    { metric: '40%', label: 'Cooling Energy Reduction', description: 'Smart system optimization' },
-    { metric: '24/7', label: 'Continuous Monitoring', description: 'Real-time quality control' }
-  ];
-
-  const processes = [
-    {
-      step: '1',
-      title: 'Water Intake & Pre-treatment',
-      description: 'Initial filtration and conditioning of water sources before entering cooling systems.',
-      technology: 'Multi-stage filtration'
-    },
-    {
-      step: '2',
-      title: 'Precision Cooling Distribution',
-      description: 'Intelligent distribution of cooled water to high-density server racks and equipment.',
-      technology: 'Smart flow control'
-    },
-    {
-      step: '3',
-      title: 'Heat Exchange & Recovery',
-      description: 'Efficient heat transfer and waste heat capture for secondary applications.',
-      technology: 'Advanced heat exchangers'
-    },
-    {
-      step: '4',
-      title: 'Water Treatment & Recycling',
-      description: 'Comprehensive treatment and purification for continuous water system reuse.',
-      technology: 'Chemical-free treatment'
-    }
-  ];
-
-  const qualityStandards = [
-    { parameter: 'pH Level', target: '6.5-8.5', current: '7.2', status: 'optimal' },
-    { parameter: 'Conductivity', target: '<500 μS/cm', current: '320 μS/cm', status: 'optimal' },
-    { parameter: 'Total Dissolved Solids', target: '<300 ppm', current: '185 ppm', status: 'optimal' },
-    { parameter: 'Turbidity', target: '<1 NTU', current: '0.3 NTU', status: 'optimal' },
-    { parameter: 'Temperature', target: '18-22°C', current: '20°C', status: 'optimal' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const coolingTechnologies = [{
+    icon: Thermometer,
+    title: 'AI-Powered Thermal Management',
+    description: 'Machine learning algorithms optimize cooling systems in real-time, reducing energy consumption by 45%.',
+    efficiency: '45% savings',
+    color: 'text-blue-500'
+  }, {
+    icon: Droplets,
+    title: 'Closed-Loop Water Recycling',
+    description: 'Advanced filtration and treatment systems achieve 98% water recycling rate with zero waste discharge.',
+    efficiency: '98% recycling',
+    color: 'text-cyan-500'
+  }, {
+    icon: Cpu,
+    title: 'Precision Liquid Cooling',
+    description: 'Direct-to-chip cooling technology for high-density servers with unprecedented thermal efficiency.',
+    efficiency: '60°C reduction',
+    color: 'text-purple-500'
+  }, {
+    icon: Recycle,
+    title: 'Heat Recovery Systems',
+    description: 'Waste heat capture and repurposing for facility heating and hot water generation.',
+    efficiency: '85% recovery',
+    color: 'text-green-500'
+  }];
+  const waterMetrics = [{
+    metric: '98%',
+    label: 'Water Recycling Rate',
+    description: 'Closed-loop system efficiency'
+  }, {
+    metric: '2.3M',
+    label: 'Gallons Saved Annually',
+    description: 'Water conservation impact'
+  }, {
+    metric: '40%',
+    label: 'Cooling Energy Reduction',
+    description: 'Smart system optimization'
+  }, {
+    metric: '24/7',
+    label: 'Continuous Monitoring',
+    description: 'Real-time quality control'
+  }];
+  const processes = [{
+    step: '1',
+    title: 'Water Intake & Pre-treatment',
+    description: 'Initial filtration and conditioning of water sources before entering cooling systems.',
+    technology: 'Multi-stage filtration'
+  }, {
+    step: '2',
+    title: 'Precision Cooling Distribution',
+    description: 'Intelligent distribution of cooled water to high-density server racks and equipment.',
+    technology: 'Smart flow control'
+  }, {
+    step: '3',
+    title: 'Heat Exchange & Recovery',
+    description: 'Efficient heat transfer and waste heat capture for secondary applications.',
+    technology: 'Advanced heat exchangers'
+  }, {
+    step: '4',
+    title: 'Water Treatment & Recycling',
+    description: 'Comprehensive treatment and purification for continuous water system reuse.',
+    technology: 'Chemical-free treatment'
+  }];
+  const qualityStandards = [{
+    parameter: 'pH Level',
+    target: '6.5-8.5',
+    current: '7.2',
+    status: 'optimal'
+  }, {
+    parameter: 'Conductivity',
+    target: '<500 μS/cm',
+    current: '320 μS/cm',
+    status: 'optimal'
+  }, {
+    parameter: 'Total Dissolved Solids',
+    target: '<300 ppm',
+    current: '185 ppm',
+    status: 'optimal'
+  }, {
+    parameter: 'Turbidity',
+    target: '<1 NTU',
+    current: '0.3 NTU',
+    status: 'optimal'
+  }, {
+    parameter: 'Temperature',
+    target: '18-22°C',
+    current: '20°C',
+    status: 'optimal'
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <img 
-            src="/lovable-uploads/dd199b64-98a2-43f5-81f8-e977087035f7.png" 
-            alt="Advanced Water Treatment and Cooling Facility" 
-            className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
-          />
+          <img src="/lovable-uploads/dd199b64-98a2-43f5-81f8-e977087035f7.png" alt="Advanced Water Treatment and Cooling Facility" className="absolute inset-0 w-full h-full object-cover opacity-40 z-0" />
           <div className="section-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Advanced Cooling &<br/><span className="gradient-text">Water Recycling</span>
+                Advanced Cooling &<br /><span className="gradient-text">Water Recycling</span>
               </h1>
               <p className="text-xl text-foreground/70 leading-relaxed mb-8">
                 Revolutionary cooling technology combined with comprehensive water recycling systems 
@@ -129,8 +139,7 @@ const AdvancedCoolingWaterRecycling = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {waterMetrics.map((metric, index) => (
-                <Card key={metric.label} className="text-center hover:shadow-lg transition-all duration-300">
+              {waterMetrics.map((metric, index) => <Card key={metric.label} className="text-center hover:shadow-lg transition-all duration-300">
                   <CardContent className="pt-6">
                     <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                       {metric.metric}
@@ -138,8 +147,7 @@ const AdvancedCoolingWaterRecycling = () => {
                     <div className="font-semibold mb-2">{metric.label}</div>
                     <div className="text-sm text-foreground/60">{metric.description}</div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -158,9 +166,8 @@ const AdvancedCoolingWaterRecycling = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {coolingTechnologies.map((tech, index) => {
-                const IconComponent = tech.icon;
-                return (
-                  <Card key={tech.title} className="group hover:shadow-lg transition-all duration-300">
+              const IconComponent = tech.icon;
+              return <Card key={tech.title} className="group hover:shadow-lg transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -179,9 +186,8 @@ const AdvancedCoolingWaterRecycling = () => {
                         {tech.description}
                       </CardDescription>
                     </CardContent>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </div>
         </section>
@@ -199,8 +205,7 @@ const AdvancedCoolingWaterRecycling = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {processes.map((process, index) => (
-                <Card key={process.step} className="text-center hover:shadow-lg transition-all duration-300">
+              {processes.map((process, index) => <Card key={process.step} className="text-center hover:shadow-lg transition-all duration-300">
                   <CardHeader className="pb-3">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl font-bold text-primary">{process.step}</span>
@@ -215,8 +220,7 @@ const AdvancedCoolingWaterRecycling = () => {
                       {process.technology}
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -265,8 +269,7 @@ const AdvancedCoolingWaterRecycling = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {qualityStandards.map((standard, index) => (
-                    <div key={standard.parameter} className="space-y-2">
+                  {qualityStandards.map((standard, index) => <div key={standard.parameter} className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="text-sm font-medium">{standard.parameter}</span>
                         <div className="flex items-center gap-2">
@@ -276,10 +279,11 @@ const AdvancedCoolingWaterRecycling = () => {
                         </div>
                       </div>
                       <div className="w-full bg-muted rounded-full h-1">
-                        <div className="bg-blue-500 h-1 rounded-full" style={{ width: '95%' }}></div>
+                        <div className="bg-blue-500 h-1 rounded-full" style={{
+                      width: '95%'
+                    }}></div>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </CardContent>
               </Card>
             </div>
@@ -348,24 +352,9 @@ const AdvancedCoolingWaterRecycling = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Experience <span className="gradient-text">Sustainable Cooling</span>
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-              Discover how our advanced cooling and water recycling systems deliver superior 
-              performance while protecting precious water resources.
-            </p>
-            <button className="btn-neon">
-              Learn More About Our Technology
-            </button>
-          </div>
-        </section>
+        
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AdvancedCoolingWaterRecycling;
