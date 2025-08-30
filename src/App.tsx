@@ -36,6 +36,11 @@ import BusinessRevenueModel from "./pages/BusinessRevenueModel";
 import MaintenanceFutureInnovations from "./pages/MaintenanceFutureInnovations";
 import AboutUs from "./pages/AboutUs";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import ColocationServices from "./pages/ColocationServices";
+import CloudOperations from "./pages/CloudOperations";
+import HostingServices from "./pages/HostingServices";
+import ManagedSolutions from "./pages/ManagedSolutions";
+import InformationServices from "./pages/InformationServices";
 
 import NotFound from "./pages/NotFound";
 
@@ -81,6 +86,11 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/colocation-services" element={<ColocationServices />} />
+          <Route path="/cloud-operations" element={<CloudOperations />} />
+          <Route path="/hosting-services" element={<HostingServices />} />
+          <Route path="/managed-solutions" element={<ManagedSolutions />} />
+          <Route path="/information-services" element={<InformationServices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
