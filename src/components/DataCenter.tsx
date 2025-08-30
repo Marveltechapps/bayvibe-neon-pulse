@@ -1,5 +1,5 @@
 import { MapPin, Building2, Wifi, Zap, Shield, Thermometer, Network, Server, Settings } from 'lucide-react';
-import dataCenterBuilding from '@/assets/datacenter-building.jpg';
+import dataCenterBuilding from '/lovable-uploads/6022ae80-6d8e-452e-832a-2db32d3f2194.png';
 const DataCenter = () => {
   const features = [{
     icon: MapPin,
